@@ -1,0 +1,248 @@
+.footer{
+    height: 120vh;
+    width: 100%;
+    background: rgb(23,22,19);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+}
+
+.footerContainer{
+    height: 118vh;
+    width: 98%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footerText{
+  height: 28%;
+  width: 98%;
+  background: rgb(23,22,19);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid white;
+
+}
+
+
+.newsletter{
+    height: 70%;
+    width: 23%;
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+
+    & span {
+        font-size: 23px;
+        color: white;
+    }
+
+    & h1 {
+        font-size: 15px;
+        color: white;
+    }
+}
+
+.inpuT{
+    height: 70%;
+    width: 50%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    & input{
+        height: 50%;
+        width: 70%;
+        background: white;
+        border: none;
+        padding: 12px;
+        color: black;
+        border: none ;
+        outline: none;
+
+    }
+
+   & button {
+    height: 50%;
+    width: 22%;
+    background: red;
+    color: black;
+    border: none ;
+    outline: none;
+   }
+}
+
+.socialMedia{
+    height: 70%;
+    width: 18%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+}
+
+.footerText1{
+    height: 65%;
+    width: 98%;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 0.2px solid white;
+
+
+  }
+
+  .footeriner1{
+    height: 90%;
+    width: 25%;
+    display: flex;
+    /* background: pink; */
+    padding-top: 70px;
+
+    & header {
+        font-size: 30px;
+        color: white;
+    }
+
+    & strong {
+        font-size: 19px;
+        color: red;
+    }
+  }
+
+  .footeriner2{
+    height: 90%;
+    width: 20%;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 2px;
+    padding-top: 10px;
+    
+
+    & h2 {
+        font-size: 20px;
+        color: white;
+    }
+
+    & h1 {
+        list-style: none;
+        font-size: 12px;
+        display: flex;
+        color: white;
+
+
+    }
+  }
+
+  .footeriner3{
+    height: 90%;
+    width: 20%;
+    /* background: red; */
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    padding: 2px;
+    padding-top: 10px;
+    
+
+    & h2 {
+        font-size: 20px;
+        color: white;
+
+    }
+
+    & h1 {
+        font-size: 12px;
+        display: flex;
+        color: white;
+    }
+  }
+
+  .footeriner4{
+    height: 90%;
+    width: 20%;
+    /* background: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    padding: 2px;
+    padding-top: 10px;
+    
+
+    & h2 {
+        font-size: 20px;
+        color: white;
+
+    }
+
+    & h1 {
+        font-size: 12px;
+        display: flex;
+        color: white;
+    }
+  }
+
+  .footeriner5{
+    height: 90%;
+    width: 20%;
+    /* background: purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 2px;
+    padding-top: 10px;
+    
+
+    & h2 {
+        font-size: 20px;
+        color: white;
+        font-size: 10;
+    }
+
+    & h1 {
+        list-style: none;
+        font-size: 12px;
+        display: flex;
+        color: white;
+
+
+    }
+  }
+
+  .footerText2{
+    height: 18%;
+    width: 98%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+
+    & strong {
+      color: red;
+    }
+  }
+  
+ 
