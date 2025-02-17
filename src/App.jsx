@@ -13,7 +13,7 @@ import Page from "./Pages/Page"
 import Categories from "./Pages/Categories"
 // import Contact from "./Pages/Contact";
 import { useState, useEffect } from "react"
-import Loader from "./component/Loader/Loader"
+import Loader from "./component/Loader/loader"
 import ProductCheckout from "./Pages/ProductCheckout";
 
 
