@@ -5,7 +5,7 @@ import { ScaleLoader } from 'react-spinners'
 const Loader = () => {
     return (
       <div>
-        <span className="loader"></span>
+        <span className="Loader"></span>
         <ScaleLoader />
       </div>
     );

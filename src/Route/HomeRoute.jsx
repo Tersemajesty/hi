@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
-import Loader from "../component/Loader/loader";
+import Loader from "../component/Loader/Loader";
 
 const HomeRoute = () => {
     const [loading, setLoading] = useState(false);
