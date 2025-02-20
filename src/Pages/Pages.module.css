@@ -565,7 +565,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid gray;
 
     
     & button {
@@ -1078,16 +1078,605 @@ a {
 
 /* for ProductCheckout */
 
-.ProductCheckout{
-    height: max-content;
+.checkoutwrapper {
     width: 100%;
-    background: red;
+    height: 310vh;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+ .checkoutwrapperbody {
+    width: 100%;
+    height: 25%;
+    background-color: #f2e9d8;
+    color: rgb(62, 61, 61);
+    text-align: center;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+        margin: 0;
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 29px;
+    }
+    
+}
+
+.checkouttextwrapper {
+    width: 20%;
+    height: max-content;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
+    color: rgb(118, 117, 117);
+    font-size: 15px;
+    cursor: pointer;
+} 
+
+
+/* General Styles */
+ .container {
+    width: 99%;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 110%;
+    background: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+    }
+  } 
+  
+  /* Returning Customer Section */
+
+.returningcustomer{
+    height: 90%;
+    width: 96%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+.returningcustomer1{
+    height: 8%;
+    width: 94%;
+    background: rgb(244,244,244);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    /* justify-content: center; */
+
+    & p {
+        font-size: 12px;
+        padding: 8px;
+
+    }
+}
+
+.text{
+    height: 12%;
+    width: 94%;
+    /* background: blueviolet; */
+    display: flex;
+    align-items: center;
+     font-size: 12px;
+     padding: 15px;
 
 }
 
+
+.input{
+    height: 14%;
+    width: 94%;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+     gap: 7px;
+
+    & input {
+        height: 68%;
+        width: 30%;
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 2px;
+        background: rgb(255,255,255);
+        padding: 6px;
+    }
+}
+
+
+.logGEDin{
+    height: 14%;
+    width: 94%;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    & button {
+        height: 70%;
+        width: 10%;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background: red;
+        color: white;
+    }
+
+
+    & label {
+        font-size: 13px;
+        color: gray;
+    }
+}
+
+
+
+  .cuppon{
+    height: 8%;
+    width: 94%;
+    background: rgb(244,244,244);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    gap: 10px;
+    /* justify-content: center; */
+
+    & p {
+        font-size: 12px;
+        padding: 8px;
+        gap: 10px;
+
+
+    }
+}
+
+
+.input2{
+    height: 14%;
+    width: 94%;
+    /* background: peru; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 70%;
+        width: 60%;
+        padding: 10px;
+        font-size: 13px;
+        border: 1px solid gray;
+        outline: none;
+
+    }
+}
+
+
+.button{
+    height: 14%;
+    width: 94%;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+
+    & button {
+        height: 70%;
+        width: 17%;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background: red;
+        color: white;
+    }
+}
+
+
+.hold{
+    height: 250%;
+    width: 100%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.billing{
+    height: 95%;
+    width: 65%;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.bilng0{
+    height: 10%;
+    width: 97%;
+    /* background: red; */
+}
+
+.bilng2{
+    height: 24%;
+    width: 97%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & input {
+        height: 50%;
+        width: 47%;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+.billing3{
+    height: 17%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 65%;
+        width: 95%;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+
+.billing4{
+    height: 20%;
+    width: 97%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & input {
+        height: 50%;
+        width: 47%;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+.blling5{
+    height: 30%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 50%;
+        width: 95%;
+        outline: none;
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 35px;
+    }
+}
+
+
+
+
+.billing6{
+    height: 23%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 60%;
+        width: 95%;
+        outline: none;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+
+
+
+.billing7{
+    height: 23%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 60%;
+        width: 95%;
+        outline: none;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+
+
+
+.billing8{
+    height: 23%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 60%;
+        width: 95%;
+        outline: none;
+        border: 1px solid gray;
+        padding: 10px;
+    }
+}
+
+
+
+
+.billing9{
+    height: 35%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+    & input {
+        height: 48%;
+        width: 95%;
+        outline: none;
+        border: 1px solid gray;
+        padding: 10px;
+        border-radius: 35px;
+    }
+}
+
+
+
+
+.billing10{
+   
+        height: 23%;
+        width: 97%;
+        /* background: blue; */
+        display: flex;
+        align-items: center;
+    
+        & input {
+            height: 60%;
+            width: 95%;
+            outline: none;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+}
+
+
+
+
+
+
+
+.billing12{
+    height: 23%;
+    width: 97%;
+    /* background: blue; */
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+
+.billing13{
+    height: 60%;
+        width: 100%;
+        /* background: blue; */
+        display: flex;
+        align-items: center;
+    
+         & input {
+            height: 90%;
+            width: 99%;
+            outline: none;
+            border: 1px solid gray;
+            padding: 10px;
+        }  
+}
+
+
+
+
+
+
+
+
+ .order{ 
+    height: 80%;
+    width: 30%;
+    background: purple;
+}
+
+
+  /* .returningcustomer {
+    background-color: #f5f5f5;
+    
+    height: 15%;
+    width: 60%;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .returningcustomer a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .returningcustomer a:hover {
+    text-decoration: underline;
+    color: darkred;
+  }
+  
+
+  .loginform {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+  }
+  
+  .loginform input {
+    flex: 1;
+    min-width: 48%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .loginform input:focus {
+    border-color: red;
+    outline: none;
+  }
+  
+
+  .loginactions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .loginbtn, .applycouponbtn {
+    position: relative;
+    overflow: hidden;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 10%;
+    transition: all 0.3s ease-in-out;
+  }
+  .applycouponbtn{
+    width: 20%;
+    font-size: 15px;
+  }
+  .loginbtn:hover, .applycouponbtn:hover {
+    background-color: darkred;
+  }
+  
+  
+  .loginbtn::before, .applycouponbtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .loginbtn:hover::before, .applycouponbtn:hover::before {
+    left: 100%;
+  }
+  
+  
+  .checkboxcontainer {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .checkboxcontainer input {
+    margin-right: 5px;
+  }
+  
+  
+  .coupon-section {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .couponsection a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .couponsection a:hover {
+    text-decoration: underline;
+    color: darkred;
+  }
+  
+  
+  .couponsection input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .couponsection input:focus {
+    border-color: red;
+    outline: none;
+  } */
 
 /* for ProductDetails */
 

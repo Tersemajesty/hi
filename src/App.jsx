@@ -2,6 +2,7 @@ import "./App.css"
 // import Body from "./component/Body/Body"
 import HomeRoute from "./Route/HomeRoute";
 import Home from "./Pages/Home"
+// import HomePage from "./component/HomePage/HomePage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import ProductDetails from "./Pages/ProductDetails"
 import Signup from "./Pages/Signup"
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
 
     children: [
       { path: "home", element: <Home /> },
+      // { path: "HomePage", element: <HomePage /> },
       { path: "productCheckout", element: <ProductCheckout /> },
       // { path: "blog", element: <Blog /> },
       { path: "page", element: <Page /> },

@@ -2,7 +2,6 @@ import styles from "./Footer.module.css"
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { GiTwirlyFlower } from "react-icons/gi";
 
 
 
@@ -29,7 +28,7 @@ const Footer = () => {
          </div>
          <div className={styles.footerText1}>
             <div className={styles.footeriner1}>
-                <GiTwirlyFlower size={45}  color="red"/>
+               <img src="public/loder.png.webp" alt="" />
                 <header>Terses <strong>store</strong></header>
             </div>
             <div className={styles.footeriner2}>

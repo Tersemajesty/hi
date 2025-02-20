@@ -1,12 +1,8 @@
-import style from "./Body.module.css"
-
+import "./Body.css"
  const Body = () => {
     return (
-        <div className={style.wrrap}>
-            lll
-
-
-            huuuu
+        <div className="Body">
+           zgfzgzg 
         </div>
     )
 }
