@@ -1,18 +1,14 @@
 import "./App.css"
-// import Body from "./component/Body/Body"
 import HomeRoute from "./Route/HomeRoute";
 import Home from "./Pages/Home"
-// import HomePage from "./component/HomePage/HomePage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import ProductDetails from "./Pages/ProductDetails"
 import Signup from "./Pages/Signup"
 import Login from "./Pages/Login"
 import Cart from "./Pages/Cart"
-// import Blog from "./Pages/Blog"
 import User from "./Pages/User"
 import Page from "./Pages/Page"
 import Categories from "./Pages/Categories"
-// import Contact from "./Pages/Contact";
 import { useState, useEffect } from "react"
 import Loader from "./component/Loader/Loader"
 import ProductCheckout from "./Pages/ProductCheckout";
@@ -24,8 +20,7 @@ const router = createBrowserRouter([
     element: <HomeRoute />,
 
     children: [
-      { path: "home", element: <Home /> },
-      // { path: "HomePage", element: <HomePage /> },
+      { path: "/home", element: <Home /> },
       { path: "productCheckout", element: <ProductCheckout /> },
       // { path: "blog", element: <Blog /> },
       { path: "page", element: <Page /> },

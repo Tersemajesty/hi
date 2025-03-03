@@ -21,15 +21,26 @@ const Footer = () => {
               <button>Subscribe</button>
             </div>
             <div className={styles.socialMedia}>
-               <FaFacebook  size={25}/>
-               <FaInstagram  size={25}/>
-               <FaYoutube  size={25}/>
+            <FaFacebook 
+                size={25} 
+                onClick={() => window.open("https://web.facebook.com/terse.majestic", "_blank")}
+              />
+
+               <FaInstagram 
+                size={25}
+                onClick={() => window.open("https://www.instagram.com/?hl=en")}
+               />
+
+               <FaYoutube 
+                size={25}
+                onClick={() => window.open("https://www.youtube.com/@Terseapparel")}
+               />
             </div>
          </div>
          <div className={styles.footerText1}>
             <div className={styles.footeriner1}>
                <img src="public/loder.png.webp" alt="" />
-                <header>Terses <strong>store</strong></header>
+                <header>Capital <strong>Shop</strong></header>
             </div>
             <div className={styles.footeriner2}>
             <h2>Shop Men</h2>
@@ -72,7 +83,7 @@ const Footer = () => {
          </div>
          <div className={styles.footerText2}>
                  <p>
-                 Copyright ©2025 All rights reserved | This template is made with  by <strong>Terses </strong>Store
+                 Copyright ©2025 All rights reserved | This template is made with ❤ by <strong>Colorlib </strong>Store
                  </p>
          </div>
          

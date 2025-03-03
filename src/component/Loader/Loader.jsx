@@ -4,7 +4,7 @@ import style from "./Loader.module.css"
 
 const Loader = () => {
     return (
-      <div>
+      <div className={style.chi}>
         <span className={style.Loader}></span>
         <ScaleLoader />
       </div>

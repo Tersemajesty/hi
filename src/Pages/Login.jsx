@@ -1,10 +1,35 @@
+import { useState } from "react";
 import style from "./Pages.module.css"
-// import { Link } from "react-router-dom"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 
  
  const Login = () => {
+      const[password, setPassword] = useState ("")
+      const[email, setEmail] = useState ("")
+      console.log(email)
+      const navigate = useNavigate()
+
+      const url = "https://capitalshop-3its.onrender.com/api/users/login"
+      const baseUrl = 'http://localhost:9898'
+      const handleLogin = async (e) =>{
+       e.preventDefault();
+       try{
+      const response = await axios.post(url,{password,email,baseUrl})
+      // toast.success(response?.data?. message )
+      console.log(response)
+      if (response?.status === 200) {
+            localStorage.setItem("token", JSON.stringify(response?.data?.token))
+            toast.success("Login Successful");
+            navigate('/home')
+       }
+       } catch(err){
+          console.log(err);
+          toast.error("Account already exist ");
+        }
+      }
     return (
         <div className={style.login}>
             <div className={style.login1}>
@@ -15,12 +40,16 @@ import { NavLink } from "react-router-dom";
                   <div className={style.login3}>
                     <h1>Username or Email Address</h1>
                         <input type="text"
-                        placeholder="Username/ Email Address" />
+                        placeholder=" Email Address"
+                        value={email}
+                        onChange={(e) => setEmail(e .target.value)} />
                   </div>
-                  <div className={style.login4}>
+             <div className={style.login4}>
                   <h1>Passwords</h1>
                         <input type="text"
-                        placeholder="Enter Password" />
+                        placeholder="Enter Password"
+                        value={password}
+                        onChange={(e) => setPassword(e .target.value)} /> 
                   </div>
                   <div className={style.login5}>
                   <div className={style.remember}>
@@ -28,7 +57,9 @@ import { NavLink } from "react-router-dom";
               <label htmlFor="remember">Keep me logged in</label>
             </div>
                   <div className={style.login7}>
-            <a href="#">Forgot Password?</a>
+                        <NavLink  to={"/Signup"}>
+                  <a href="#">Forgot Password?</a>
+                        </NavLink>
                   </div>
                   </div>
 
@@ -36,7 +67,7 @@ import { NavLink } from "react-router-dom";
                     <NavLink to="/Signup">
                     <h1>Dont have an account ? <strong>Sign up</strong> here</h1>
                     </NavLink>
-                 <button>Login</button>
+                 <button onClick={handleLogin}>Login</button>
 
                     
                   </div>
