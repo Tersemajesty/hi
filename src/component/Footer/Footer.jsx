@@ -21,17 +21,17 @@ const Footer = () => {
               <button>Subscribe</button>
             </div>
             <div className={styles.socialMedia}>
-            <FaFacebook 
+            <FaFacebook className={styles.facebook}
                 size={25} 
                 onClick={() => window.open("https://web.facebook.com/terse.majestic", "_blank")}
               />
 
-               <FaInstagram 
+               <FaInstagram className={styles.instagram}
                 size={25}
                 onClick={() => window.open("https://www.instagram.com/?hl=en")}
                />
 
-               <FaYoutube 
+               <FaYoutube className={styles.youtube}
                 size={25}
                 onClick={() => window.open("https://www.youtube.com/@Terseapparel")}
                />

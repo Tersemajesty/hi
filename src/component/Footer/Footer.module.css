@@ -67,7 +67,6 @@
         border: none;
         padding: 12px;
         color: black;
-        border: none ;
         outline: none;
 
     }
@@ -79,6 +78,8 @@
     color: black;
     border: none ;
     outline: none;
+    cursor: pointer;
+    color: white;
    }
 }
 
@@ -91,16 +92,24 @@
     justify-content: center;
     gap: 15px;
     color: white;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.6s ease-in-out;
+    
+}
 
+.facebook,.instagram,.youtube{
+    cursor: pointer;
+    transition: color 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.facebook:hover,.instagram:hover,.youtube:hover{
+    color: red;
+    transform: rotateY(180deg);
 }
 
 
-.socialMedia:hover {
+/* .socialMedia:hover {
     color: red;
     transform: rotateY(180deg);
-  }
+  } */
 
 .footerText1{
     height: 65%;
