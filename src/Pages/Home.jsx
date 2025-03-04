@@ -6,6 +6,7 @@ import { PiTruckLight } from "react-icons/pi";
 import { CiCreditCard1 } from "react-icons/ci";
 import { GiBank } from "react-icons/gi";
 import { TbClock24 } from "react-icons/tb";
+import { getAllProduct } from "../auth/Api";
 
 
 
@@ -141,11 +142,13 @@ const images = [
 ];
 
 
-// useEffect(() => {
-//     setTimeout(() => {
-//       document.querySelector(".slide-up").style.opacity = "1";
-//     }, 100);
-//   }, []);
+useEffect(() => {
+    setTimeout(() => {
+      document.querySelector(".slide-up").style.opacity = "1";
+    }, 100);
+
+    getAllProduct()
+  }, []);
   
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -165,7 +168,7 @@ const images = [
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  console.log(currentIndex)
+  // console.log(currentIndex)
    
 
   return (
