@@ -131,19 +131,21 @@ const images = [
   {
     url: "src/assets/navbar.jpg",
     align: "left",
+    h1:'Minimal Menz Style',
   },
   {
     url: "src/assets/navbar2.jpg",
     align: "right",
+    h1:'Minimal Woman Wears'
   },
 ];
 
 
-useEffect(() => {
-    setTimeout(() => {
-      document.querySelector(".slide-up").style.opacity = "1";
-    }, 100);
-  }, []);
+// useEffect(() => {
+//     setTimeout(() => {
+//       document.querySelector(".slide-up").style.opacity = "1";
+//     }, 100);
+//   }, []);
   
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -152,7 +154,6 @@ useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 15000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -164,6 +165,7 @@ useEffect(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  console.log(currentIndex)
    
 
   return (
@@ -180,12 +182,16 @@ useEffect(() => {
         <div className={`text-container ${images[currentIndex].align}`}>
        
           <h2 className="fade-in h2">Fashion Sale</h2>
-          <h1 className="slide-up h1" color="red">Minimal Menz Style</h1>
-          <p className="zoom-in p">
+          <h1 className="slide-up h1" color="red">{images[currentIndex].h1}</h1>
+          {images[currentIndex].align === 'left' ? <p className="zoom-in p">
             Consectetur adipisicing  elit. Laborum fuga incidunt <br />
              laboriosam voluptas iure, delectus <br />dignissimos facilis
                neque nulla earum.
-          </p>
+          </p> : <p className="zoom-in p">
+            Lorem ipsum dolor sit amet consectetur adipisicing <br />
+            acere consectetur corrupti ullam <br /> pariatur natu
+            s, ipsam rem deleniti.
+          </p>}
           <button className="btn-slide">Shop Now</button>
         </div>
 
