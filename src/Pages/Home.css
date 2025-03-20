@@ -48,7 +48,7 @@
   
   /* Hero Section */
   .hero-section {
-    width: 1150px;
+    width: 100vw;
     height: 600px;
     display: flex;
     align-items: center;
@@ -245,7 +245,7 @@
   background-position: center;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.1s ease-out;
 
     }
 
@@ -277,10 +277,18 @@
   transition: transform 0.5s ease-in-out;
     }
 
-    .text-container1 h1, 
 .text-container1 p {
     font-family: sans-serif, cursive;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.text-container1 h1 {
+  font-family: sans-serif, cursive;
+  position: absolute;
+  bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -293,7 +301,7 @@
         font-weight: bold;
         gap: 10px;
   margin: 0;
-  bottom: 0
+  bottom: 0;
       }
       
       .text-container1 p {
@@ -303,19 +311,23 @@
   text-decoration-thickness: 1px; 
   gap: 20px;
   color: gold;
-  bottom: -20px; /* Hides below */
+  bottom: -20px;/* Hides below */
+  /* display: none; */
   opacity: 0;
       }
       
       .category-box:hover .text-container1 h1 {
         transform: translate(-50%, -10px);
+        bottom: 40px;
       }
       
       .category-box:hover .text-container1 p {
+        /* display: flex; */
         opacity: 1; /* Show P */
   transform: translate(-50%, 0);
   padding-top: 20px;
   gap: 60px;
+  bottom: -10px;
 
       }
 

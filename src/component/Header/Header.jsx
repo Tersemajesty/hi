@@ -1,4 +1,4 @@
-import "./header.css";
+import "./Header.css";
 import {  FaTimes } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
