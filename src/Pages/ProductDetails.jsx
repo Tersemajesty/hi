@@ -2,6 +2,8 @@ import styles from "./Pages.module.css";
 import { FaShareAlt } from "react-icons/fa";
 
 const ProductDetails = () => {
+
+  
   return (
     <div className={styles.productwrapper}>
       <div className={styles.productdetailsbody}>

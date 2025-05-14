@@ -1,5 +1,7 @@
 import { useState } from "react";
 import style from "./Pages.module.css";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import {  useNavigate } from "react-router";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -43,65 +45,62 @@ const Cart = () => {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+  const navigate = useNavigate();
 
   return (
     <div className={style.Cart}>
       <div className={style.Cart1}>
         <div className={style.style}>
-          <h2>Cart</h2>
-          <h2>Home</h2>
+          <h2>Your Cart</h2>
+         
         </div>
       </div>
 
       <div className={style.car2}>
         <div className={style.purpose}>
-          <h1>Product</h1>
-          <div className={style.chnge}>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Total</p>
-          </div>
+          <h1>Products</h1>
         </div>
 
         {cartItems.map((item) => (
           <div key={item.id} className={style.purpose1}>
             <h1>{item.title}</h1>
             <div className={style.chnge1}>
-              <p>${item.price.toFixed(2)}</p>
-              <div>
-                <button onClick={() => handleDecrease(item.id)}>-</button>
+              <div className={style.buttondiv}>
+                <button onClick={() => handleDecrease(item.id)} style={{color: "black"}}>-</button>
                 <span style={{ margin: "0 10px" }}>{item.quantity}</span>
-                <button onClick={() => handleIncrease(item.id)}>+</button>
+                <button onClick={() => handleIncrease(item.id)} style={{color: "black"}}>+</button>
               </div>
               <p>${(item.price * item.quantity).toFixed(2)}</p>
-              <button onClick={() => handleDelete(item.id)}>Delete</button>
+              <button onClick={() => handleDelete(item.id)}><RiDeleteBin6Line size={16} style={{color: "red", background: "white"}} /></button>
             </div>
           </div>
         ))}
 
         <div className={style.herosection}>
-          <button>Update Cart</button>
-          <button>Close Coupon</button>
-        </div>
-
-        <div className={style.purpose4}>
-          <h1>Order Summary</h1>
-          <div className={style.chnge3}>
-            <p>Subtotal</p>
-            <p>${subtotal.toFixed(2)}</p>
+          <div className={style.purpose5}>
+          <button className={style.btwn}>clear Cart</button>
+          <button className={style.btwn}>Continue Shopping</button>
           </div>
+          <div className={style.purpose3}>
+            <h1>Order Summary</h1>
+            <div className={style.subtotal}>
+              <p>Subtotal</p>
+              <p>${subtotal.toFixed(2)}</p>
+            </div>
+            <div className={style.chnge9}>
+              <p>shipping</p>
+              <p>free</p>
+            </div>
+            <div className={style.chnge16}>
+              <p>Total</p>
+              <p>${subtotal.toFixed(2)}</p>
+            </div>
+            <button onClick={()=>navigate("./productcheckout")} className={style.proceed}>Proceed To Checkout</button>
+          </div>
+       
         </div>
-      </div>
-
-      <div className={style.wrap}>
-        {/* You can put shipping details or promo code input here */}
-      </div>
-
-      <div className={style.unner}>
-        <button>Continue Shopping</button>
-        <button>Proceed to Checkout</button>
-      </div>
     </div>
+      </div>
   );
 };
 

@@ -427,7 +427,7 @@
 /* for cart */
 
 .Cart{
-    height: 240vh;
+    height: 190vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -438,17 +438,17 @@
 }
 
 .Cart1{
-    height: 20%;
+    height: 10%;
     width: 100%;
     display: flex; 
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
-    
+
 }
 
 .style{
-  height: 110%;
+  height: 60%;
   width: 40%;
   display: flex;
   align-items: center;
@@ -460,9 +460,8 @@
 
   h2 {
     margin: 0;
-    margin-top: 40px;
-    font-weight: 100;
-    font-size: 15px
+    font-weight: 900;
+    font-size: 23px
   }
 }
 
@@ -474,14 +473,13 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
-    background: white;
-    padding: 20px;
+    background: rgb(255,255,255);
+    
 }
 
 .purpose{
-    height: 50%;
-    width: 100%;
-    /* background: blue; */
+    height: 15%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -492,22 +490,11 @@
     }
 }
 
-.chnge{
-    height: 50%;
-    width: 40%;
-    /* background: rgb(0, 255, 149); */
-    display: flex;
-    color: grey;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 100px;
-    font-size: 15px;
-}
+
 
 .purpose1{
-    height: 100%;
+    height: 20%;
     width: 100%;
-    /* background: blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -524,7 +511,6 @@
 .chnge1{
     height: 50%;
     width: 40%;
-    /* background: rgb(0, 255, 149); */
     display: flex;
     color: grey;
     align-items: center;
@@ -533,161 +519,160 @@
     font-size: 15px;
 }
 
+.chnge1 button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .chnge1 span {
+    font-weight: bold;
+  }
+  
+  .chnge1 button:last-child {
+    color: white;
+  }
 
-.purpose2{
-    height: 100%;
+.buttondiv{
+    height: 60%;
     width: 100%;
-    /* background: red; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
-    padding: 20px;
 
-    & h1 {
-        font-size: 15px;
-        font-weight: 90;
-
-    }
 }
+
+
 
 .chnge2{
     height: 50%;
     width: 40%;
-    /* background: rgb(0, 255, 149); */
     display: flex;
     color: grey;
     align-items: center;
     justify-content: flex-end;
     gap: 100px;
     font-size: 15px;
+    background: #000;
 }
 
+
 .herosection{
-    height: 100%;
+    height: 50%;
     width: 100%;
-    /* background: violet; */
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    justify-content: space-between;
+    padding: 33px;
+}
+
+
+.purpose5{
+    height: 80%;
+    width: 40%;
+    display: flex;
+    gap: 10px;
+
+}
+
+.purpose3{
+    height: 84%;
+    width: 25%;
+    background: rgb(245,245,247);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+
+    & h1 {
+        font-size: 20px;
+        color: white;
+        font-weight: 100;
+        padding: 15px;
+        color: black;
+    }
+}
+
+.subtotal{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.chnge9{
+    height: 15%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid gray;
+}
 
-    
-    & button {
-        height: 40%;
-        width: 15%;
-        border-radius: 20px;
-        background: red;
-        color: white;
-        border: none;
-        outline: none;
-    }
+.chnge16{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
-    .herosection button::before {
+
+.proceed{
+    height: 17%;
+    width: 80%;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btwn {
+    height: 17%;
+    width: 35%;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    outline: none;
+    gap: 10px;
+    background: red;
+    font-size: 12px;
+}
+.btwn::before {
         content: "";
         position: absolute;
         top: 0;
         left: -100%;
         width: 100%;
         height: 80%;
-        background: red;
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: left 0.3s ease-in-out;
+        background: red;
     }
     
-    .herosection button:hover::before {
+ .btwn:hover::before {
         left: 0;
     }
     
-     & herosection.button:hover {
+.btwn:hover {
         box-shadow: rgb(246, 245, 245) 0px 20px 50px 4px;
     }
     
-    
-}
 
 
-    
-.purpose4{
-    height: 100%;
-    width: 100%;
-    /* background: yellow; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
-    padding: 20px;
-    font-size: 1px;
 
-}
-
-.chnge3{
-    height: 50%;
-    width: 40%;
-    /* background: rgb(0, 255, 149); */
-    display: flex;
-    color: grey;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 100px;
-    font-size: 14px;
-    font-weight: 80;
-}
-   
-.wrap{
-        height:55% ;
-        width: 100%;
-        display: flex; 
-        flex-direction: column;
-        align-items: center; 
-        justify-content: center; 
-        background: purple;
-        border-bottom: 1px solid gray;
-    }
-    
    
     
-.unner{
-        height:19% ;
-        width: 100%;
-        display: flex; 
-        gap: 4px;
-        align-items: center; 
-        background: white;
-
-
-        & button {
-            height: 30%;
-            width: 15%;
-            border-radius: 20px;
-            background: red;
-            color: white;
-            border: none;
-            outline: none;
-        }
-        
-    }
     
-    .chnge1 button {
-        padding: 5px 10px;
-        margin: 0 5px;
-        background: #f2f2f2;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      .chnge1 span {
-        font-weight: bold;
-      }
-      
-      .chnge1 button:last-child {
-        background-color: red;
-        color: white;
-      }
+    
       
     
     /* for login */
@@ -1103,8 +1088,7 @@ a {
 
 .checkoutwrapper {
     width: 100%;
-    height: 310vh;
-    /* background-color: pink; */
+    height: 210vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1115,7 +1099,7 @@ a {
 
  .checkoutwrapperbody {
     width: 100%;
-    height: 25%;
+    height: 15%;
     background-color: #f2e9d8;
     color: rgb(62, 61, 61);
     text-align: center;
@@ -1133,18 +1117,6 @@ a {
     
 }
 
-.checkouttextwrapper {
-    width: 20%;
-    height: max-content;
-    /* background-color: blueviolet; */
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    gap: 10px;
-    color: rgb(118, 117, 117);
-    font-size: 15px;
-    cursor: pointer;
-} 
 
 
 /* General Styles */
@@ -1153,7 +1125,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110%;
+    height: 40%;
     background: white;
     font-family: Arial, sans-serif;
   }
@@ -1180,24 +1152,21 @@ a {
 
 .returningcustomer{
     height: 90%;
-    width: 96%;
-    /* background: red; */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 8px;
-    padding: 10px;
 }
 
 .returningcustomer1{
-    height: 8%;
+    height: 18%;
     width: 94%;
     background: rgb(244,244,244);
     display: flex;
     align-items: center;
     padding-top: 20px;
-    /* justify-content: center; */
 
     & p {
         font-size: 12px;
@@ -1207,9 +1176,8 @@ a {
 }
 
 .text{
-    height: 12%;
+    height: 18%;
     width: 94%;
-    /* background: blueviolet; */
     display: flex;
     align-items: center;
      font-size: 12px;
@@ -1219,7 +1187,7 @@ a {
 
 
 .input{
-    height: 14%;
+    height: 22%;
     width: 94%;
     /* background: pink; */
     display: flex;
@@ -1247,59 +1215,21 @@ a {
     gap: 6px;
 
     & button {
-        height: 70%;
+        height: 100%;
         width: 10%;
         border-radius: 20px;
         outline: none;
         border: none;
         background: red;
         color: white;
+        cursor: pointer;
     }
 
 
     & label {
         font-size: 13px;
         color: gray;
-    }
-}
-
-
-
-  .cuppon{
-    height: 8%;
-    width: 94%;
-    background: rgb(244,244,244);
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-    gap: 10px;
-    /* justify-content: center; */
-
-    & p {
-        font-size: 12px;
-        padding: 8px;
-        gap: 10px;
-
-
-    }
-}
-
-
-.input2{
-    height: 14%;
-    width: 94%;
-    /* background: peru; */
-    display: flex;
-    align-items: center;
-
-    & input {
-        height: 70%;
-        width: 60%;
-        padding: 10px;
-        font-size: 13px;
-        border: 1px solid gray;
-        outline: none;
-
+        cursor: pointer;
     }
 }
 
@@ -1307,7 +1237,6 @@ a {
 .button{
     height: 14%;
     width: 94%;
-    /* background: pink; */
     display: flex;
     align-items: center;
 
@@ -1324,9 +1253,8 @@ a {
 
 
 .hold{
-    height: 250%;
+    height: 70%;
     width: 100%;
-    /* background: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1335,7 +1263,6 @@ a {
 .billing{
     height: 95%;
     width: 65%;
-    /* background: pink; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1344,21 +1271,20 @@ a {
 
 
 .bilng0{
-    height: 10%;
+    height: 13%;
     width: 97%;
-    /* background: red; */
+    font-size: 20px;
 }
 
 .bilng2{
     height: 24%;
     width: 97%;
-    /* background: yellow; */
     display: flex;
     align-items: center;
     gap: 10px;
 
     & input {
-        height: 50%;
+        height: 65%;
         width: 47%;
         border: 1px solid gray;
         padding: 10px;
@@ -1366,14 +1292,13 @@ a {
 }
 
 .billing3{
-    height: 17%;
+    height: 23%;
     width: 97%;
-    /* background: blue; */
     display: flex;
     align-items: center;
 
     & input {
-        height: 65%;
+        height: 70%;
         width: 95%;
         border: 1px solid gray;
         padding: 10px;
@@ -1390,7 +1315,7 @@ a {
     gap: 10px;
 
     & input {
-        height: 50%;
+        height: 65%;
         width: 47%;
         border: 1px solid gray;
         padding: 10px;
@@ -1405,157 +1330,62 @@ a {
     align-items: center;
 
     & input {
-        height: 50%;
-        width: 95%;
-        outline: none;
-        border: 1px solid gray;
-        padding: 10px;
-        border-radius: 35px;
-    }
-}
-
-
-
-
-.billing6{
-    height: 23%;
-    width: 97%;
-    /* background: blue; */
-    display: flex;
-    align-items: center;
-
-    & input {
-        height: 60%;
+        height: 55%;
         width: 95%;
         outline: none;
         border: 1px solid gray;
         padding: 10px;
     }
 }
-
-
-
-
-.billing7{
-    height: 23%;
-    width: 97%;
-    /* background: blue; */
-    display: flex;
-    align-items: center;
-
-    & input {
-        height: 60%;
-        width: 95%;
-        outline: none;
-        border: 1px solid gray;
-        padding: 10px;
-    }
-}
-
-
 
 
 .billing8{
     height: 23%;
     width: 97%;
-    /* background: blue; */
     display: flex;
     align-items: center;
 
     & input {
-        height: 60%;
+        height: 65%;
         width: 95%;
         outline: none;
         border: 1px solid gray;
         padding: 10px;
     }
 }
-
-
-
-
-.billing9{
-    height: 35%;
-    width: 97%;
-    /* background: blue; */
-    display: flex;
-    align-items: center;
-
-    & input {
-        height: 48%;
-        width: 95%;
-        outline: none;
-        border: 1px solid gray;
-        padding: 10px;
-        border-radius: 35px;
-    }
-}
-
-
-
-
-.billing10{
-   
-        height: 23%;
-        width: 97%;
-        /* background: blue; */
-        display: flex;
-        align-items: center;
-    
-        & input {
-            height: 60%;
-            width: 95%;
-            outline: none;
-            border: 1px solid gray;
-            padding: 10px;
-        }
-}
-
-
-
-
 
 
 
 .billing12{
-    height: 23%;
-    width: 97%;
-    /* background: blue; */
-    display: flex;
-    align-items: center;
-
-}
-
-
-
-
-.billing13{
-    height: 60%;
-        width: 100%;
-        /* background: blue; */
+   
+        height: 60%;
+        width: 47%;
         display: flex;
         align-items: center;
-    
-         & input {
-            height: 90%;
-            width: 99%;
+        flex-direction: column;
+}
+        .botton {
+            width: 40%;
+            height: 25%;
+            border-radius: 20px;
             outline: none;
-            border: 1px solid gray;
-            padding: 10px;
-        }  
+            border: none;
+            background: red;
+            cursor: pointer;
+        }
+
+.payment{
+    font-size: 20px;
+    font-weight: 900;
 }
 
-
-
-
-
-
-
-
  .order{ 
-    height: 80%;
+    height: 40%;
     width: 30%;
-    background: purple;
+    background: rgb(245,245,247);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 

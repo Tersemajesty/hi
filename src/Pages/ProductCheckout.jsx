@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import style from "./Pages.module.css"
 
 const ProductCheckout = () => {
+  const navigate = useNavigate()
   return (
     <div className={style.checkoutwrapper}>
       <div className={style.checkoutwrapperbody}>
         <h2>Checkout</h2>
-        <div className={style.checkouttextwrapper}>
-          <p className={style.hometext}>Home</p>
-          <p>Checkout</p>
-        </div>
+        
       </div>
 
       <div className={style.container}>
@@ -31,22 +29,9 @@ const ProductCheckout = () => {
              placeholder="password" />
           </div>
           <div className={style.logGEDin}>
-          <button>Login</button>
-          {/* <div className="checkbox-container"> */}
+          <button onClick={()=>navigate("./login")}>Login</button>
             <input type="checkbox" id="create-account" />
             <label htmlFor="create-account">Create an account?</label> 
-           {/* </div>  */}
-
-          </div>
-          <div className={style.cuppon}>
-         <p>Have a coupon?<Link to="/login">Click here to Enter code</Link></p>
-          </div>
-          <div className={style.input2}>
-                <input type="text"
-                placeholder="Enter  cuppon code" />
-          </div>
-          <div className={style.button}>
-              <button> Apply coppon</button>
           </div>
       </div>
 
@@ -54,7 +39,7 @@ const ProductCheckout = () => {
     <div className={style.hold}>
           <div className={style.billing}>               
                 <div className={style.bilng0}>
-                <p>Billing Details</p>
+                <p>Shipping Details</p>
                 </div>
 
                 <div className={style.bilng2}>
@@ -80,41 +65,21 @@ const ProductCheckout = () => {
                 <input type="text"
                   placeholder="Country" />
                 </div>
-                <div className={style.billing6}>
-                    <input type="text"
-                    placeholder="Adress line 01" />
-                </div>
-                <div className={style.billing7}>
-                <input type="text"
-                    placeholder="Adress line 02" />
-                </div>
                 <div className={style.billing8}>
                 <input type="text"
-                    placeholder="Town/ city" />
+                    placeholder="postal code" />
                 </div>
-                <div className={style.billing9}>
-                 <input type="text"
-                    placeholder="District" />
-                </div>
-                <div className={style.billing10}>
-                <input type="text"
-                    placeholder="PostCode/Zip" />
-                </div>
-            
-                <div className={style.billing12}>
-                    <p>Shipping Details</p>
-                </div>
-                <div className={style.billing13}>
-                <input type="text"
-                placeholder="Order Notes" />
-                </div>
-                <div className={style.billing14}>
-
+                  <div className={style.billing12}>
+                    <p className={style.payment}>Payment</p>
+                    <button className={style.botton}>place order</button>
                 </div>
              
           </div>
           <div className={style.order}>
-
+          <p>Order summary</p>
+          <div>
+            
+          </div>
           </div>
     </div>
     </div>
