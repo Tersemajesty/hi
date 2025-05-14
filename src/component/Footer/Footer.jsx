@@ -39,7 +39,7 @@ const Footer = () => {
          </div>
          <div className={styles.footerText1}>
             <div className={styles.footeriner1}>
-               <img src="public/loder.png.webp" alt="" />
+               <img src="/images/loder.png.webp" alt="" />
                 <header>Capital <strong>Shop</strong></header>
             </div>
             <div className={styles.footeriner2}>

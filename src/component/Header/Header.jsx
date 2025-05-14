@@ -64,7 +64,7 @@ const Header = () => {
       
       <div className="Header">
         <div className="Logoimg">
-          <img src="src/assets/logo.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
+          <img src="/images/logo.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
         </div>
 
         <div className="Categories">

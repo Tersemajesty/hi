@@ -227,9 +227,9 @@
     align-items: center;
     gap: 20px;
 }
-.men { background-image: url(../assets/Nav1.webp); }
-.women { background-image: url(../assets/fashion.jpeg); }
-.baby { background-image: url(../assets/baby.jpeg); }
+.men { background-image: url(../images/Nav1.webp); }
+.women { background-image: url(../images/fashion.jpeg); }
+.baby { background-image: url(../images/baby.jpeg); }
 
 
 
