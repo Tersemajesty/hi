@@ -1,8 +1,9 @@
-
-export const BabyCollection = () => {
+import React from 'react'
+import style from "./Pages.module.css";
+ const BabyCollection = () => {
     return (
-        <div>
-            ygygycgyc
+        <div className={style.baby}>
+           
         </div>
     )
 }

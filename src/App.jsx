@@ -12,6 +12,9 @@ import Categories from "./Pages/Categories"
 import { useState, useEffect } from "react"
 import Loader from "./component/Loader/Loader"
 import ProductCheckout from "./Pages/ProductCheckout";
+import  Men from "./Pages/Men";
+import Women from "./Pages/Women";
+import BabyCollection from "./Pages/BabyCollection";
 
 
 const router = createBrowserRouter([
@@ -22,14 +25,13 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "productCheckout", element: <ProductCheckout /> },
-      // { path: "blog", element: <Blog /> },
       { path: "page", element: <Page /> },
       { path: "user", element: <User /> },
       { path: "categories", element: <Categories /> },
       // { path: "contact", element: <Contact /> },
-      // { path: "men", element: <men /> },
-      // { path: "women", element: <women /> },
-      // { path: "babycollection", element: <babycollection /> },
+      { path: "men", element: <Men /> },
+      { path: "women", element: <Women /> },
+      { path: "babycollection", element: <BabyCollection /> },
       { path: "ProductDetails", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
 

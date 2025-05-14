@@ -57,11 +57,6 @@ import { toast } from 'react-toastify';
                   value={password} 
                   onChange={(e)=> setPassword(e.target.value)}/>
                </div>
-               <div className={style.signupform3}>
-               <h1>Confirm Password</h1>
-                  <input type="text" 
-                  placeholder='Confirm Password'/>
-               </div>
                <div className={style.signupform4}>
                          <NavLink to={"/Login"}>
                          <h1>Already have an account <strong>Login here</strong></h1>

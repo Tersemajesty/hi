@@ -125,10 +125,12 @@ color: rgb(245, 17, 17);
 .showdropdown1 li{
   list-style-type: none;
   cursor: pointer;
+  font-weight: 600;
 }
 .showdropdown1 li:hover{
    color: red;
    transform: scale(1.03);
+   font-weight: 600
 }
 
 .showdropdown2{

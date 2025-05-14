@@ -1,8 +1,9 @@
-
+import React from 'react'
+import style from "./Pages.module.css"
  const Women = () => {
     return (
-        <div>
-            uygygytgyu76i
+        <div className={style.women}>
+            
         </div>
     )
 }

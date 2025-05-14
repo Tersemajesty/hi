@@ -18,7 +18,6 @@ import { toast } from "react-toastify";
        e.preventDefault();
        try{
       const response = await axios.post(url,{password,email,baseUrl})
-      // toast.success(response?.data?. message )
       console.log(response)
       if (response?.status === 200) {
             localStorage.setItem("token", JSON.stringify(response?.data?.token))

@@ -7,6 +7,8 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { GiBank } from "react-icons/gi";
 import { TbClock24 } from "react-icons/tb";
 import { getAllProduct } from "../auth/Api";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -32,38 +34,50 @@ const testimonials = [
     name: "Michael Brown",
     stack: "Business Owner",
   },
+  {
+    text: "Amazing customer experience and fast delivery. I’ll definitely shop again!",
+    image: "src/assets/ceo.webp",
+    name: "Sarah Lee",
+    stack: "E-commerce Manager",
+  },
+  {
+    text: "Very user-friendly and reliable. The attention to detail is impressive.",
+    image: "src/assets/ceo.webp",
+    name: "Daniel Ek",
+    stack: "UX Researcher",
+  },
 ];
 
 
 
 const images9 = [
-  { url: "src/assets/Carousel1.webp" },
-  { url: "src/assets/Carousel2.webp" },
-  { url: "src/assets/Carousel3.webp" },
-  { url: "src/assets/Carousel4.webp" },
-  { url: "src/assets/Carousel4.webp" },
-  { url: "src/assets/Carousel5.webp" },
-  { url: "src/assets/Carousel2.webp" },
-  { url: "src/assets/Carousel4.webp" },
-  { url: "src/assets/Carousel5.webp" },
-  { url: "src/assets/Carousel1.webp" },
-  { url: "src/assets/Carousel1.webp" },
-  { url: "src/assets/Carousel1.webp" },
+  { url: "src/assets/men1.jpeg" },
+  { url: "src/assets/img2.jpeg" },
+  { url: "src/assets/img5.jpeg" },
+  { url: "src/assets/img6.jpeg" },
+  { url: "src/assets/men1.jpeg" },
+  { url: "src/assets/men2.jpeg" },
+  { url: "src/assets/men3.jpeg" },
+  { url: "src/assets/men5.jpeg" },
+  { url: "src/assets/img11.jpeg" },
+  { url: "src/assets/img12.jpeg" },
+  { url: "src/assets/men5.jpeg" },
+  { url: "src/assets/img5.jpeg" },
 ];
 
 const youLikeImages = [
-  { url: "src/assets/youlike1.webp" },
-  { url: "src/assets/youlike1.webp" },
-  { url: "src/assets/youlike2.webp" },
+  { url: "src/assets/swim1.jpeg" },
+  { url: "src/assets/swim2.jpeg" },
+  { url: "src/assets/swim3.jpeg" },
   { url: "src/assets/youlike3.webp" },
-  { url: "src/assets/youlike3.webp" },
+  { url: "src/assets/swim4.jpeg" },
   { url: "src/assets/youlike4.webp" },
-  { url: "src/assets/youlike5.webp" },
-  { url: "src/assets/youlike5.webp" },
+  { url: "src/assets/swim5.jpeg" },
+  { url: "src/assets/swim1.jpeg" },
   { url: "src/assets/youlike6.webp" },
-  { url: "src/assets/youlike9.webp" },
+  { url: "src/assets/swim6.jpeg" },
   { url: "src/assets/youlike8.webp" },
-  { url: "src/assets/youlike7.webp" },
+  { url: "src/assets/swim2.jpeg" },
 ];
 
 
@@ -98,6 +112,7 @@ const Home = () => {
     );
   };
 
+ 
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   const incrementTestimonial = () => {
@@ -106,11 +121,22 @@ const Home = () => {
     );
   };
 
+
   const decrementTestimonial = () => {
     setCurrentTestimonialIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
+
+  useEffect(() => {
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonialIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 7000); 
+
+    return () => clearInterval(testimonialInterval);
+  }, [testimonials.length]);
 
 // State for trending carousel
 const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
@@ -168,11 +194,22 @@ useEffect(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // console.log(currentIndex)
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    toast.success("Added to cart");
+    position: "top-right";
+    autoClose: 2000;
+    setTimeout(() => {
+      navigate("/");
+    }, 1500); 
+  };
+  
    
 
   return (
     <div className="HomeWrapper">
+      <ToastContainer/>
            <div className="first">
       <nav className="navbar">
         <h5>Period Offer <span className="spam">Shop Now</span> </h5>
@@ -208,7 +245,7 @@ useEffect(() => {
         <div className="category-box men">
           <div className="text-container1">
             <h1>Men’s Fashion</h1>
-            <p className="shop-now">Shop Now</p>
+            <p  onClick={()=>navigate("./Men")} className="shop-now">Shop Now</p>
           </div>
         </div>
 
@@ -216,7 +253,7 @@ useEffect(() => {
         <div className="category-box women">
           <div className="text-container1">
             <h1>Women’s Fashion</h1>
-            <p className="shop-now">Shop Now</p>
+            <p onClick={()=>navigate("./Women")} className="shop-now">Shop Now</p>
           </div>
         </div>
 
@@ -224,7 +261,7 @@ useEffect(() => {
         <div className="category-box baby">
           <div className="text-container1">
             <h1>Baby’s Fashion</h1>
-            <p className="shop-now">Shop Now</p>
+            <p onClick={()=>navigate("./BabyCollection")} className="shop-now">Shop Now</p>
           </div>
         </div>
       </div>
@@ -232,7 +269,7 @@ useEffect(() => {
     <div className="carousel9-section">
   {/* Header Section */}
   <div className="carousel9-header">
-    <h2>Trending This Week</h2>
+    <h2>Trendings This Week</h2>
     <div className="category9-links">
       <a href="#">Men</a>
       <a href="#">Women</a>
@@ -241,10 +278,8 @@ useEffect(() => {
     </div>
   </div>
   
-  {/* Gray Separator Line */}
   <div className="separator9-line"></div>
 
-  {/* Carousel */}
   <div className="carousel9-container">
     <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button>
     <div className="carousel9">
@@ -258,7 +293,7 @@ useEffect(() => {
               {/* Hover Box */}
               <div className="hover9-box">
                 <div className="icon9-container">
-                  <FaShoppingCart className="icon9" />
+                  <FaShoppingCart className="icon9" onClick={handleAddToCart} />
                 </div>
                 <div className="icon9-container">
                   <FaHeart className="icon9" />
@@ -307,6 +342,10 @@ useEffect(() => {
             <p className="profile-stack">
               {testimonials[currentTestimonialIndex].stack}
             </p>
+           
+          <button className="nav-button right-btn" onClick={incrementTestimonial}>
+            {/* <FaChevronRight /> */}
+          </button>
           </div>
         </div>
       </div>
@@ -345,7 +384,7 @@ useEffect(() => {
                   {/* Hover Box */}
                   <div className="hover9-box">
                     <div className="icon9-container">
-                      <FaShoppingCart className="icon9" />
+                      <FaShoppingCart onClick={handleAddToCart} className="icon9" />
                     </div>
                     <div className="icon9-container">
                       <FaHeart className="icon9" />
@@ -368,45 +407,7 @@ useEffect(() => {
         <button className="nav9-button right9-btn" onClick={nextCarouselSlide2}>❯</button>
       </div>
     </div>
-      <div className="LatestNews">
-        <div className="Latestnewswrapper">
-       <div className="latestnewsimgandtext">
-        <div className="Latestnewsimghlder">
-          <img src="src/assets/like1.webp" alt="" className="latestnewsImage" />
-        </div>
-        <div className="latestNewsletter">
-
-        <p>Fashion Tips</p>
-        <h3>What Curling Irons Are The Best Ones</h3>
-        <p>Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <h5>Read More</h5>
-        </div>
-       </div>
-       <div className="latestnewsimgandtext">
-        <div className="Latestnewsimghlder2">
-          <img src="src/assets/like2.webp" alt=""  className="latestnewsImage" />
-        </div>
-        <div className="latestNewsletter">
-
-        <p>Fashion Tips</p>
-        <h3>Vogues Ultimate Guide To Autumn/ Winter 2019 Shoes</h3>
-        <p>Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <h5>Read More</h5>
-        </div>
-       </div>
-       <div className="latestnewsimgandtext">
-        <div className="Latestnewsimghlder">
-          <img src="src/assets/like3.webp" alt="" className="latestnewsImage" />
-        </div>
-        <div className="latestNewsletter">
-        <p>Fashion Tips</p>
-        <h3>What Curling Irons Are The Best Ones</h3>
-        <p>Consectetur adipisicing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus..</p>
-        <h5>Read More</h5>
-        </div>
-       </div>
-       </div>
-      </div>
+      
       <div className="Mainbody">
       <div className="Wrap1er">
          <div className="downicon">

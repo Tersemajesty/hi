@@ -64,15 +64,15 @@ const Header = () => {
       
       <div className="Header">
         <div className="Logoimg">
-          <img src="src/assets/logo.webp" alt="logo" className="CapitalLogo" />
+          <img src="src/assets/logo.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
         </div>
 
         <div className="Categories">
           <ul className="ul-header">
-            <li className="li-header" onClick={() => navigate("/Home")}>Home</li>
-            <li className="li-header">Men</li>
-            <li className="li-header">Women</li>
-            <li className="li-header">Baby Collections</li>
+            <li className="li-header" onClick={() => navigate("./")}>Home</li>
+            <li className="li-header" onClick={()=> navigate("./men")}>Men</li>
+            <li className="li-header" onClick={()=>navigate("./women")}>Women</li>
+            <li className="li-header" onClick={()=>navigate("./babycollection")}>Baby Collections</li>
 
             {/* Pages Dropdown */}
             <li 
@@ -99,7 +99,7 @@ const Header = () => {
 
                   <NavLink to={"productcheckout"}>
 
-                  <li>Product Checkout</li>
+                  <li>ProductCheckout</li>
                   </NavLink>
                 </ul>
               )}
@@ -165,7 +165,7 @@ const Header = () => {
       </div>
       <div className="menuhld">
         <div className="menu">
-          <span onClick={toggleMenu}>MENU</span>
+          <span onClick={toggleMenu}></span>
           <RxHamburgerMenu onClick={toggleMenu} />
         </div>
       </div>

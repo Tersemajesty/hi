@@ -1,6 +1,5 @@
 import styles from "./Pages.module.css";
 import { FaShareAlt } from "react-icons/fa";
-// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const ProductDetails = () => {
   return (

@@ -212,17 +212,19 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
+    /* padding: 20px; */
 
 }
 
 .signupContainer{
-    height: 110%;
+    height: 105%;
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding: 0px; */
     flex-direction: column;
-    /* background: red; */
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -415,6 +417,11 @@
     justify-content: center;
     background-color: white;
 }
+
+
+
+
+
 
 
 /* for cart */
@@ -665,6 +672,24 @@
         
     }
     
+    .chnge1 button {
+        padding: 5px 10px;
+        margin: 0 5px;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .chnge1 span {
+        font-weight: bold;
+      }
+      
+      .chnge1 button:last-child {
+        background-color: red;
+        color: white;
+      }
+      
     
     /* for login */
 .login{
@@ -1825,3 +1850,20 @@ descriptiondetails :hover {
     cursor: pointer;
 }
 
+.men{
+    background: pink;
+    height: 100vh;
+    width: 100%;
+}
+
+.women{
+    background: green;
+    height: 100vh;
+    width: 100%;
+}
+
+.baby{
+    background: green;
+    height: 100vh;
+    width: 100%;
+}

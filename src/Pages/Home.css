@@ -228,8 +228,8 @@
     gap: 20px;
 }
 .men { background-image: url(../assets/Nav1.webp); }
-.women { background-image: url(../assets/Nav2.webp); }
-.baby { background-image: url(../assets/Nav3.webp); }
+.women { background-image: url(../assets/fashion.jpeg); }
+.baby { background-image: url(../assets/baby.jpeg); }
 
 
 
@@ -275,6 +275,7 @@
   color: white;
   width: 100%;
   transition: transform 0.5s ease-in-out;
+  cursor: pointer;
     }
 
 .text-container1 p {
@@ -385,7 +386,6 @@
   .separator9-line {
     width: 100%;
     height: 2px;
-    background: gray;
     margin-bottom: 20px;
   }
   
@@ -395,6 +395,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    
   }
   
   .carousel9 {
@@ -414,12 +415,18 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    height: 80%;
+    width: 100%;
   }
   
   .image9-container img {
     width: 100%;
     display: block;
     transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   
   }
   
   .image9-container:hover img {
@@ -520,13 +527,15 @@
 
   .testimony-container {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background: #F3EAD8;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* position: relative; */
+    gap: 25px;
 }
 
 .testimony-header {
@@ -537,17 +546,20 @@
 }
 
 .testimony-subtext {
-    font-size: 16px;
+    font-size: 15px;
     color: gray;
     margin-bottom: 20px;
+    font-family: "Phudu", serif;
+
 }
 
 .testimony-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 80%;
-    height: auto;
+    height: 50%;
 }
 
 .testimony-content {
@@ -556,7 +568,7 @@
 }
 
 .testimony-text {
-    font-size: 20px;
+    font-size: 15px;
     color: #333;
     line-height: 1.5;
     margin-bottom: 15px;
@@ -567,13 +579,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 20%;
+    width: 60%;
+    left: 90px;
+    position: relative;
 }
 
 .profile-image {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin-right: 15px;
+    top:  90px;
 }
 
 .profile-name {
@@ -588,7 +605,7 @@
 
 /* Navigation Buttons */
 .nav-button {
-    background: none;
+    background: transparent;
     border: none;
     font-size: 28px;
     cursor: pointer;
@@ -603,6 +620,7 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.5s ease-in-out forwards;
+    
 }
 
 @keyframes fadeIn {
@@ -615,94 +633,6 @@
         transform: translateY(0);
     }
 }
-.LatestNews{
-    width: 100%;
-    height: max-content;
-    /* background-color: #333; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;
-    background-color: rgb(243, 241, 237);
-}
-
-.Latestnewswrapper{
-    width: 80%;
-    height: 90%;
-    /* background-color: aqua; */
-    margin-left: 50px;
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: space-between;
-}
-
-.latestnewsimgandtext{
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    /* background-color: brown; */
-
-}
-
-.latestnewsimgandtext h3:hover{
-    color: red;
-    cursor: pointer;
-}
-
-.Latestnewsimghlder{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: chartreuse; */
-    
-}
-
-.latestnewsImage{
-    width: 100%;
-    height: 370px;
-    
-}
-
-
-.latestNewsletter{
-    width: 100%;
-    height: max-content;
-    font-size: 14px;
-    font-weight: smaller;
-    /* gap: 20px; */
-    display: flex;
-    flex-direction: column;
-    /* background-color: aqua; */
-    /* background: grey; */
-    font-family: sans-serif, cursive, Arial, Helvetica, sans-serif;
-
-    & h3{
-      font-size: 20px;
-    }
-}
-
-
-.latestNewsletter h5{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    cursor: pointer;
-    font-size: 15px;
-    margin: 0;
-    padding-bottom: 10px;
-    transform: scaleX(1);
-}
-
-.latestNewsletter h5:hover{
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    text-underline-offset: 8px;
-    transform: scaleY(1.07);
-    /* color: red; */
-}
-
 
 .Mainbody{
     width: 100%;
@@ -810,7 +740,6 @@
   .navbar{
     width: 100%;
     height: 5vh;
-    /* background: green; */
     /* font-size: 14px; */
   }
   .navbar p {
@@ -838,11 +767,13 @@
   
   /* Hero Section: 100% width and 70% height of viewport */
   .hero-section {
-    width: 100%;
+    width: 90%;
     height: 70vh;
+    left: 20px;
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
+    /* background: #000; */
   }
   
   .text-container {
