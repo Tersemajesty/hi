@@ -1,17 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Pages.module.css";
 import { FaShareAlt } from "react-icons/fa";
 
 const ProductDetails = () => {
-
+const navigate = useNavigate()
   
   return (
     <div className={styles.productwrapper}>
       <div className={styles.productdetailsbody}>
         <h2>Product Details</h2>
-        <div className={styles.textwrapper}>
-          <p className={styles.hometext}>Home</p>
-          <p>Product Details</p>
-        </div>
       </div>
       <div className={styles.detailwrapper}>
         <div className={styles.detailproductimage}>
@@ -29,16 +26,13 @@ const ProductDetails = () => {
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star"></i>
                 <i className="fas fa-star-half-alt"></i>
-                <p className={styles.reviewcounts}>(120 Reviews)</p>
               </div>
             </div>
             <div className={styles.buttonwrapper}>
               <div className={styles.buttoncart}>
-                <p>Add To Cart</p>
+                <p onClick={()=>navigate("./cart")}>Add To Cart</p>
               </div>
-              <button className={styles.sharebtn}>
-                <FaShareAlt/>
-              </button>
+            
             </div>
           </div>
         </div>
@@ -46,9 +40,7 @@ const ProductDetails = () => {
       <div className={styles.descriptionwrapper}>
         <div className={styles.descriptiondetails}>
           <h5 color="red"> Description </h5>
-          <h5>Author</h5>
-          <h5>Comments</h5>
-          <h5>Reviews</h5>
+          
         </div>
         <div className={styles.descriptiontext}>
           <p className={styles.descriptiontextbox}>

@@ -271,10 +271,10 @@ useEffect(() => {
   <div className="carousel9-header">
     <h2>Trendings This Week</h2>
     <div className="category9-links">
-      <a href="#">Men</a>
-      <a href="#">Women</a>
-      <a href="#">Baby</a>
-      <a href="#">Favorites</a>
+      <a onClick={()=>navigate("./men")} href="#">Men</a>
+      <a onClick={()=>navigate("./women")} href="#">Women</a>
+      <a onClick={()=>navigate("./babycollection")} href="#">Baby</a>
+      <a  onClick={()=>navigate("./favorites")} href="#">Favorites</a>
     </div>
   </div>
   
@@ -298,9 +298,7 @@ useEffect(() => {
                 <div className="icon9-container">
                   <FaHeart className="icon9" />
                 </div>
-                <div className="icon9-container">
-                  <FaSearch className="icon9" />
-                </div>
+               
               </div>
             </div>
             {/* Product Name & Price */}
@@ -317,7 +315,7 @@ useEffect(() => {
   </div>
 </div>
 <div className="testimony-container">
-    <h2 className="testimony-header">Customer Testimonial</h2>
+    <h2 className="testimony-header">Clients review</h2>
     <p className="testimony-subtext">What our customers are saying</p>
 
     <div className="testimony-wrapper">
@@ -360,10 +358,10 @@ useEffect(() => {
       <div className="carousel9-header">
         <h2>You May Also Like</h2>
         <div className="category9-links">
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">Baby</a>
-          <a href="#">Favorites</a>
+          <a onClick={()=>navigate("./men")} href="#">Men</a>
+          <a onClick={()=>navigate("./women")}href="#">Women</a>
+          <a onClick={()=>navigate("./babycollection")}href="#">Baby</a>
+          <a onClick={()=>navigate("./favorites")}href="#">Favorites</a>
         </div>
       </div>
       
