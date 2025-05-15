@@ -35,14 +35,28 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 10px;
+  cursor: pointer;
   /* background: #9c2d2d; */
+
+  & header {
+    font-size: 25px;
+    font-weight: 700;
+  color: black;}
+
+& strong {
+    font-size: 15px;
+    color: red;
+}
 }
 .CapitalLogo{
-  width: 160px;
-  height: 39px;
+  width: 25%;
+  height: 90%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+
+  
 }
 
 .Categories{

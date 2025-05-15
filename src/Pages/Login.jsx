@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
  const Login = () => {
       const[password, setPassword] = useState ("")
       const[email, setEmail] = useState ("")
+      const [error, setError] = useState({});
       console.log(email)
       const navigate = useNavigate()
 
@@ -16,19 +17,39 @@ import { toast } from "react-toastify";
       const baseUrl = 'http://localhost:9898'
       const handleLogin = async (e) =>{
        e.preventDefault();
+
+       const newErrors = {};
+       if (!email.trim()) newErrors.email = "Email is required";
+       if (!password.trim()) newErrors.password = "Password is required";
+
+            setError(newErrors);
+            if (Object.keys(newErrors).length > 0) return;
+
        try{
       const response = await axios.post(url,{password,email,baseUrl})
       console.log(response)
       if (response?.status === 200) {
             localStorage.setItem("token", JSON.stringify(response?.data?.token))
             toast.success("Login Successful");
-            navigate('/home')
+            navigate('/')
        }
+
+       setEmail("");
+       setPassword("");
        } catch(err){
           console.log(err);
           toast.error("Account already exist ");
         }
       }
+
+      const inputStyle = (field) => ({
+        border: error[field] ? '2px solid red' : '1px solid #ccc',
+        padding: '10px',
+        borderRadius: '5px',
+        width: '100%',
+        marginBottom: '5px',
+      });
+
     return (
         <div className={style.login}>
             <div className={style.login1}>
@@ -41,15 +62,22 @@ import { toast } from "react-toastify";
                         <input type="text"
                         placeholder=" Email Address"
                         value={email}
-                        onChange={(e) => setEmail(e .target.value)} />
+                        onChange={(e) => setEmail(e .target.value)}
+                        style={{ ...inputStyle("email") }}
+                         />
+                        {error.email && <span style={{ color: 'red' }}>{error.email}</span>}
                   </div>
+
              <div className={style.login4}>
                   <h1>Passwords</h1>
                         <input type="text"
                         placeholder="Enter Password"
                         value={password}
-                        onChange={(e) => setPassword(e .target.value)} /> 
+                        onChange={(e) => setPassword(e .target.value)}
+                        style={inputStyle(password)} /> 
+                                  {errors.name && <small style={{ color: 'red' }}>{errors.name}</small>}
                   </div>
+                  
                   <div className={style.login5}>
                   <div className={style.remember}>
               <input type="checkbox"  id="remember" />

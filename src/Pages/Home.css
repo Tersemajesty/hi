@@ -782,6 +782,24 @@
     /* Ensure animation and transition remain the same */
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
+
+  .carousel9-header{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .category9-links{
+    gap: 20px;
+    width: 60%;
+  }
+
+  .carousel9-container{
+    background: #000;
+  }
+
+  .carousel9{
+    background: #000;
+  }
   .navbaricons1{
     display: none;
     opacity: 1;

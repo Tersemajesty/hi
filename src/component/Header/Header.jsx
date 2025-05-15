@@ -64,7 +64,8 @@ const Header = () => {
       
       <div className="Header">
         <div className="Logoimg">
-          <img src="/images/logo.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
+          <img src="/images/loder.png.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
+          <header onClick={()=> navigate("./")}>Fashion <strong>Hub</strong></header>
         </div>
 
         <div className="Categories">
@@ -144,11 +145,9 @@ const Header = () => {
           </div>
         )}
           </i>
-          <NavLink to={"login"}>
           <i className="i-nav">
-            <CgProfile />
+            <CgProfile onClick={()=>navigate("/profilepage")} />
             </i>
-          </NavLink>
 
           <NavLink to={"Cart"}>
           <i className="i-nav">

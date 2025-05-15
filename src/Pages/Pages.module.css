@@ -1539,12 +1539,6 @@ p {
     box-shadow: rgb(246, 245, 245) 0px 20px 50px 4px;
 }
 
-
-
-
-
-
-
 .descriptionwrapper {
     width: 80%;
     height: 400px;
@@ -1602,4 +1596,23 @@ descriptiondetails :hover {
     background: green;
     height: 100vh;
     width: 100%;
+}
+
+.ProfilePage{
+    height: 100vh;
+    width: 100%;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfilePage__container{
+    height: 90%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+     border-radius: 10px;
 }

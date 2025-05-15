@@ -40,7 +40,7 @@ const Footer = () => {
          <div className={styles.footerText1}>
             <div className={styles.footeriner1}>
                <img src="/images/loder.png.webp" alt="" />
-                <header>Capital <strong>Shop</strong></header>
+                <header>Fashion <strong>Hub</strong></header>
             </div>
             <div className={styles.footeriner2}>
             <h2>Shop Men</h2>

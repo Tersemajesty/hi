@@ -95,7 +95,7 @@ const Cart = () => {
               <p>Total</p>
               <p>${subtotal.toFixed(2)}</p>
             </div>
-            <button onClick={()=>navigate("./productcheckout")} className={style.proceed}>Proceed To Checkout</button>
+            <button onClick={()=>navigate("/productcheckout")} className={style.proceed}>Proceed To Checkout</button>
           </div>
        
         </div>

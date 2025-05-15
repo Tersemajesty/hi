@@ -15,6 +15,8 @@ import ProductCheckout from "./Pages/ProductCheckout";
 import  Men from "./Pages/Men";
 import Women from "./Pages/Women";
 import BabyCollection from "./Pages/BabyCollection";
+import PrivateRoute from "./Route/PrivateRoute";
+import ProfilePage from "./Pages/ProfilePage";
 
 
 const router = createBrowserRouter([
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
 
     children: [
       { path: "/", element: <Home /> },
+      {element: <PrivateRoute />,
+        children: [
+          {path: "/productCheckout",
+          element: <ProductCheckout/>},
+          {
+            path: "/profilepage",
+            element: <ProfilePage />,
+          }
+        ]
+      },
       { path: "productCheckout", element: <ProductCheckout /> },
       { path: "page", element: <Page /> },
       { path: "user", element: <User /> },
