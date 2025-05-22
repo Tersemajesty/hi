@@ -74,8 +74,8 @@ import { toast } from "react-toastify";
                         placeholder="Enter Password"
                         value={password}
                         onChange={(e) => setPassword(e .target.value)}
-                        style={inputStyle(password)} /> 
-                                  {errors.name && <small style={{ color: 'red' }}>{errors.name}</small>}
+                        style={inputStyle("password")} /> 
+                                  {error.name && <small style={{ color: 'red' }}>{error.name}</small>}
                   </div>
                   
                   <div className={style.login5}>

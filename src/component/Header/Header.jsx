@@ -172,9 +172,9 @@ const Header = () => {
         <div className="categorymenu">
           <div className="menudownheder">
             <div className="menudown" onClick={() => navigate("/")}>Home</div>
-            <div className="menudown">Men</div>
-            <div className="menudown">Women</div>
-            <div className="menudown">Baby Collection</div>
+            <div className="menudown"onClick={()=>navigate("./men")} >Men</div>
+            <div className="menudown"onClick={()=>navigate("./women")}>Women</div>
+            <div className="menudown"onClick={()=>navigate("./babycollection")}>Baby Collection</div>
             <div className="menudown" onClick={togglePageDropdown}>
               Page <IoIosArrowDown />
               {showPageDropdown && (
