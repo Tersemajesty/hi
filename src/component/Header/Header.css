@@ -40,6 +40,7 @@
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  font-family: sans-serif;
   align-items: center;
   gap: 10px;
   cursor: pointer;
@@ -48,11 +49,16 @@
   & header {
     font-size: 25px;
     font-weight: 700;
-  color: black;}
+  color: black;
+  font-family: sans-serif;
+}
+  
 
 & strong {
     font-size: 15px;
     color: red;
+    font-family: sans-serif;
+
 }
 }
 .CapitalLogo{

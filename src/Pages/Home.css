@@ -730,6 +730,22 @@
 
 }
 
+
+.carousel9-container{
+  background: red;
+  height: 60%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;}
+
+.carousel9{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+  background: pink;
+  flex-direction: row;
+}
   .hero-section {
     width: 100%;
     height: 60vh; /* 60% of the viewport height */
@@ -793,13 +809,7 @@
     width: 60%;
   }
 
-  .carousel9-container{
-    background: #000;
-  }
-
-  .carousel9{
-    background: #000;
-  }
+  
   .navbaricons1{
     display: none;
     opacity: 1;

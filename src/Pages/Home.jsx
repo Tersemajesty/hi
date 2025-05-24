@@ -282,7 +282,7 @@ useEffect(() => {
 
   <div className="carousel9-container">
     <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button>
-    <div className="carousel9">
+    <div className="carousel9" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
       {images9
         .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
         .map((image, index) => (
