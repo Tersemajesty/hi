@@ -156,12 +156,12 @@ const trendingNextSlide = () => {
 
 const images = [
   {
-    url: "src/assets/navbar.jpg",
+    url: "/images/navbar.jpg",
     align: "left",
     h1:'Minimal Menz Style',
   },
   {
-    url: "src/assets/navbar2.jpg",
+    url: "/images/navbar2.jpg",
     align: "right",
     h1:'Minimal Woman Wears'
   },

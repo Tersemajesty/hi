@@ -5,6 +5,12 @@
   align-items: center;
   justify-content: center;
   background-color: white; 
+  position: sticky;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* position: fixed; */
+  top: -10px; /* Start slightly above */
+  z-index: 1000;
+  transition: top 30s ease;
   /* border-bottom: 1px solid grey; */
 }
 

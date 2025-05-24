@@ -9,6 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const url = "https://capitalshop-3its.onrender.com/api/users/register";
 
@@ -23,7 +24,7 @@ const Signup = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length > 0) return;
-
+    setLoading(true);
     try {
       const response = await axios.post(url, { name, email, password });
       toast.success(response?.data?.message);
@@ -37,6 +38,8 @@ const Signup = () => {
     } catch (err) {
       console.log(err);
       toast.error("Signup failed. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -96,7 +99,7 @@ const Signup = () => {
           <NavLink to={"/Login"}>
             <h1>Already have an account <strong>Login here</strong></h1>
           </NavLink>
-          <button onClick={handleSignup}>Sign-up</button>
+          <button onClick={handleSignup} disabled={loading}> {loading ?"signing up..." : "sign up"}</button>
         </div>
       </div>
     </div>

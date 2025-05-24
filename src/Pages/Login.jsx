@@ -8,6 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState({});
+  const [loading,setLoading] = useState("");
   console.log(email);
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const Login = () => {
     setError(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
+    setLoading(true);
     try {
       const response = await axios.post(url, { password, email, baseUrl });
       console.log(response);
@@ -36,7 +38,10 @@ const Login = () => {
       setPassword("");
     } catch (err) {
       console.log(err);
-      toast.error("Account already exist ");
+      toast.error("Login failed ");
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -97,7 +102,7 @@ const Login = () => {
               Dont have an account ? <strong>Sign up</strong> here
             </h1>
           </NavLink>
-          <button onClick={handleLogin}>Login</button>
+          <button onClick={handleLogin} disabled={loading}> {loading ?" Logging in....." : "Login"}</button>
         </div>
       </div>
     </div>
