@@ -734,17 +734,14 @@
 .carousel9-container{
   background: red;
   height: 60%;
-  overflow: hidden;
   width: 100%;
-  position: relative;}
+}
 
 .carousel9{
   height: 90%;
   width: 100%;
-  display: flex;
-  transition: transform 0.5s ease;
   background: pink;
-  flex-direction: row;
+  flex-direction: r;
 }
   .hero-section {
     width: 100%;
