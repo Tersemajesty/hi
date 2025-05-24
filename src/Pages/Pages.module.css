@@ -1,212 +1,7 @@
-/* for login */
-
-.login{
-    height: 125vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 30px;
-
-}
-
-.login1{
-    height: 105%;
-    width: 60%;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    gap: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-}
-
-.login2{
-    height: 25%;
-    width: 95%;
-    /* background: red; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    /* padding: 10px; */
-
-
-
-    & strong{
-        font-size: 25px;
-        color: black;
-        font-weight: 100;
-    
-    }
-    & h1{
-        font-size: 50px;
-        color: black;
-        font-weight: 100;
-
-    
-}
-}
-
-.login3{
-    height: 18%;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    gap: 13px;
-    justify-content: center;
-
-    & h1{
-        font-size: 15px;
-        color: black;
-        font-weight: 100;
-    }
-
-    & input{
-        height: 90%;
-        width: 94%;
-        border-radius: 3px;
-        outline: none;
-        font-weight: 100;
-        font-size: 20px;
-        border: 1px solid gray;
-        padding: 14px;
-    }
-
-
-}
-
-.login4{
-    height: 18%;
-    width: 95%;
-    /* background: blue;        */
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    gap: 13px;
-    justify-content: center;
-
-    & h1{
-        font-size: 20px;
-        color: black;
-        font-weight: 100;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    }
-
-    & input{
-        height: 90%;
-        width: 94%;
-        font-weight: 90;
-        border-radius: 3px;
-        outline: none;
-        border: 0.5px solid gray;
-        padding: 14px;
-        font-size: 20px;
-    }
-}
-
-.login5{
-    height: 10%;
-    width: 95%;
-    /* background: pink; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-
-
-.login7{
-    height: 90%;
-    width: 30%;
-    /* background: purple; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 100;
-    font-size: 20px;
-
-}
-
-.remember {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* background: #000; */
-    cursor: pointer;
-    justify-content: center;
-  }
-
-  .remember label, .login  {
-    color: #888;
-    font-weight: 100;
-    font-size: 20px;
-  }
-
-  a {
-    color:red;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 100;
-  }
-
-.login6{
-    height: 30%;
-    width: 95%;
-    /* background: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-
-    & Link {
-        font-size: 17px;
-        color: black;
-        display: flex;
-        
-    }
-
-    & h1 {
-        font-size: 15px;
-        color: black;
-        font-weight: 100;
-    }
-
-    & strong {
-        font-size: 15px;
-        color: red;
-        font-weight: 100;
-    }
-
-    & button {
-        height: 40%;
-        width: 21%;
-        background: red;
-        border: none;
-        outline: none;
-        color: white;
-        font-weight: 90;
-        cursor: pointer;
-    }
-}
-
-
-
-
-
-
 /* for signup */
 
 .signup{
-    height: 140vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -217,8 +12,8 @@
 }
 
 .signupContainer{
-    height: 105%;
-    width: 60%;
+    height: 100%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,7 +48,7 @@
 }
 
 .signupform{
-    height: 14%;
+    height: 20%;
     width: 80%;
     /* background: red; */
     display: flex;
@@ -283,7 +78,7 @@
 }
 
 .signupform1{
-    height: 14%;
+    height: 20%;
     width: 80%;
     /* background: red; */
     display: flex;
@@ -312,7 +107,7 @@
 }
 
 .signupform2{
-    height: 14%;
+    height: 20%;
     width: 80%;
     /* background: red; */
     display: flex;
@@ -386,6 +181,7 @@
         color: white;
         border: none;
         outline: none;
+        border-radius: 10px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 100;
     }
@@ -422,18 +218,16 @@
 
 
 
-
-
 /* for cart */
 
 .Cart{
-    height: 190vh;
+    height: 200vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(243,234,216);
+    background: rgb(243,234,216);   
     
 }
 
@@ -441,14 +235,13 @@
     height: 10%;
     width: 100%;
     display: flex; 
-    flex-direction: column;
     align-items: center; 
     justify-content: center; 
 
 }
 
 .style{
-  height: 60%;
+  height: 20%;
   width: 40%;
   display: flex;
   align-items: center;
@@ -467,7 +260,7 @@
 
 
 .car2{
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex; 
     flex-direction: column;
@@ -490,11 +283,36 @@
     }
 }
 
+.containerdiv{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.containerdiv1{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
 
 
+.containerdiv2{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
 .purpose1{
-    height: 20%;
-    width: 100%;
+    height: 50%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -560,27 +378,44 @@
 
 
 .herosection{
-    height: 50%;
+    height: 80%;
     width: 100%;
     display: flex;
     align-items: center;
-    /* gap: 10px; */
+    gap: 20px;
     justify-content: space-between;
     padding: 33px;
+    /* background: gray; */
+    flex-direction: column;
 }
 
+.div1{
+    height: 20%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
 
 .purpose5{
     height: 80%;
-    width: 40%;
+    width: 100%;
     display: flex;
     gap: 10px;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
 .purpose3{
-    height: 84%;
-    width: 25%;
+    height: 85%;
+    width: 100%;
     background: rgb(245,245,247);
     display: flex;
     gap: 10px;
@@ -625,7 +460,7 @@
 
 .proceed{
     height: 17%;
-    width: 80%;
+    width: 40%;
     background: red;
     border: none;
     outline: none;
@@ -633,31 +468,19 @@
     cursor: pointer;
 }
 .btwn {
-    height: 17%;
+    height: 30%;
     width: 35%;
     border-radius: 20px;
-    color: white;
+    color: black;
     border: none;
     outline: none;
     gap: 10px;
     background: red;
     font-size: 12px;
+    align-items: center;
+    cursor: pointer;
 }
-.btwn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 80%;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease-in-out;
-        background: red;
-    }
-    
+
  .btwn:hover::before {
         left: 0;
     }
@@ -675,9 +498,9 @@
     
       
     
-    /* for login */
+/* for login  */
 .login{
-    height: 125vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -688,203 +511,8 @@
 }
 
 .login1{
-    height: 105%;
-    width: 60%;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    gap: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-}
-
-.login2{
-    height: 25%;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.login2 strong{
-    font-size: 25px;
-    color: black;
-    font-family: "Space Mono", serif;
-    font-weight: 100;
-}
-
-.login2 h1{
-    font-size: 18px;
-    color: black;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.login3{
-    height: 18%;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    gap: 13px;
-    justify-content: center;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.login3 h1{
-    font-size: 15px;
-    color: black;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.login3 input{
-    height: 90%;
-    width: 94%;
-    border-radius: 3px;
-    outline: none;
-    font-weight: 100;
-    font-size: 10px;
-    border: 1px solid gray;
-    padding: 14px;
-    box-sizing: border-box;
-}
-
-.login4{
-    height: 18%;
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    padding: 2px;
-    gap: 13px;
-    justify-content: center;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.login4 h1{
-    font-size: 15px;
-    color: black;
-    font-weight: 100;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.login4 input{
-    height: 90%;
-    width: 94%;
-    font-weight: 90;
-    border-radius: 3px;
-    outline: none;
-    border: 0.5px solid gray;
-    padding: 14px;
-    font-size: 10px;
-    box-sizing: border-box;
-}
-
-.login5{
-    height: 10%;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.login7{
-    height: 90%;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 100;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.remember {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-}
-
-.remember label, .login  {
-    /* color: #888; */
-    font-weight: 100;
-    font-size: 13px;
-}
-
-a {
-    color:red;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 100;
-}
-
-.login6{
-    height: 30%;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    /* background: #f7f7f7; */
-    border-radius: 10px;
-}
-
-.login6 Link {
-    font-size: 17px;
-    color: black;
-    display: flex;
-}
-
-.login6 h1 {
-    font-size: 15px;
-    color: black;
-    font-weight: 100;
-}
-
-.login6 strong {
-    font-size: 15px;
-    color: red;
-    font-weight: 100;
-}
-
-.login6 button {
-    height: 40%;
-    width: 21%;
-    background: red;
-    border: none;
-    outline: none;
-    color: white;
-    font-weight: 90;
-    border-radius: 10px;
-    cursor: pointer;
-}/* for login */
-.login{
-    height: 125vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.login1{
-    height: 105%;
-    width: 60%;
+    height: 100%;
+    width: 40%;
     display: flex;
     padding: 30px;
     flex-direction: column;
@@ -924,7 +552,7 @@ a {
 }
 
 .login3{
-    height: 18%;
+    height: 25%;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -955,7 +583,7 @@ a {
 }
 
 .login4{
-    height: 18%;
+    height: 25%;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -1071,9 +699,6 @@ a {
 
 
 
-
-
-
 .loader {
     display: flex;
     justify-content: center;
@@ -1082,6 +707,8 @@ a {
     /* background: #000; */
   }
   
+
+
 
 
 /* for ProductCheckout */
@@ -1581,21 +1208,152 @@ descriptiondetails :hover {
 }
 
 .men{
-    background: red;
-    height: 100vh;
+    /* background: red; */
+    height: 230vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* padding-top: 20px; */
+
 }
+
+.menwrap{
+    height: 100%;
+    width: 100%;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menbodywrap{
+    height:90%;
+    width: 95%;
+    /* background: blue; */
+    display: flex;
+}
+
+.menwrap1{
+    height: 100%;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menwrap2{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 
 .women{
-    background: green;
-    height: 100vh;
+    /* background: red; */
+    height: 230vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* padding-top: 20px; */
+
 }
 
-.baby{
-    background: green;
-    height: 100vh;
+.womenwrap{
+    height: 100%;
     width: 100%;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.womenbodywrap{
+    height:90%;
+    width: 95%;
+    /* background: blue; */
+    display: flex;
+}
+
+.womenwrap1{
+    height: 100%;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.womenwrap2{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.baby{
+    /* background: red; */
+    height: 230vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* padding-top: 20px; */
+
+}
+
+.babywrap{
+    height: 100%;
+    width: 100%;
+    /* background: green; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.babybodywrap{
+    height:90%;
+    width: 95%;
+    /* background: blue; */
+    display: flex;
+}
+
+.babywrap1{
+    height: 100%;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.babywrap2{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ProfilePage{
@@ -1615,4 +1373,20 @@ descriptiondetails :hover {
     align-items: center;
     background: rgb(255, 255, 255);
      border-radius: 10px;
+}
+
+.Productdetailpage{
+    height: 100vh;
+    width: 100%;
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Productdetailpagebody{
+    height: 100%;
+    width: 90%;
+    background: red;
 }

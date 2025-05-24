@@ -107,26 +107,9 @@ const Header = () => {
             </li>
 
             {/* Blog Dropdown */}
-            <li 
-              className="li-header"
-              onMouseEnter={() => handleMouseEnter("blog")}
-              onMouseLeave={handleMouseLeave}
-            >
-              Blog 
-              {activeDropdown === "blog" && (
-                <ul 
-                  className="showdropdown2"
-                  onMouseEnter={() => setActiveDropdown("blog")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <li>Blog</li>
-                  <li>Blog Element</li>
-                  <li>Blog Details</li>
-                </ul>
-              )}
-            </li>
+            
 
-            <li className="li-header">Contact</li>
+            
           </ul>
         </div>
 
@@ -136,7 +119,7 @@ const Header = () => {
           <div className="search-dropdown">
             <input
               type="text"
-              placeholder="Search Here"
+              placeholder="Search Here......."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"

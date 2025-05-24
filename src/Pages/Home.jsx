@@ -201,7 +201,7 @@ useEffect(() => {
     position: "top-right";
     autoClose: 2000;
     setTimeout(() => {
-      navigate("/");
+      navigate("/Cart");
     }, 1500); 
   };
   

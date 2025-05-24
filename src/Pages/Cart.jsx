@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "./Pages.module.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import {  useNavigate } from "react-router";
+import Card from "../component/Card/card"
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([
@@ -18,6 +19,13 @@ const Cart = () => {
       quantity: 2,
     },
   ]);
+
+  const images1 = [
+    { url: "/images/img6.jpeg" },
+    { url: "/images/img5.jpeg" },
+    { url: "/images/img6.jpeg" },
+    { url: "/images/img6.jpeg" }
+  ];
 
   const handleIncrease = (id) => {
     setCartItems((prev) =>
@@ -50,10 +58,7 @@ const Cart = () => {
   return (
     <div className={style.Cart}>
       <div className={style.Cart1}>
-        <div className={style.style}>
-          <h2>Your Cart</h2>
-         
-        </div>
+      <h2>Your Cart</h2>
       </div>
 
       <div className={style.car2}>
@@ -61,7 +66,9 @@ const Cart = () => {
           <h1>Products</h1>
         </div>
 
-        {cartItems.map((item) => (
+      <div className={style.containerdiv}>
+      <div className={style.containerdiv2}>
+      {cartItems.map((item) => (
           <div key={item.id} className={style.purpose1}>
             <h1>{item.title}</h1>
             <div className={style.chnge1}>
@@ -75,12 +82,10 @@ const Cart = () => {
             </div>
           </div>
         ))}
+      </div>
 
-        <div className={style.herosection}>
-          <div className={style.purpose5}>
-          <button className={style.btwn}>clear Cart</button>
-          <button className={style.btwn}>Continue Shopping</button>
-          </div>
+        <div className={style.containerdiv1}>
+        
           <div className={style.purpose3}>
             <h1>Order Summary</h1>
             <div className={style.subtotal}>
@@ -97,7 +102,24 @@ const Cart = () => {
             </div>
             <button onClick={()=>navigate("/productcheckout")} className={style.proceed}>Proceed To Checkout</button>
           </div>
-       
+          <div className={style.purpose5}>
+          <button className={style.btwn}>clear Cart</button>
+          <button className={style.btwn}>Continue Shopping</button>
+          </div>
+        </div>
+      </div>
+
+        <div className={style.herosection}>
+        <div className={style.div1}>
+        <h2 className={style.div3}>you may also like</h2>
+        </div>
+       <div className={style.div}>
+       <Card images={images1} title="baby  wears" />
+        <Card images={images1} title="baby  wears" />
+        <Card images={images1} title="baby  wears" />
+        <Card images={images1} title="baby  wears" />
+
+       </div>
         </div>
     </div>
       </div>
