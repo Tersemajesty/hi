@@ -307,14 +307,16 @@
     }
 
     .inpuT{
-        height: 100%;
+        height: 120%;
         width: 90%;
         /* background: brown; */
+        flex-direction: column;
+        gap: 10px;
 
         
     & input{
         height: 60%;
-        width: 70%;
+        width: 90%;
         background: white;
         border: none;
         /* padding: 12px; */
@@ -324,8 +326,8 @@
     }
 
    & button {
-    height: 50%;
-    width: 22%;
+    height: 60%;
+    width: 30%;
     background: red;
     color: black;
     border: none ;
