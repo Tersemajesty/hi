@@ -712,7 +712,7 @@
 
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 738px) {
   .HomeWrapper{
     width: 100%;
     height: max-content;
@@ -727,14 +727,19 @@
 .first{
   width: 100%;
   height: 70vh;
+  background: #000;
 
 }
 
+.hero-section{
+  width: 150vw;
+  height: 8000%;
+  background: palevioletred;
+}
 
 .carousel9-container{
-  background: red;
   height: 60%;
-  width: 100%;
+  width: 100vw;
 }
 
 .carousel9{

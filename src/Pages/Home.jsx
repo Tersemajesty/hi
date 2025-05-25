@@ -218,7 +218,7 @@ useEffect(() => {
 
       <section
         className="hero-section"
-        style={{ backgroundImage: `url(${images[currentIndex].url})` }} >
+        style={{   backgroundImage: `url(${images[currentIndex].url})` }} >
         <div className={`text-container ${images[currentIndex].align}`}>
        
           <h2 className="fade-in h2">Fashion Sale</h2>
