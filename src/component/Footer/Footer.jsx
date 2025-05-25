@@ -72,7 +72,6 @@ const Footer = () => {
                
                <h1>Track your order</h1>
                <h1>FAQ</h1>
-               <h1>Carrier</h1>
                <h1>Contact us</h1>
             </div>
          </div>
