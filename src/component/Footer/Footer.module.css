@@ -350,7 +350,7 @@
     }
 
     .footeriner1{
-        height: 20%;
+        height: 18%;
         width: 90%;
         /* background: green; */
         display: flex;
@@ -362,10 +362,10 @@
 
 
         & img {
-            height: 150%;
+            height: 120%;
             position: relative;
-           bottom:  50px;
-            width: 33%;
+           bottom:  40px;
+            width: 30%;
             /* padding-bottom: 20px; */
             /* background: #000; */
             background-position: center;
@@ -374,7 +374,7 @@
             font-size: 30px;
             color: white;
             position: relative;
-            bottom:  50px;
+            bottom:  40px;
         }
     
         & strong {
