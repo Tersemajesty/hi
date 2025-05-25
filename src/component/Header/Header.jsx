@@ -14,11 +14,11 @@ const Header = () => {
 
   const [menubar, setMenubar] = useState(false);
   const [showPageDropdown, setShowPageDropdown] = useState(false);
-  const [showBlogDropdown, setShowBlogDropdown] = useState(false);
+  const [showMenDropdown, setShowMenDropdown] = useState(false);
 
   const toggleMenu = () => setMenubar(!menubar);
   const togglePageDropdown = () => setShowPageDropdown(!showPageDropdown);
-  const toggleBlogDropdown = () => setShowBlogDropdown(!showBlogDropdown);
+  const toggleDropdown = () => setShowBlogDropdown(!showBlogDropdown);
 
   const  navigate = useNavigate()
   const [showSearch, setShowSearch] = useState(false);
@@ -71,17 +71,69 @@ const Header = () => {
         <div className="Categories">
           <ul className="ul-header">
             <li className="li-header" onClick={() => navigate("./")}>Home</li>
-            <li className="li-header" onClick={()=> navigate("./men")}>Men</li>
-            <li className="li-header" onClick={()=>navigate("./women")}>Women</li>
-            <li className="li-header" onClick={()=>navigate("./babycollection")}>Baby Collections</li>
+            <li
+  className="li-header"
+  onMouseEnter={() => handleMouseEnter("men")}
+  onMouseLeave={handleMouseLeave}>Men {activeDropdown === "men" && (
+    <ul
+      className="showdropdown2"
+      onMouseEnter={() => setActiveDropdown("men")}
+      onMouseLeave={handleMouseLeave}
+    >
+      <li onClick={() => navigate("/senator")}>Senator</li>
+      <li onClick={() => navigate("/casual")}>casual</li>
+      <li onClick={() => navigate("/formal")}>formal outfits</li>
+      <li onClick={() => navigate("/summer")}>summer</li>
+    </ul>
+  )}
+</li>
 
+<li
+  className="li-header"
+  onMouseEnter={() => handleMouseEnter("women")}
+  onMouseLeave={handleMouseLeave}
+>
+  women 
+  
+  {activeDropdown === "women" && (
+    <ul
+      className="showdropdown3"
+      onMouseEnter={() => setActiveDropdown("womwen")}
+      onMouseLeave={handleMouseLeave}
+    >
+      <li onClick={() => navigate("/women/mesh gown")}>mesh gown</li>
+      <li onClick={() => navigate("/women/bubu gown")}>bubu gown</li>
+      <li onClick={() => navigate("/women/dinner gowns")}>dinner gowns</li>
+    </ul>
+  )}
+</li>
+
+<li
+  className="li-header"
+  onMouseEnter={() => handleMouseEnter("babycollection")}
+  onMouseLeave={handleMouseLeave}
+>
+  babycollection 
+  
+  {activeDropdown === "babycollection" && (
+    <ul
+      className="showdropdown4"
+      onMouseEnter={() => setActiveDropdown("babycollection")}
+      onMouseLeave={handleMouseLeave}
+    >
+      <li onClick={() => navigate("/babycollection/ball gowns")}>ball gown</li>
+      <li onClick={() => navigate("/babycollection/summer wears")}>summer wears</li>
+      <li onClick={() => navigate("/babycollection/diapers")}>diapers</li>
+    </ul>
+  )}
+</li>
             {/* Pages Dropdown */}
             <li 
               className="li-header"
               onMouseEnter={() => handleMouseEnter("pages")}
               onMouseLeave={handleMouseLeave}
             >
-              Pages <MdOutlineKeyboardArrowDown size={20} />
+              Pages 
               {activeDropdown === "pages" && (
                 <ul 
                   className="showdropdown1"

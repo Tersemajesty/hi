@@ -14,6 +14,10 @@ import Women from "./Pages/Women";
 import BabyCollection from "./Pages/BabyCollection";
 import PrivateRoute from "./Route/PrivateRoute";
 import ProfilePage from "./Pages/ProfilePage";
+import Senator from "./clothLog/senator";
+import Summer from "./clothLog/summer";
+import Casual from "./clothLog/casual";
+import Formal from "./clothLog/formal";
 
 
 const router = createBrowserRouter([
@@ -39,6 +43,11 @@ const router = createBrowserRouter([
       { path: "babycollection", element: <BabyCollection /> },
       { path: "ProductDetails", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
+      { path: "summer", element: <Summer/>},
+      { path: "senator", element: <Senator/>},
+      { path: "casual", element: <Casual/>},
+      { path: "formal", element: <Formal/>}
+
 
     ],  
   },
