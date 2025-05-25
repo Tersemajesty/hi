@@ -169,17 +169,7 @@ const Header = () => {
                 </ul>
               )}
             </div>
-            <div className="menudown" onClick={toggleBlogDropdown}>
-              Blog <IoIosArrowDown />
-              {showBlogDropdown && (
-                <ul className="dropdown-list">
-                  <li>Blog</li>
-                  <li>Element</li>
-                  <li>Blog Details</li>
-                </ul>
-              )}
-            </div>
-            <div className="menudown">Contact</div>
+            
           </div>
         </div>
       )}

@@ -22,6 +22,13 @@ import Card from "../component/Card/card"
         { url: "/images/senate1.jpeg" },
         { url: "/images/senate1.jpeg" }
       ];
+
+      const images4 = [
+        { url: "/images/casual2.jpeg" },
+        { url: "/images/casual2.jpeg" },
+        { url: "/images/casual2.jpeg" },
+        { url: "/images/casual2.jpeg" }
+      ];
   
   
     return (
@@ -45,10 +52,18 @@ import Card from "../component/Card/card"
           </div>
           <div className={style.menwrap2}>
           <div className={style.menbodywrap}>
-          <Card images={images3} title="Formal Wear" />
-          <Card images={images3} title="Formal Wear" />
-          <Card images={images3} title="Formal Wear" />
-          <Card images={images3} title="Formal Wear" />
+          <Card images={images3} title="senator Wear" />
+          <Card images={images3} title="senator Wear" />
+          <Card images={images3} title="senator Wear" />
+          <Card images={images3} title="senator Wear" />
+          </div>
+          </div>
+          <div className={style.menwrap3}>
+          <div className={style.menbodywrap}>
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
           </div>
           </div>
         </div>

@@ -22,6 +22,13 @@ import Card from "../component/Card/card"
         { url: "/images/mesh2.jpeg" },
         { url: "/images/mesh2.jpeg" }
       ];
+
+      const images4 = [
+        { url: "/images/mesh4.jpeg" },
+        { url: "/images/mesh4.jpeg" },
+        { url: "/images/mesh4.jpeg" },
+        { url: "/images/mesh4.jpeg" }
+      ];
   
   
     return (
@@ -49,6 +56,14 @@ import Card from "../component/Card/card"
           <Card images={images3} title="Formal Wear" />
           <Card images={images3} title="Formal Wear" />
           <Card images={images3} title="Formal Wear" />
+          </div>
+          </div>
+          <div className={style.wmenwrap3}>
+          <div className={style.womenbodywrap}>
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
           </div>
           </div>
         </div>

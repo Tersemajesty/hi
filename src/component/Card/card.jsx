@@ -28,7 +28,7 @@ const card = ({ images = [], title = "Product Name" }) => {
       autoClose: 2000,
     });
     setTimeout(() => {
-      navigate("/Cart");
+      navigate("");
     }, 1500);
   };
 

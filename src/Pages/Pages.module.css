@@ -72,7 +72,7 @@
         border: 1px solid gray;
         font-family: ' sans-serif';
         font-weight: 100;
-        font-size: 12px;
+        font-size: 14px;
 
     }
 }
@@ -101,7 +101,7 @@
         border: 1px solid gray;
         font-family: ' sans-serif';
         font-weight: 100;
-        font-size: 12px;
+        font-size: 14px;
 
     }
 }
@@ -128,7 +128,7 @@
         padding: 20px;
         border-radius: 2px;
         outline: none;
-        font-size: 12px;
+        font-size: 14px;
         border: 1px solid gray;
         font-family: ' sans-serif';
         font-weight: 100;
@@ -403,8 +403,9 @@
 
 .div{
     height: 100%;
-    width: 100%;
+    width: 90%;
     display: flex;
+    /* background: #000; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    /* background: palevioletred; */
 }
 
@@ -581,7 +582,7 @@
     border-radius: 3px;
     outline: none;
     font-weight: 100;
-    font-size: 10px;
+    font-size: 14px;
     border: 1px solid gray;
     padding: 14px;
     /* box-sizing: border-box; */
@@ -614,7 +615,7 @@
     outline: none;
     border: 0.5px solid gray;
     padding: 14px;
-    font-size: 10px;
+    font-size: 14px;
     /* box-sizing: border-box; */
 }
 
@@ -1227,12 +1228,13 @@ descriptiondetails :hover {
 
 .men{
     /* background: red; */
-    height: 230vh;
+    height: 300vh;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    /* background: pink; */
     /* padding-top: 20px; */
 
 }
@@ -1273,12 +1275,21 @@ descriptiondetails :hover {
     justify-content: center;
 }
 
+.menwrap3{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 
 .women{
     /* background: red; */
-    height: 230vh;
+    height: 305vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1324,11 +1335,20 @@ descriptiondetails :hover {
     justify-content: center;
 }
 
+.womenwrap3{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .baby{
     /* background: red; */
-    height: 230vh;
+    height: 300vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1366,6 +1386,15 @@ descriptiondetails :hover {
 
 
 .babywrap2{
+    height: 100%;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.babywrap3{
     height: 100%;
     width: 100%;
     /* background: purple; */

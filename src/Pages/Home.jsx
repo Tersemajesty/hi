@@ -18,31 +18,31 @@ import { useNavigate } from "react-router-dom";
 const testimonials = [
   {
     text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "John Doe",
     stack: "Software Engineer",
   },
   {
     text: "I love how easy it is to use this platform. It has saved me so much time and effort. Highly recommended!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Emily Smith",
     stack: "Product Designer",
   },
   {
     text: "The best investment I have ever made. Their service is top-notch, and I couldn't be happier with the results!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Michael Brown",
     stack: "Business Owner",
   },
   {
     text: "Amazing customer experience and fast delivery. I’ll definitely shop again!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Sarah Lee",
     stack: "E-commerce Manager",
   },
   {
     text: "Very user-friendly and reliable. The attention to detail is impressive.",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Daniel Ek",
     stack: "UX Researcher",
   },
@@ -201,7 +201,7 @@ useEffect(() => {
     position: "top-right";
     autoClose: 2000;
     setTimeout(() => {
-      navigate("/Cart");
+      navigate("/");
     }, 1500); 
   };
   

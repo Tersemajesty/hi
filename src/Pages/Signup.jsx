@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import style from './Pages.module.css';
 import { NavLink } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -53,6 +53,7 @@ const Signup = () => {
 
   return (
     <div className={style.signup}>
+      <ToastContainer/>
       <div className={style.signupContainer}>
         <div className={style.signuphead}>
           <strong>Signup</strong>

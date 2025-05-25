@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from "./Pages.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const [password, setPassword] = useState("");
@@ -55,6 +55,7 @@ const Login = () => {
 
   return (
     <div className={style.login}>
+      <ToastContainer />
       <div className={style.login1}>
         <div className={style.login2}>
           <strong>Login</strong>
@@ -75,7 +76,7 @@ const Login = () => {
         <div className={style.login4}>
           <h1>Passwords</h1>
           <input
-            type="text"
+            type="password"
             placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
