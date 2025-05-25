@@ -1,5 +1,5 @@
 import React from 'react'
-import style from "./clothlog.module.css"
+import style from "./clothLog.module.css"
 
  const Senator = () => {
     return (
