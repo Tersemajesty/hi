@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
-import './card.css';
-import { FaShoppingCart, FaHeart, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import React, { useState } from "react";
+import "./card.css";
+import {
+  FaShoppingCart,
+  FaHeart,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const card = ({ images = [], title = "Product Name" }) => {
   const navigate = useNavigate();
@@ -42,39 +47,39 @@ const card = ({ images = [], title = "Product Name" }) => {
       <div className="card">
         <div className="card-container">
           {images.length > 0 ? (
-            images
-              .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
-              .map((image, index) => (
-                <div key={index} className="cardslide">
-                  <div className="card-image-container">
-                    <img src={image.url} alt={`Slide ${index + 1}`} />
-                    <div className="card-hover9-box">
-                      <div className="card-icon9-container">
-                        <FaShoppingCart
-                          className="card-icon9"
-                          onClick={handleAddToCart}
-                        />
-                      </div>
-                      <div className="icon9-container">
-                        <FaHeart className="icon9" />
-                      </div>
+            images.map((image, index) => (
+              <div key={index} className="cardslide">
+                <div className="card-image-container">
+                  <img src={image.url} alt={`Slide ${index + 1}`} />
+                  <div className="card-hover9-box">
+                    <div className="card-icon9-container">
+                      <FaShoppingCart
+                        className="card-icon9"
+                        onClick={handleAddToCart}
+                      />
+                    </div>
+                    <div className="icon9-container">
+                      <FaHeart className="icon9" />
                     </div>
                   </div>
-                  <div className="card-product9-details">
-                    <h2 className="card-product9-title">{title}</h2>
-                    <p className="card-price9">
-                      $98.00 <span className="card-old9-price">$120.00</span>
-                    </p>
-                  </div>
                 </div>
-              ))
+                <div className="card-product9-details">
+                  <h2 className="card-product9-title">{title}</h2>
+                  <p className="card-price9">
+                    $98.00 <span className="card-old9-price">$120.00</span>
+                  </p>
+                </div>
+              </div>
+            ))
           ) : (
             <p>No products available.</p>
           )}
         </div>
       </div>
 
-      <button className="card-button cardright9-btn" onClick={trendingNextSlide}>
+      <button
+        className="card-button cardright9-btn"
+        onClick={trendingNextSlide}>
         <FaChevronRight />
       </button>
     </div>
