@@ -17,7 +17,7 @@ import ProfilePage from "./Pages/ProfilePage";
 import Summer from "./clothLog/summer";
 import Casual from "./clothLog/casual";
 import Formal from "./clothLog/formal";
-import Senator from "./clothLog/senator";
+// import Senator from "./clothLog/senator";
 
 
 const router = createBrowserRouter([
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       { path: "ProductDetails", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
       { path: "summer", element: <Summer/>},
-      { path: "senator", element: <Senator/>},
+      // { path: "senator", element: <Senator/>},
       { path: "casual", element: <Casual/>},
       { path: "formal", element: <Formal/>}
 
