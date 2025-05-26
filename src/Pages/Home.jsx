@@ -16,12 +16,12 @@ import { useNavigate } from "react-router-dom";
 
 
 const testimonials = [
-  {
-    text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
-    image: "/images/dp.jpeg",
-    name: "John Doe",
-    stack: "Software Engineer",
-  },
+  // {
+  //   text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
+  //   image: "/images/dp.jpeg",
+  //   name: "John Doe",
+  //   stack: "Software Engineer",
+  // },
   {
     text: "I love how easy it is to use this platform. It has saved me so much time and effort. Highly recommended!",
     image: "/images/dp.jpeg",

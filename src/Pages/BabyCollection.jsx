@@ -4,14 +4,14 @@ import Card from "../component/Card/card"
  const BabyCollection = () => {
     const images1 = [
         { url: "/images/img6.jpeg" },
-        { url: "/images/img6.jpeg" },
-        { url: "/images/img6.jpeg" },
+        { url: "/images/baby.jpeg" },
+        { url: "/images/baby2.jpeg" },
         { url: "/images/img6.jpeg" }
       ];
       
       const images2 = [
         { url: "/images/baby2.jpeg" },
-        { url: "/images/baby2.jpeg" },
+        { url: "/images/baby1.jpeg" },
         { url: "/images/baby2.jpeg" },
         { url: "/images/baby2.jpeg" }
       ];
@@ -36,10 +36,9 @@ import Card from "../component/Card/card"
           <div className={style.babywrap}>
           <div className={style.babybodywrap}>
           <Card images={images1} title="baby wears" />
-          <Card images={images1} title="baby Wears" />
           <Card images={images1} title="baby wears" />
           <Card images={images1} title="baby wears" />
-          
+          <Card images={images1} title="baby wears" />
           </div>
           </div>
           <div className={style.babywrap1}>
