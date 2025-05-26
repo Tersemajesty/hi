@@ -14,9 +14,9 @@ import Women from "./Pages/Women";
 import BabyCollection from "./Pages/BabyCollection";
 import PrivateRoute from "./Route/PrivateRoute";
 import ProfilePage from "./Pages/ProfilePage";
-import Summer from "./clothLog/summer";
-import Casual from "./clothLog/casual";
-import Formal from "./clothLog/formal";
+import Summer from "./clothLog/Summer";
+import Casual from "./clothLog/Casual";
+import Formal from "./clothLog/Formal";
 // import Senator from "./clothLog/senator";
 
 
