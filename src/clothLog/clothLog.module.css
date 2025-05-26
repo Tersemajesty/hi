@@ -1,23 +1,217 @@
 .summer{
-    height: 100vh;
+    height: 300vh;
     width: 100%;
-    background: red;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
 }
 
-.senator{
-    height: 100vh;
+.summerContainer{
+    height: 100%;
     width: 100%;
-    background: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
+}
+
+.summerContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.summerContainer2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+
+.summerContainer3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+
+
+
+.senator{
+    height: 300vh;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.senatorContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
+}
+
+.senatorContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.senatorContainer2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+
+.senatorContainer3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
 }
 
 .formal{
-    height: 100vh;
+    height: 300vh;
     width: 100%;
-    background: blue;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
 }
 
-.casual{
-    height: 100vh;
+.formalContainer{
+    height: 100%;
     width: 100%;
-    background: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
 }
+
+.formalContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.formalContainer2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+
+.formalContainer3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+.casual{
+    height: 300vh;
+    width: 100%;
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.casualContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: white; */
+}
+
+.backwardIcon{
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+ 
+
+.casualContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.casualContainer2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+
+.casualContainer3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #000; */
+}
+

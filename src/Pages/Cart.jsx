@@ -116,10 +116,7 @@ const Cart = () => {
        <div className={style.div}>
         
        <Card images={images1} title="baby  wears" />
-        <Card images={images1} title="baby  wears" />
-        <Card images={images1} title="baby  wears" />
-        <Card images={images1} title="baby  wears" />
-
+        
        </div>
         </div>
     </div>

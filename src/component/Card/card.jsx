@@ -9,7 +9,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const card = ({ images, title = "Product Name" }) => {
+const Card = ({ images, title = "Product Name" }) => {
   const navigate = useNavigate();
   const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
 
@@ -33,11 +33,9 @@ const card = ({ images, title = "Product Name" }) => {
       autoClose: 2000,
     });
     setTimeout(() => {
-      navigate("");
+      navigate(""); // Not sure where you want to navigate? Consider removing or updating.
     }, 1500);
   };
-
-  console.log(images);
 
   return (
     <div className="cardwrapper">
@@ -51,7 +49,10 @@ const card = ({ images, title = "Product Name" }) => {
           {images.length > 0 ? (
             images.map((image, index) => (
               <div key={index} className="cardslide">
-                <div className="card-image-container">
+                <div
+                  onClick={() => navigate(`/productdetails/${image.id}`)} // fixed path here!
+                  className="card-image-container"
+                >
                   <img src={image.url} alt={`Slide ${index + 1}`} />
                   <div className="card-hover9-box">
                     <div className="card-icon9-container">
@@ -81,11 +82,12 @@ const card = ({ images, title = "Product Name" }) => {
 
       <button
         className="card-button cardright9-btn"
-        onClick={trendingNextSlide}>
+        onClick={trendingNextSlide}
+      >
         <FaChevronRight />
       </button>
     </div>
   );
 };
 
-export default card;
+export default Card;

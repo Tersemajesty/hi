@@ -1,6 +1,5 @@
 import axios from "axios"
 
-
 const url = "https://capitalshop-3its.onrender.com/api/"
 
 export const getAllProduct = async()=>{
@@ -11,3 +10,5 @@ export const getAllProduct = async()=>{
         console.log(error)
     }
 }
+
+

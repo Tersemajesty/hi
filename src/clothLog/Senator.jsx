@@ -1,11 +1,10 @@
 import React from 'react'
 import style from "./clothLog.module.css"
 import Card from '../component/Card/card'
-import { useNavigate } from 'react-router-dom';
 import { IoArrowUndoSharp } from "react-icons/io5";
 
 
- const Casual = () => {
+ const Senator = () => {
     const images1 = [
         { id:1, url: "/images/casual1.jpeg" },
         { id:2, url: "/images/casual2.jpeg" },
@@ -20,7 +19,7 @@ import { IoArrowUndoSharp } from "react-icons/io5";
         { id:8, url: "/images/casual5.jpeg" },
       ];
 
-      const images3 = [
+       const images3 = [
     {id:10, url: "/images/senate1.jpeg" },
     {id:10, url: "/images/senate2.jpeg" },
     {id:11, url: "/images/senate3.jpeg" },
@@ -33,29 +32,26 @@ import { IoArrowUndoSharp } from "react-icons/io5";
     {id:15, url: "/images/casual7.jpeg" },
     {id:16, url: "/images/casual9.jpeg" },
   ];
-  const navigate = useNavigate()
-
 
     return (
-        <div className={style.casual}>
-        <IoArrowUndoSharp className={style.backwardIcon} size={30} onClick={()=>navigate(-1)}/>
-          
-        <div className={style.casualContainer}>
+        <div className={style.senator}>
+            <IoArrowUndoSharp className={style.backwardIcon} size={30} onClick={()=>navigate(-1)}/>
+            <div className={style.senatorContainer}>
           <Card images={images1} title="baby wears" />
             </div>
 
-            <div className={style.casualContainer1}>
+            <div className={style.senatorContainer1}>
           <Card images={images2} title="baby wears" />
             </div>
 
-            <div className={style.casualContainer2}>
+            <div className={style.senatorContainer2}>
           <Card images={images3} title="baby wears" />
             </div>
 
-            <div className={style.casualContainer3}>
+            <div className={style.senatorContainer3}>
           <Card images={images4} title="baby wears" />
             </div>
         </div>
     )
 }
-export default Casual
+export default Senator

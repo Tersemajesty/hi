@@ -10,9 +10,9 @@ const Women = () => {
   ];
 
   const images2 = [
-    { url: "/images/img5.jpeg" },
-    { url: "/images/img6.jpeg" },
-    { url: "/images/img8.jpeg" },
+    { url: "/images/mesh2.jpeg" },
+    { url: "/images/mesh4.jpeg" },
+    { url: "/images/mesh1.jpeg" },
     { url: "/images/img10.jpeg" },
   ];
 
@@ -25,9 +25,9 @@ const Women = () => {
 
   const images4 = [
     { url: "/images/mesh4.jpeg" },
+    { url: "/images/mesh2.jpeg" },
     { url: "/images/mesh4.jpeg" },
-    { url: "/images/mesh4.jpeg" },
-    { url: "/images/mesh4.jpeg" },
+    { url: "/images/mesh1.jpeg" },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Women = () => {
           <Card images={images2} title="Formal Wear" /> */}
         </div>
       </div>
-      <div className={style.wmenwrap2}>
+      <div className={style.womenwrap2}>
         <div className={style.womenbodywrap}>
           <Card images={images3} title="Formal Wear" />
           {/* <Card images={images3} title="Formal Wear" />
@@ -56,7 +56,7 @@ const Women = () => {
           <Card images={images3} title="Formal Wear" /> */}
         </div>
       </div>
-      <div className={style.wmenwrap3}>
+      <div className={style.womenwrap3}>
         <div className={style.womenbodywrap}>
           <Card images={images4} title="Formal Wear" />
           {/* <Card images={images4} title="Formal Wear" />

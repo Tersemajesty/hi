@@ -17,7 +17,8 @@ import ProfilePage from "./Pages/ProfilePage";
 import Summer from "./clothLog/Summer";
 import Casual from "./clothLog/Casual";
 import Formal from "./clothLog/Formal";
-// import Senator from "./clothLog/senator";
+import SearchResultPage from "./component/Header/SearchResultPage";
+import Senator from "./clothLog/Senator";
 
 
 const router = createBrowserRouter([
@@ -41,12 +42,15 @@ const router = createBrowserRouter([
       { path: "men", element: <Men /> },
       { path: "women", element: <Women /> },
       { path: "babycollection", element: <BabyCollection /> },
-      { path: "ProductDetails", element: <ProductDetails /> },
+      { path: "ProductDetails/:id", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
       { path: "summer", element: <Summer/>},
       // { path: "senator", element: <Senator/>},
       { path: "casual", element: <Casual/>},
-      { path: "formal", element: <Formal/>}
+      { path: "formal", element: <Formal/>},
+      { path: "senator", element: <Senator/>},
+      { path: "search", element: <SearchResultPage/>}
+
 
 
     ],  

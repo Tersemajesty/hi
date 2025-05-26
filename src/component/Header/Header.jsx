@@ -23,6 +23,13 @@ const Header = () => {
   const  navigate = useNavigate()
   const [showSearch, setShowSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const handleSearch =()=>{
+    if (searchTerm.trim()){
+      navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm(""); 
+      setShowSearch(false);
+    }
+  }
 
   const toggleSearch = () => {
     setShowSearch(!showSearch);
@@ -174,6 +181,9 @@ const Header = () => {
               placeholder="Search Here......."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter")handleSearch(); 
+              }}
               className="search-input"
             />
             <FaTimes className="close-icon" onClick={toggleSearch} />
