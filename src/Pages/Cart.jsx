@@ -114,6 +114,7 @@ const Cart = () => {
         <h2 className={style.div3}>you may also like</h2>
         </div>
        <div className={style.div}>
+        
        <Card images={images1} title="baby  wears" />
         <Card images={images1} title="baby  wears" />
         <Card images={images1} title="baby  wears" />

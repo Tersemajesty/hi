@@ -10,10 +10,10 @@ import Card from "../component/Card/card"
       ];
       
       const images2 = [
-        { url: "/images/img5.jpeg" },
-        { url: "/images/img5.jpeg" },
-        { url: "/images/img5.jpeg" },
-        { url: "/images/img5.jpeg" }
+        { url: "/images/baby2.jpeg" },
+        { url: "/images/baby2.jpeg" },
+        { url: "/images/baby2.jpeg" },
+        { url: "/images/baby2.jpeg" }
       ];
 
       const images3 = [
@@ -21,6 +21,13 @@ import Card from "../component/Card/card"
         { url: "/images/baby.jpeg" },
         { url: "/images/baby.jpeg" },
         { url: "/images/baby.jpeg" }
+      ];
+  
+      const images4 = [
+        { url: "/images/baby1.jpeg" },
+        { url: "/images/baby1.jpeg" },
+        { url: "/images/baby1.jpeg" },
+        { url: "/images/baby1.jpeg" }
       ];
   
   
@@ -49,6 +56,14 @@ import Card from "../component/Card/card"
           <Card images={images3} title="Formal Wear" />
           <Card images={images3} title="Formal Wear" />
           <Card images={images3} title="Formal Wear" />
+          </div>
+          </div>
+          <div className={style.babywrap3}>
+          <div className={style.babybodywrap}>
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
+          <Card images={images4} title="Formal Wear" />
           </div>
           </div>
         </div>

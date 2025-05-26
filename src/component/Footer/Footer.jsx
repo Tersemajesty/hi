@@ -18,7 +18,7 @@ const Footer = () => {
             <div className={styles.inpuT}>
               <input type="email"
               placeholder="Enter your Email" />
-              <button>Subscribe</button>
+              <button >Subscribe</button>
             </div>
             <div className={styles.socialMedia}>
             <FaFacebook className={styles.facebook}
@@ -47,7 +47,6 @@ const Footer = () => {
                
                     <h1>Winter</h1>
                     <h1>Summer</h1>
-                    <h1>Clothing Fashion</h1>
                     <h1>Formal</h1>
                     <h1>cashual</h1>
 
@@ -57,7 +56,6 @@ const Footer = () => {
                
                <h1>Winter</h1>
                <h1>Summer</h1>
-               <h1>Clothing Fashion</h1>
                <h1>Formal</h1>
                <h1>cashual</h1>
             </div>
@@ -66,7 +64,6 @@ const Footer = () => {
                
                <h1>Winter</h1>
                <h1>Summer</h1>
-               <h1>Clothing Fashion</h1>
                <h1>Formal</h1>
                <h1>cashual</h1>
             </div>
@@ -74,16 +71,13 @@ const Footer = () => {
             <h2>Quick Links</h2>
                
                <h1>Track your order</h1>
-               <h1>Support</h1>
                <h1>FAQ</h1>
-               <h1>Carrier</h1>
-               <h1>About </h1>
                <h1>Contact us</h1>
             </div>
          </div>
          <div className={styles.footerText2}>
                  <p>
-                 Copyright ©2025 All rights reserved | This template is made with ❤ by <strong>Colorlib </strong>Store
+                 Copyright ©2025 All rights reserved 
                  </p>
          </div>
          

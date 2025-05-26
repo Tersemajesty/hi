@@ -5,6 +5,12 @@
   align-items: center;
   justify-content: center;
   background-color: white; 
+  position: sticky;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* position: fixed; */
+  top: -10px; /* Start slightly above */
+  z-index: 1000;
+  transition: top 30s ease;
   /* border-bottom: 1px solid grey; */
 }
 
@@ -34,6 +40,7 @@
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  font-family: sans-serif;
   align-items: center;
   gap: 10px;
   cursor: pointer;
@@ -42,11 +49,16 @@
   & header {
     font-size: 25px;
     font-weight: 700;
-  color: black;}
+  color: black;
+  font-family: sans-serif;
+}
+  
 
 & strong {
     font-size: 15px;
     color: red;
+    font-family: sans-serif;
+
 }
 }
 .CapitalLogo{
@@ -131,8 +143,8 @@ color: rgb(245, 17, 17);
   padding-bottom: 20px;
   align-items: flex-start;
   top: 90px;
-  right: 190px;
-  border-top: 3px;
+  right:110px;
+  border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -142,7 +154,7 @@ color: rgb(245, 17, 17);
   font-weight: 600;
 }
 .showdropdown1 li:hover{
-   color: red;
+   color: black;
    transform: scale(1.03);
    font-weight: 600
 }
@@ -158,8 +170,9 @@ color: rgb(245, 17, 17);
   padding: 10px;
   padding-bottom: 20px;
   align-items: flex-start;
+  columns: red;
   top: 90px;
-  right: 110px;
+  right: 450px;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
 }
@@ -170,7 +183,63 @@ color: rgb(245, 17, 17);
 }
 
 .showdropdown2 li:hover{
-  color: red;
+  color: black;
+  transform: scale(1.03);
+}
+
+.showdropdown3{
+  width: 16%;
+  height: max-content;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  align-items: flex-start;
+  columns: red;
+  top: 90px;
+  right: 350px;
+  border-top: 3px solid red;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.showdropdown3 li{
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.showdropdown3 li:hover{
+  color: black;
+  transform: scale(1.03);
+}
+
+.showdropdown4{
+  width: 16%;
+  height: max-content;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  align-items: flex-start;
+  columns: red;
+  top: 90px;
+  right: 250px;
+  border-top: 3px solid red;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.showdropdown4 li{
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.showdropdown4 li:hover{
+  color: black;
   transform: scale(1.03);
 }
 

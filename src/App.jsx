@@ -14,7 +14,10 @@ import Women from "./Pages/Women";
 import BabyCollection from "./Pages/BabyCollection";
 import PrivateRoute from "./Route/PrivateRoute";
 import ProfilePage from "./Pages/ProfilePage";
-import { Productdetailpage } from "./Pages/Productdetailpage";
+import Summer from "./clothLog/summer";
+import Casual from "./clothLog/casual";
+import Formal from "./clothLog/formal";
+// import Senator from "./clothLog/senator";
 
 
 const router = createBrowserRouter([
@@ -35,12 +38,16 @@ const router = createBrowserRouter([
         ]
       },
       { path: "productCheckout", element: <ProductCheckout /> },
-      { path: "productdetailpage", element: <Productdetailpage /> },
       { path: "men", element: <Men /> },
       { path: "women", element: <Women /> },
       { path: "babycollection", element: <BabyCollection /> },
       { path: "ProductDetails", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
+      { path: "summer", element: <Summer/>},
+      // { path: "senator", element: <Senator/>},
+      { path: "casual", element: <Casual/>},
+      { path: "formal", element: <Formal/>}
+
 
     ],  
   },

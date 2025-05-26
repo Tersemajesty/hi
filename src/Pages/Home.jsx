@@ -18,31 +18,31 @@ import { useNavigate } from "react-router-dom";
 const testimonials = [
   {
     text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "John Doe",
     stack: "Software Engineer",
   },
   {
     text: "I love how easy it is to use this platform. It has saved me so much time and effort. Highly recommended!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Emily Smith",
     stack: "Product Designer",
   },
   {
     text: "The best investment I have ever made. Their service is top-notch, and I couldn't be happier with the results!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Michael Brown",
     stack: "Business Owner",
   },
   {
     text: "Amazing customer experience and fast delivery. I’ll definitely shop again!",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Sarah Lee",
     stack: "E-commerce Manager",
   },
   {
     text: "Very user-friendly and reliable. The attention to detail is impressive.",
-    image: "/images/ceo.webp",
+    image: "/images/dp.jpeg",
     name: "Daniel Ek",
     stack: "UX Researcher",
   },
@@ -156,12 +156,12 @@ const trendingNextSlide = () => {
 
 const images = [
   {
-    url: "src/assets/navbar.jpg",
+    url: "/images/navbar.jpg",
     align: "left",
     h1:'Minimal Menz Style',
   },
   {
-    url: "src/assets/navbar2.jpg",
+    url: "/images/navbar2.jpg",
     align: "right",
     h1:'Minimal Woman Wears'
   },
@@ -201,7 +201,7 @@ useEffect(() => {
     position: "top-right";
     autoClose: 2000;
     setTimeout(() => {
-      navigate("/Cart");
+      navigate("/");
     }, 1500); 
   };
   
@@ -218,7 +218,7 @@ useEffect(() => {
 
       <section
         className="hero-section"
-        style={{ backgroundImage: `url(${images[currentIndex].url})` }} >
+        style={{   backgroundImage: `url(${images[currentIndex].url})` }} >
         <div className={`text-container ${images[currentIndex].align}`}>
        
           <h2 className="fade-in h2">Fashion Sale</h2>
@@ -282,7 +282,7 @@ useEffect(() => {
 
   <div className="carousel9-container">
     <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button>
-    <div className="carousel9">
+    <div className="carousel9" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
       {images9
         .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
         .map((image, index) => (

@@ -9,7 +9,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const card = ({ images = [], title = "Product Name" }) => {
+const card = ({ images, title = "Product Name" }) => {
   const navigate = useNavigate();
   const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
 
@@ -33,9 +33,11 @@ const card = ({ images = [], title = "Product Name" }) => {
       autoClose: 2000,
     });
     setTimeout(() => {
-      navigate("/Cart");
+      navigate("");
     }, 1500);
   };
+
+  console.log(images);
 
   return (
     <div className="cardwrapper">

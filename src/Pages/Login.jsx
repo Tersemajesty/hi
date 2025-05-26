@@ -2,12 +2,13 @@ import { useState } from "react";
 import style from "./Pages.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState({});
+  const [loading,setLoading] = useState("");
   console.log(email);
   const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const Login = () => {
     setError(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
+    setLoading(true);
     try {
       const response = await axios.post(url, { password, email, baseUrl });
       console.log(response);
@@ -36,7 +38,10 @@ const Login = () => {
       setPassword("");
     } catch (err) {
       console.log(err);
-      toast.error("Account already exist ");
+      toast.error("Login failed ");
+    }
+    finally {
+      setLoading(false);
     }
   };
 
@@ -50,6 +55,7 @@ const Login = () => {
 
   return (
     <div className={style.login}>
+      <ToastContainer />
       <div className={style.login1}>
         <div className={style.login2}>
           <strong>Login</strong>
@@ -70,7 +76,7 @@ const Login = () => {
         <div className={style.login4}>
           <h1>Passwords</h1>
           <input
-            type="text"
+            type="password"
             placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -97,7 +103,7 @@ const Login = () => {
               Dont have an account ? <strong>Sign up</strong> here
             </h1>
           </NavLink>
-          <button onClick={handleLogin}>Login</button>
+          <button onClick={handleLogin} disabled={loading}> {loading ?" Logging in....." : "Login"}</button>
         </div>
       </div>
     </div>
