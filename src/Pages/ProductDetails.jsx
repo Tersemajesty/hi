@@ -1,7 +1,8 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { data, useNavigate, useParams } from "react-router-dom";
 import styles from "./Pages.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -15,7 +16,8 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(url);
-        setProduct(res.data);
+        console.log(res);
+        setProduct(res?.data?.data);
       } catch (err) {
         console.error("Failed to fetch product:", err.message);
       } finally {
@@ -28,6 +30,29 @@ const ProductDetails = () => {
 
   if (loading) return <p>Loading...</p>;
   if (!product) return <p>Product not found.</p>;
+
+  const myToken = localStorage.getItem("token");
+  console.log(myToken);
+  const url1 = `https://capitalshop-3its.onrender.com/api/cart/add`;
+  const addToCart = async () => {
+    console.log(myToken)
+    try {
+      const res = await axios.post(
+        url1,
+        { productId: product._id, quantity: 1 },
+        {
+          headers: { Authorization: `Bearer ${myToken}` },
+        }
+      );
+      console.log(res);
+      toast.success("Product added to cart", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className={styles.productwrapper}>
@@ -42,21 +67,14 @@ const ProductDetails = () => {
           <div className={styles.pricetextholder}>
             {/* Dynamic product data */}
             <h3>{product.name}</h3>
-            <p>{product.author || "Unknown Author"}</p>
+            <p>{product.stock}</p>
             <span>${product.price}</span>
             <div className={styles.review}>
-              <div className={styles.rating}>
-                {/* Optional: replace with real ratings */}
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star"></i>
-                <i className="fas fa-star-half-alt"></i>
-              </div>
+              <p>Reviews: {product.reviews ? product.reviews.length : 0}</p>
             </div>
             <div className={styles.buttonwrapper}>
-              <div className={styles.buttoncart}>
-                <p onClick={() => navigate("/cart")}>Add To Cart</p>
+              <div className={styles.buttoncart} onClick={addToCart}>
+                <p>Add To Cart</p>
               </div>
             </div>
           </div>

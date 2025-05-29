@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./card.css";
 import {
   FaShoppingCart,
@@ -8,34 +8,31 @@ import {
 } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Card = ({ images, title = "Product Name" }) => {
   const navigate = useNavigate();
-  const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
+  const [dataset, setDataset] = useState([]);
 
-  const trendingPages = Math.ceil(images.length / 4 || 1);
+  const [initialIndex, setInitialIndex] = useState(0);
+  const [finalIndex, setFinalIndex] = useState(4);
 
   const trendingPrevSlide = () => {
-    setCurrentTrendingIndex((prev) =>
-      prev === 0 ? trendingPages - 1 : prev - 1
-    );
+    setInitialIndex((prev) => (prev <= 0 ? 0 : prev - 1));
+    setFinalIndex((prev) => (initialIndex <= 0 ? 4 : prev - 1));
   };
 
   const trendingNextSlide = () => {
-    setCurrentTrendingIndex((prev) =>
-      prev === trendingPages - 1 ? 0 : prev + 1
-    );
+    if (finalIndex < images?.length) {
+      setInitialIndex((prev) => prev + 1);
+      setFinalIndex((prev) => prev + 1);
+    }
   };
 
-  const handleAddToCart = () => {
-    toast.success("Added to cart", {
-      position: "top-right",
-      autoClose: 2000,
-    });
-    setTimeout(() => {
-      navigate(""); // Not sure where you want to navigate? Consider removing or updating.
-    }, 1500);
-  };
+  console.log(initialIndex, finalIndex);
+
+ 
+
 
   return (
     <div className="cardwrapper">
@@ -46,30 +43,20 @@ const Card = ({ images, title = "Product Name" }) => {
 
       <div className="card">
         <div className="card-container">
-          {images.length > 0 ? (
-            images.map((image, index) => (
+          {images?.length > 0 ? (
+            images.slice(initialIndex, finalIndex)?.map((item, index) => (
               <div key={index} className="cardslide">
                 <div
-                  onClick={() => navigate(`/productdetails/${image.id}`)} // fixed path here!
+                  onClick={() => navigate(`/productdetails/${item.id}`)}
                   className="card-image-container"
                 >
-                  <img src={image.url} alt={`Slide ${index + 1}`} />
-                  <div className="card-hover9-box">
-                    <div className="card-icon9-container">
-                      <FaShoppingCart
-                        className="card-icon9"
-                        onClick={handleAddToCart}
-                      />
-                    </div>
-                    <div className="icon9-container">
-                      <FaHeart className="icon9" />
-                    </div>
-                  </div>
+                  <img src={item.image} alt={`Slide ${index + 1}`} />
+                  <div className="card-hover9-box"></div>
                 </div>
                 <div className="card-product9-details">
-                  <h2 className="card-product9-title">{title}</h2>
+                  <h2 className="card-product9-title">{item.name}</h2>
                   <p className="card-price9">
-                    $98.00 <span className="card-old9-price">$120.00</span>
+                    $98.00 <span className="card-old9-price">{item.price}</span>
                   </p>
                 </div>
               </div>
