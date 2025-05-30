@@ -84,9 +84,7 @@ const Header = () => {
 
         <div className="Categories">
           <ul className="ul-header">
-            <li className="li-header" onClick={() => navigate("./")}>
-              Home
-            </li>
+            <li className="li-header" onClick={() => navigate("./")}>Home</li>
 
             <li
               className="li-header"
@@ -140,9 +138,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <li onClick={() => navigate("/ball")}>Ball Gown</li>
-                  <li onClick={() => navigate("/summerBabies")}>
-                    Summer Wears
-                  </li>
+                  <li onClick={() => navigate("/summerBabies")}>Summer Wears</li>
                 </ul>
               )}
             </li>
@@ -159,18 +155,10 @@ const Header = () => {
                   onMouseEnter={() => setActiveDropdown("pages")}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <NavLink to={"login"}>
-                    <li>Login</li>
-                  </NavLink>
-                  <NavLink to={"/cart"}>
-                    <li>Cart</li>
-                  </NavLink>
-                  <NavLink to={"/productdetails"}>
-                    <li>Product Details</li>
-                  </NavLink>
-                  <NavLink to={"productcheckout"}>
-                    <li>ProductCheckout</li>
-                  </NavLink>
+                  <NavLink to={"login"}><li>Login</li></NavLink>
+                  <NavLink to={"/cart"}><li>Cart</li></NavLink>
+                  <NavLink to={"/productdetails"}><li>Product Details</li></NavLink>
+                  <NavLink to={"productcheckout"}><li>ProductCheckout</li></NavLink>
                 </ul>
               )}
             </li>
@@ -242,33 +230,18 @@ const Header = () => {
         {menubar && (
           <div className="categorymenu">
             <div className="menudownheder">
-              <div className="menudown" onClick={() => navigate("/")}>
-                Home
-              </div>
-              <div className="menudown" onClick={() => navigate("./men")}>
-                Men
-              </div>
-              <div className="menudown" onClick={() => navigate("./women")}>
-                Women
-              </div>
-              <div
-                className="menudown"
-                onClick={() => navigate("./babycollection")}
-              >
-                Baby Collection
-              </div>
+              <div className="menudown" onClick={() => navigate("/")}>Home</div>
+              <div className="menudown" onClick={() => navigate("./men")}>Men</div>
+              <div className="menudown" onClick={() => navigate("./women")}>Women</div>
+              <div className="menudown" onClick={() => navigate("./babycollection")}>Baby Collection</div>
               <div className="menudown" onClick={togglePageDropdown}>
                 Page <IoIosArrowDown />
                 {showPageDropdown && (
                   <ul className="dropdown-list">
                     <li onClick={() => navigate("/login")}>Login</li>
                     <li onClick={() => navigate("/cart")}>Cart</li>
-                    <li onClick={() => navigate("/productdetails")}>
-                      Product Details
-                    </li>
-                    <li onClick={() => navigate("/productpage")}>
-                      Product Checkout
-                    </li>
+                    <li onClick={() => navigate("/productdetails")}>Product Details</li>
+                    <li onClick={() => navigate("/productpage")}>Product Checkout</li>
                   </ul>
                 )}
               </div>
