@@ -30,11 +30,14 @@ const Cart = () => {
       }
 
       try {
-        const res = await axios.get("https://capitalshop-3its.onrender.com/api/cart", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const res = await axios.get(
+          "https://capitalshop-3its.onrender.com/api/cart",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         const items = res?.data?.items || [];
         setCartItems(items);
@@ -55,7 +58,7 @@ const Cart = () => {
       )
     );
   };
-
+const url1 = "https://capitalshop-3its.onrender.com/api/cart/remove";
   const handleDecrease = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -90,7 +93,7 @@ const Cart = () => {
           <div className={style.containerdiv2}>
             {cartItems.map((item) => (
               <div key={item._id} className={style.purpose1}>
-                <h1>{item.productId?.name }</h1>
+                <h1>{item.productId?.name}</h1>
                 <div className={style.chnge1}>
                   <div className={style.buttondiv}>
                     <button onClick={() => handleDecrease(item._id)}>-</button>
