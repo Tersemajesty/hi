@@ -30,11 +30,14 @@ const Cart = () => {
       }
 
       try {
-        const res = await axios.get("https://capitalshop-3its.onrender.com/api/cart", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const res = await axios.get(
+          "https://capitalshop-3its.onrender.com/api/cart",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         const items = res?.data?.items || [];
         setCartItems(items);
@@ -89,18 +92,22 @@ const Cart = () => {
         <div className={style.containerdiv}>
           <div className={style.containerdiv2}>
             {cartItems.map((item) => (
-              <div key={item._id} className={style.purpose1}>
-                <h1>{item.productId?.name }</h1>
+              <div key={item.product._id} className={style.purpose1}>
+                <h1>{item.product.name}</h1>
                 <div className={style.chnge1}>
                   <div className={style.buttondiv}>
-                    <button onClick={() => handleDecrease(item._id)}>-</button>
+                    <button onClick={() => handleDecrease(item.product._id)}>
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => handleIncrease(item._id)}>+</button>
+                    <button onClick={() => handleIncrease(item.product._id)}>
+                      +
+                    </button>
                   </div>
                   <p className={style.p}>
-                    ${(item.productId?.price * item.quantity).toFixed(2)}
+                    ${(item.product.price * item.quantity).toFixed(2)}
                   </p>
-                  <button onClick={() => handleDelete(item._id)}>
+                  <button onClick={() => handleDelete(item.product._id)}>
                     <RiDeleteBin6Line size={16} style={{ color: "red" }} />
                   </button>
                 </div>
@@ -125,8 +132,7 @@ const Cart = () => {
               </div>
               <button
                 onClick={() => navigate("/productcheckout")}
-                className={style.proceed}
-              >
+                className={style.proceed}>
                 Proceed To Checkout
               </button>
             </div>
