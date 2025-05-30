@@ -40,7 +40,7 @@ const Cart = () => {
         setCartItems(items);
         console.log("Cart response:", res.data);
       } catch (err) {
-        console.error("Failed to fetch cart:", err.response?.data || err.message);
+        console.error("login in first:", err.response?.data || err.message);
         toast.error("Failed to load cart items.");
       }
     };

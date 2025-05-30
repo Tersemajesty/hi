@@ -43,7 +43,7 @@ const Header = () => {
   const handleMouseLeave = () => {
     setTimeout(() => {
       setActiveDropdown(null);
-    }, 5000);
+    }, 50000);
   };
   const [isFixed, setIsFixed] = useState(false);
 
