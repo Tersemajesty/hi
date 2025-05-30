@@ -19,7 +19,7 @@ import Casual from "./clothLog/Casual";
 import Formal from "./clothLog/Formal";
 import SearchResultPage from "./component/Header/SearchResultPage";
 import Senator from "./clothLog/Senator";
-import Mesh from "./clothBlog/mesh";
+import Mesh from "./clothBlog/Mesh";
 import Bubu  from "./clothBlog/Bubu";
 import Dinner from "./clothBlog/Dinner";
 import  Ball from "./clothBabies/Ball";
