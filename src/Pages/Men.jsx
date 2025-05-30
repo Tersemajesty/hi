@@ -1,81 +1,53 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import style from "./Pages.module.css";
 import Card from "../component/Card/card";
 import { IoArrowUndoSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import Loader from "../component/Loader/Loader";
+
 const Men = () => {
-  const url2 = "https://capitalshop-3its.onrender.com/api/products/{id}";
+  const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+  const [loader, setLoader] = useState(true);
+
+  const url =
+    "https://capitalshop-3its.onrender.com/api/products/?category=683706cc812fcbd690f3ab9e&limit=8";
 
   useEffect(() => {
-    const getOneproduct = async (id) => {
+    const fetchProducts = async () => {
       try {
-        const res = await axios.get(`${url2}${id}`);
-        console.log(res.data);
+        const res = await axios.get(url);
+        setProducts(res.data?.data?.products);
+        console.log(res?.data?.data?.products);
+
+        setLoader(false);
       } catch (error) {
-        console.log(error.message);
+        console.error(error.message);
+      } finally {
+        setLoader(false);
       }
     };
-  });
 
-  const images1 = [
-    { id: 1, url: "/images/casual1.jpeg" },
-    { id: 2, url: "/images/casual2.jpeg" },
-    { id: 3, url: "/images/casual3.jpeg" },
-    { id: 4, url: "/images/casual4.jpeg" },
-    { id: 17, url: "/images/casual1.jpeg" },
-    { id: 18, url: "/images/casual2.jpeg" },
-    { id: 19, url: "/images/casual3.jpeg" },
-    { id: 20, url: "/images/casual4.jpeg" },
-  ];
-  const images2 = [
-    { id: 5, url: "/images/vint1.jpeg" },
-    { id: 6, url: "/images/vint2.jpeg" },
-    { id: 7, url: "/images/vint3.jpeg" },
-    { id: 8, url: "/images/casual5.jpeg" },
-  ];
+    fetchProducts();
+  }, []);
 
-  const images3 = [
-    { id: 10, url: "/images/senate1.jpeg" },
-    { id: 10, url: "/images/senate2.jpeg" },
-    { id: 11, url: "/images/senate3.jpeg" },
-    { id: 12, url: "/images/senate4.jpeg" },
-  ];
-
-  const images4 = [
-    { id: 13, url: "/images/casual5.jpeg" },
-    { id: 14, url: "/images/casual6.jpeg" },
-    { id: 15, url: "/images/casual7.jpeg" },
-    { id: 16, url: "/images/casual9.jpeg" },
-  ];
-  const navigate = useNavigate();
-  return (
+  return loader ? (
+    <Loader />
+  ) : (
     <div className={style.men}>
-      <IoArrowUndoSharp
-        className={style.backwardIcon}
-        size={30}
-        onClick={() => navigate(-1)}
-      />
       <div className={style.menwrap}>
-        <div className={style.menbodywrap}>
-          <Card images={images1} title="Casual Wear" />
-        </div>
-      </div>
-      <div className={style.menwrap1}>
-        <div className={style.menbodywrap}>
-          <Card images={images2} title="Formal Wear" />
-        </div>
-      </div>
-      <div className={style.menwrap2}>
-        <div className={style.menbodywrap}>
-          <Card images={images3} title="senator Wear" />
-        </div>
-      </div>
-      <div className={style.menwrap3}>
-        <div className={style.menbodywrap}>
-          <Card images={images4} title="Formal Wear" />
-        </div>
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className={style.menbodywrap}>
+            <Card
+              images={products.slice(i * 4, (i + 1) * 4)}
+              title={`Formals ${i + 1}`}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default Men;

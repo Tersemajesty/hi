@@ -135,7 +135,7 @@
 }
 
 .p {
-  font-size: 16px;
+  font-size: 18px;
   color: gray;
   opacity: 0;
   animation: zoomIn 1s ease-out 0.9s forwards;
@@ -706,14 +706,17 @@
   align-items: center;
   text-align: center;
   padding: 0px 10px 0px 0px;
-  font-family: "jost", sans-serif;
+  font-family:  sans-serif;
+  gap: 10px;
 
   & h3 {
     font-size: 15px;
   }
 
   & p {
-    color: gray;
+    /* color: gray; */
+    font-weight: 400;
+    font-size: 18px;
   }
 }
 

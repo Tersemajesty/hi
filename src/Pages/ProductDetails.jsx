@@ -1,8 +1,9 @@
-import { data, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./Pages.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import Loader from "../component/Loader/Loader";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(url);
-        console.log(res);
+        console.log(res); 
         setProduct(res?.data?.data);
       } catch (err) {
         console.error("Failed to fetch product:", err.message);
@@ -28,34 +29,59 @@ const ProductDetails = () => {
     fetchProduct();
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
-  if (!product) return <p>Product not found.</p>;
-
-  const myToken = localStorage.getItem("token");
-  console.log(myToken);
-  const url1 = `https://capitalshop-3its.onrender.com/api/cart/add`;
   const addToCart = async () => {
-    console.log(myToken)
+    const rawToken = localStorage.getItem("token");
+    const token = rawToken?.replace(/^"(.*)"$/, "$1"); // Removes quotes
+
+    if (!token) {
+      toast.error("You must be logged in to add items to the cart.", {
+        position: "top-right",
+        autoClose: 5000,
+      });
+      return;
+    }
+
     try {
       const res = await axios.post(
-        url1,
-        { productId: product._id, quantity: 1 },
+        "https://capitalshop-3its.onrender.com/api/cart/add",
         {
-          headers: { Authorization: `Bearer ${myToken}` },
+          productId: product._id,
+          quantity: 1,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
-      console.log(res);
-      toast.success("Product added to cart", {
+
+      console.log("Add to cart response:", res.data);
+      toast.success("Product added to cart!", {
         position: "top-right",
         autoClose: 5000,
       });
     } catch (error) {
-      console.log(error);
+      console.error(
+        "Add to cart error:",
+        error.response?.data || error.message
+      );
+      toast.error(
+        error?.response?.data?.message ||
+          "Failed to add to cart. Please try again.",
+        {
+          position: "top-right",
+          autoClose: 5000,
+        }
+      );
     }
   };
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <div className={styles.productwrapper}>
+      <ToastContainer />
       <div className={styles.productdetailsbody}>
         <h2>Product Details</h2>
       </div>
@@ -63,19 +89,16 @@ const ProductDetails = () => {
         <div className={styles.detailproductimage}>
           <img src={product.image} alt={product.name} />
         </div>
-        <div className={styles.pricelistwrap}>
-          <div className={styles.pricetextholder}>
-            {/* Dynamic product data */}
-            <h3>{product.name}</h3>
-            <p>{product.stock}</p>
-            <span>${product.price}</span>
-            <div className={styles.review}>
-              <p>Reviews: {product.reviews ? product.reviews.length : 0}</p>
-            </div>
-            <div className={styles.buttonwrapper}>
-              <div className={styles.buttoncart} onClick={addToCart}>
-                <p>Add To Cart</p>
-              </div>
+        <div className={styles.pricetextholder}>
+          <h3>{product.name}</h3>
+          <p>{product.stock}</p>
+          <span>${product.price}</span>
+          <div className={styles.review}>
+            <p>Reviews: {product.reviews ? product.reviews.length : 0}</p>
+          </div>
+          <div className={styles.buttonwrapper}>
+            <div className={styles.buttoncart} onClick={addToCart}>
+              <p>Add To Cart</p>
             </div>
           </div>
         </div>

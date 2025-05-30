@@ -29,7 +29,7 @@ const Login = () => {
       const response = await axios.post(url, { password, email, baseUrl });
       console.log(response);
       if (response?.status === 200) {
-        localStorage.setItem("token", JSON.stringify(response?.data?.token));
+        localStorage.setItem("token",response?.data?.token);
         toast.success("Login Successful");
         navigate("/");
       }

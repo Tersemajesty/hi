@@ -1,57 +1,52 @@
-import React from 'react'
-import style from "./clothLog.module.css"
-import Card from '../component/Card/card'
+import React, { useEffect } from "react";
+import style from "./clothLog.module.css";
+import Card from "../component/Card/card";
 import { IoArrowUndoSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+import Loader from "../component/Loader/Loader";
+import axios from "axios";
 
+const Summer = () => {
+  const [data, setData] = React.useState([]);
+  const [loader, setLoader] = React.useState(true);
+  const navigate = useNavigate();
+  const url =
+    "https://capitalshop-3its.onrender.com/api/products?category=6837079b812fcbd690f3abaa&limit=12";
+  const getAllSummerProduct = async () => {
+    try {
+      const response = await axios.get(url);
+      setData(response?.data?.data?.products);
+      console.log(response?.data?.data?.products);
+      setLoader(false);
+    } catch (error) {
+      console.log(error);
+      setLoader(false);
+    }
+  };
+  useEffect(() => {
+    getAllSummerProduct();
+  }, []);
+  return loader ? (
+    <Loader />
+  ) : (
+    <div className={style.summer}>
+      <IoArrowUndoSharp
+        className={style.backwardIcon}
+        size={30}
+        onClick={() => navigate(-1)}
+      />
 
- const Summer = () => {
-    const images1 = [
-        { id:1, url: "/images/casual1.jpeg" },
-        { id:2, url: "/images/casual2.jpeg" },
-        { id:3, url: "/images/casual3.jpeg" },
-        { id:4, url: "/images/casual4.jpeg" },
-      ];
-
-      const images2 = [
-        { id:5, url: "/images/vint1.jpeg" },
-        { id:6, url: "/images/vint2.jpeg" },
-        { id:7, url: "/images/vint3.jpeg" },
-        { id:8, url: "/images/casual5.jpeg" },
-      ];
-
-       const images3 = [
-    {id:10, url: "/images/senate1.jpeg" },
-    {id:10, url: "/images/senate2.jpeg" },
-    {id:11, url: "/images/senate3.jpeg" },
-    {id:12, url: "/images/senate4.jpeg" },
-  ];
-
-       const images4 = [
-    {id:13, url: "/images/casual5.jpeg" },
-    {id:14, url: "/images/casual6.jpeg" },
-    {id:15, url: "/images/casual7.jpeg" },
-    {id:16, url: "/images/casual9.jpeg" },
-  ];
-
-    return (
-        <div className={style.summer}>
-          <IoArrowUndoSharp className={style.backwardIcon} size={30} onClick={()=>navigate(-1)}/>
-            <div className={style.summerContainer}>
-          <Card images={images1} title="baby wears" />
-            </div>
-
-            <div className={style.summerContainer1}>
-          <Card images={images2} title="baby wears" />
-            </div>
-
-            <div className={style.summerContainer2}>
-          <Card images={images3} title="baby wears" />
-            </div>
-
-            <div className={style.summerContainer3}>
-          <Card images={images4} title="baby wears" />
-            </div>
-        </div>
-    )
-}
-export default Summer
+      <div className={style.summerContainer3}>
+        {Array.from({ length: Math.ceil(data.length / 4) }).map((_, i) => (
+          <div key={i} className={style.summerContainer1}>
+            <Card
+              images={data.slice(i * 4, (i + 1) * 4)}
+              title={`Summer Collection ${i + 1}`}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+export default Summer;

@@ -1,5 +1,5 @@
 import "./Header.css";
-import {  FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
@@ -9,9 +9,7 @@ import { NavLink, useNavigate } from "react-router";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 
-
 const Header = () => {
-
   const [menubar, setMenubar] = useState(false);
   const [showPageDropdown, setShowPageDropdown] = useState(false);
   const [showMenDropdown, setShowMenDropdown] = useState(false);
@@ -20,28 +18,26 @@ const Header = () => {
   const togglePageDropdown = () => setShowPageDropdown(!showPageDropdown);
   const toggleDropdown = () => setShowBlogDropdown(!showBlogDropdown);
 
-  const  navigate = useNavigate()
+  const navigate = useNavigate();
   const [showSearch, setShowSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const handleSearch =()=>{
-    if (searchTerm.trim()){
+  const handleSearch = () => {
+    if (searchTerm.trim()) {
       navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
-      setSearchTerm(""); 
+      setSearchTerm("");
       setShowSearch(false);
     }
-  }
+  };
 
   const toggleSearch = () => {
     setShowSearch(!showSearch);
     setSearchTerm("");
-
   };
 
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-
   const handleMouseEnter = (dropdownName) => {
-    setActiveDropdown(dropdownName); 
+    setActiveDropdown(dropdownName);
   };
 
   const handleMouseLeave = () => {
@@ -53,7 +49,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 90) { 
+      if (window.scrollY > 90) {
         setIsFixed(true);
       } else {
         setIsFixed(false);
@@ -63,181 +59,200 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
- 
-  
 
   return (
     <div className="Headerwrapper">
-      
       <div className="Header">
         <div className="Logoimg">
-          <img src="/images/loder.png.webp" alt="logo" onClick={()=> navigate("./")} className="CapitalLogo" />
-          <header onClick={()=> navigate("./")}>Fashion <strong>Hub</strong></header>
+          <img
+            src="/images/loder.png.webp"
+            alt="logo"
+            onClick={() => navigate("./")}
+            className="CapitalLogo"
+          />
+          <header onClick={() => navigate("./")}>
+            Fashion <strong>Hub</strong>
+          </header>
         </div>
 
         <div className="Categories">
           <ul className="ul-header">
-            <li className="li-header" onClick={() => navigate("./")}>Home</li>
+            <li className="li-header" onClick={() => navigate("./")}>
+              Home
+            </li>
             <li
-  className="li-header"
-  onMouseEnter={() => handleMouseEnter("men")}
-  onMouseLeave={handleMouseLeave}>Men {activeDropdown === "men" && (
-    <ul
-      className="showdropdown2"
-      onMouseEnter={() => setActiveDropdown("men")}
-      onMouseLeave={handleMouseLeave}
-    >
-      <li onClick={() => navigate("/senator")}>Senator</li>
-      <li onClick={() => navigate("/casual")}>casual</li>
-      <li onClick={() => navigate("/formal")}>formal outfits</li>
-      <li onClick={() => navigate("/summer")}>summer</li>
-    </ul>
-  )}
-</li>
+              className="li-header"
+              onMouseEnter={() => handleMouseEnter("men")}
+              onMouseLeave={handleMouseLeave}
+            >
+              Men{" "}
+              {activeDropdown === "men" && (
+                <ul
+                  className="showdropdown2"
+                  onMouseEnter={() => setActiveDropdown("men")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <li onClick={() => navigate("/senator")}>Senator</li>
+                  <li onClick={() => navigate("/casual")}>casual</li>
+                  <li onClick={() => navigate("/formal")}>formal outfits</li>
+                  <li onClick={() => navigate("/summer")}>summer</li>
+                </ul>
+              )}
+            </li>
 
-<li
-  className="li-header"
-  onMouseEnter={() => handleMouseEnter("women")}
-  onMouseLeave={handleMouseLeave}
->
-  women 
-  
-  {activeDropdown === "women" && (
-    <ul
-      className="showdropdown3"
-      onMouseEnter={() => setActiveDropdown("womwen")}
-      onMouseLeave={handleMouseLeave}
-    >
-      <li onClick={() => navigate("/women/mesh gown")}>mesh gown</li>
-      <li onClick={() => navigate("/women/bubu gown")}>bubu gown</li>
-      <li onClick={() => navigate("/women/dinner gowns")}>dinner gowns</li>
-    </ul>
-  )}
-</li>
+            <li
+              className="li-header"
+              onMouseEnter={() => handleMouseEnter("women")}
+              onMouseLeave={handleMouseLeave}
+            >
+              women
+              {activeDropdown === "women" && (
+                <ul
+                  className="showdropdown3"
+                  onMouseEnter={() => setActiveDropdown("womwen")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <li onClick={() => navigate("/mesh")}>mesh gown</li>
+                  <li onClick={() => navigate("/bubu")}>bubu gown</li>
+                  <li onClick={() => navigate("/dinner")}>dinner gowns</li>
+                </ul>
+              )}
+            </li>
 
-<li
-  className="li-header"
-  onMouseEnter={() => handleMouseEnter("babycollection")}
-  onMouseLeave={handleMouseLeave}
->
-  babycollection 
-  
-  {activeDropdown === "babycollection" && (
-    <ul
-      className="showdropdown4"
-      onMouseEnter={() => setActiveDropdown("babycollection")}
-      onMouseLeave={handleMouseLeave}
-    >
-      <li onClick={() => navigate("/babycollection/ball gowns")}>ball gown</li>
-      <li onClick={() => navigate("/babycollection/summer wears")}>summer wears</li>
-      <li onClick={() => navigate("/babycollection/diapers")}>diapers</li>
-    </ul>
-  )}
-</li>
+            <li
+              className="li-header"
+              onMouseEnter={() => handleMouseEnter("babycollection")}
+              onMouseLeave={handleMouseLeave}
+            >
+              babycollection
+              {activeDropdown === "babycollection" && (
+                <ul
+                  className="showdropdown4"
+                  onMouseEnter={() => setActiveDropdown("babycollection")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <li onClick={() => navigate("/ball")}>ball gown</li>
+                  <li onClick={() => navigate("/summerBabies")}>
+                    summer wears
+                  </li>
+                </ul>
+              )}
+            </li>
             {/* Pages Dropdown */}
-            <li 
+            <li
               className="li-header"
               onMouseEnter={() => handleMouseEnter("pages")}
               onMouseLeave={handleMouseLeave}
             >
-              Pages 
+              Pages
               {activeDropdown === "pages" && (
-                <ul 
+                <ul
                   className="showdropdown1"
                   onMouseEnter={() => setActiveDropdown("pages")}
                   onMouseLeave={handleMouseLeave}
                 >
-                 <NavLink to={"login"}>
-                  <li>Login</li>
+                  <NavLink to={"login"}>
+                    <li>Login</li>
                   </NavLink>
                   <NavLink to={"/cart"}>
-                  <li>Cart</li>
-
+                    <li>Cart</li>
                   </NavLink>
                   <NavLink to={"/productdetails"}>
-                  <li>Product Details</li></NavLink>
+                    <li>Product Details</li>
+                  </NavLink>
 
                   <NavLink to={"productcheckout"}>
-
-                  <li>ProductCheckout</li>
+                    <li>ProductCheckout</li>
                   </NavLink>
                 </ul>
               )}
             </li>
 
             {/* Blog Dropdown */}
-            
-
-            
           </ul>
         </div>
 
         <div className="header-icons2">
-          <i className="i-nav"><IoSearchOutline className="search-icon" onClick={toggleSearch} /> 
-          {showSearch && (
-          <div className="search-dropdown">
-            <input
-              type="text"
-              placeholder="Search Here......."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter")handleSearch(); 
-              }}
-              className="search-input"
-            />
-            <FaTimes className="close-icon" onClick={toggleSearch} />
-          </div>
-        )}
+          <i className="i-nav">
+            <IoSearchOutline className="search-icon" onClick={toggleSearch} />
+            {showSearch && (
+              <div className="search-dropdown">
+                <input
+                  type="text"
+                  placeholder="Search Here......."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleSearch();
+                  }}
+                  className="search-input"
+                />
+                <FaTimes className="close-icon" onClick={toggleSearch} />
+              </div>
+            )}
           </i>
           <i className="i-nav">
-            <CgProfile onClick={()=>navigate("/profilepage")} />
-            </i>
+            <CgProfile onClick={() => navigate("/profilepage")} />
+          </i>
 
           <NavLink to={"Cart"}>
-          <i className="i-nav">
-          < HiOutlineShoppingCart />
-          <p className="cartcount">1</p>
-          </i>
+            <i className="i-nav">
+              <HiOutlineShoppingCart />
+              <p className="cartcount">1</p>
+            </i>
           </NavLink>
         </div>
       </div>
 
-      <div  className={`headermobilev ${isFixed ? "fixed" : ""}`}>
-      <div className="mobileicon">
-        <img src="src/assets/logo.webp" alt="Logo" className="mibleimg" />
-      </div>
-      <div className="menuhld">
-        <div className="menu">
-          <span onClick={toggleMenu}></span>
-          <RxHamburgerMenu onClick={toggleMenu} />
+      <div className={`headermobilev ${isFixed ? "fixed" : ""}`}>
+        <div className="mobileicon">
+          <img src="src/assets/logo.webp" alt="Logo" className="mibleimg" />
         </div>
-      </div>
-      {menubar && (
-        <div className="categorymenu">
-          <div className="menudownheder">
-            <div className="menudown" onClick={() => navigate("/")}>Home</div>
-            <div className="menudown"onClick={()=>navigate("./men")} >Men</div>
-            <div className="menudown"onClick={()=>navigate("./women")}>Women</div>
-            <div className="menudown"onClick={()=>navigate("./babycollection")}>Baby Collection</div>
-            <div className="menudown" onClick={togglePageDropdown}>
-              Page <IoIosArrowDown />
-              {showPageDropdown && (
-                <ul className="dropdown-list">
-                  <li onClick={() => navigate("/login")}>Login</li>
-                  <li onClick={() => navigate("/cart")}>Cart</li>
-                  <li onClick={() => navigate("/productdetails")}>Product Details</li>
-                  <li onClick={() => navigate("/productpage")}>Product Checkout</li>
-                </ul>
-              )}
-            </div>
-            
+        <div className="menuhld">
+          <div className="menu">
+            <span onClick={toggleMenu}></span>
+            <RxHamburgerMenu onClick={toggleMenu} />
           </div>
         </div>
-      )}
-    </div>
+        {menubar && (
+          <div className="categorymenu">
+            <div className="menudownheder">
+              <div className="menudown" onClick={() => navigate("/")}>
+                Home
+              </div>
+              <div className="menudown" onClick={() => navigate("./men")}>
+                Men
+              </div>
+              <div className="menudown" onClick={() => navigate("./women")}>
+                Women
+              </div>
+              <div
+                className="menudown"
+                onClick={() => navigate("./babycollection")}
+              >
+                Baby Collection
+              </div>
+              <div className="menudown" onClick={togglePageDropdown}>
+                Page <IoIosArrowDown />
+                {showPageDropdown && (
+                  <ul className="dropdown-list">
+                    <li onClick={() => navigate("/login")}>Login</li>
+                    <li onClick={() => navigate("/cart")}>Cart</li>
+                    <li onClick={() => navigate("/productdetails")}>
+                      Product Details
+                    </li>
+                    <li onClick={() => navigate("/productpage")}>
+                      Product Checkout
+                    </li>
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default Header;

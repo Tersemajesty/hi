@@ -1,0 +1,64 @@
+.ball{
+    height: 300vh;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+.ballContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
+}
+
+.ballContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.summer{
+    height: 235vh;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+
+}
+
+.summerContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: pink; */
+}
+
+.summerContainer1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+

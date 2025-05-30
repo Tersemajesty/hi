@@ -1,62 +1,52 @@
-import React from 'react'
-import style from "./Pages.module.css"
-import Card from "../component/Card/card"
- const BabyCollection = () => {
-    const images1 = [
-        { url: "/images/img6.jpeg" },
-        { url: "/images/baby.jpeg" },
-        { url: "/images/baby2.jpeg" },
-        { url: "/images/img6.jpeg" }
-      ];
-      
-      const images2 = [
-        { url: "/images/baby2.jpeg" },
-        { url: "/images/baby1.jpeg" },
-        { url: "/images/baby2.jpeg" },
-        { url: "/images/img6.jpeg" },
-      ];
+import React, { useEffect } from "react";
+import style from "./Pages.module.css";
+import Card from "../component/Card/card";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { IoArrowUndoSharp } from "react-icons/io5";
+import Loader from "../component/Loader/Loader";
 
-      const images3 = [
-        { url: "/images/baby.jpeg" },
-        { url: "/images/img6.jpeg" },
-        { url: "/images/baby.jpeg" }, 
-        { url: "/images/baby2.jpeg" }
-      ];
-  
-      const images4 = [
-        { url: "/images/baby1.jpeg" },
-        {url: "/images/baby.jpeg" },
-        { url: "/images/baby1.jpeg" },
-        { url: "/images/baby2.jpeg" }
-      ];
-  
-  
-    return (
-        <div className={style.baby}>
-          <div className={style.babywrap}>
-          <div className={style.babybodywrap}>
-          <Card images={images1} title="baby wears" />
-          
+
+const BabyCollection = () => {
+  const [products, setProducts] = React.useState([]);
+  const [loader, setLoader] = React.useState(true);
+
+  const url3 =
+    "https://capitalshop-3its.onrender.com/api/products/?category=6837cdafde2a4a28807fbb01&limit=8";
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get(url3);
+        setProducts(res.data?.data?.products);
+        console.log(res?.data?.data?.products);
+
+        setLoader(false);
+      } catch (error) {
+        console.error(error.message);
+      } finally {
+        setLoader(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+  const navigate = useNavigate();
+  return loader ? (
+    <Loader />
+  ) : (
+    <div className={style.women}>
+      <div className={style.womenwrap}>
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className={style.womenbodywrap}>
+            <Card
+              images={products.slice(i * 4, (i + 1) * 4)}
+              title={`Formals ${i + 1}`}
+            />
           </div>
-          </div>
-          <div className={style.babywrap1}>
-          <div className={style.babybodywrap}>
-          <Card images={images2} title="Formal Wear" />
-          
-          </div>
-          </div>
-          <div className={style.babywrap2}>
-          <div className={style.babybodywrap}>
-          <Card images={images3} title="Formal Wear" />
-          
-          </div>
-          </div>
-          <div className={style.babywrap3}>
-          <div className={style.babybodywrap}>
-          <Card images={images4} title="Formal Wear" />
-          </div>
-          </div>
-        </div>
-    )
-}
-export default BabyCollection
+        ))}
+      </div>
+    </div>
+  );
+};
+export default BabyCollection;

@@ -1,6 +1,5 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
-import { FaShoppingCart, FaHeart, FaSearch } from "react-icons/fa";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { PiTruckLight } from "react-icons/pi";
 import { CiCreditCard1 } from "react-icons/ci";
@@ -110,7 +109,7 @@ const Home = () => {
     {
       url: "/images/navbar.jpg",
       align: "left",
-      h1: "Minimal Menz Style",
+      h1: "Minimal Men's Style",
     },
     {
       url: "/images/navbar2.jpg",
@@ -129,12 +128,12 @@ const Home = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 15000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const prevSlide = () => {
     setCurrentIndex(
@@ -182,15 +181,15 @@ const Home = () => {
             </h1>
             {images[currentIndex].align === "left" ? (
               <p className="zoom-in p">
-                Consectetur adipisicing elit. Laborum fuga incidunt <br />
-                laboriosam voluptas iure, delectus <br />
-                dignissimos facilis neque nulla earum.
+                "Own Every Moment. Style That Speaks Strength." From bold
+                senator <br /> sets to laid-back casuals, our men's collection blends
+                modern design <br /> with  cultural flair. Dress to express—comfort,
+                class, and confidence <br /> in every stitch.
               </p>
             ) : (
               <p className="zoom-in p">
-                Lorem ipsum dolor sit amet consectetur adipisicing <br />
-                acere consectetur corrupti ullam <br /> pariatur natu s, ipsam
-                rem deleniti.
+                "Unapologetically You. Effortless Elegance, Everyday."
+Turn heads with our stunning range of women’s wear—casual, formal, and everything in between. For every mood, every move, and every woman who wears her power with style.
               </p>
             )}
             <button className="btn-slide">Shop Now</button>

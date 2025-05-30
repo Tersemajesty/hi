@@ -19,6 +19,11 @@ import Casual from "./clothLog/Casual";
 import Formal from "./clothLog/Formal";
 import SearchResultPage from "./component/Header/SearchResultPage";
 import Senator from "./clothLog/Senator";
+import Mesh from "./clothBlog/mesh";
+import Bubu  from "./clothBlog/Bubu";
+import Dinner from "./clothBlog/Dinner";
+import  Ball from "./clothBabies/Ball";
+import SummerBabies from "./clothBabies/SummerBabies";
 
 
 const router = createBrowserRouter([
@@ -45,11 +50,15 @@ const router = createBrowserRouter([
       { path: "ProductDetails/:id", element: <ProductDetails /> },
       { path: "cart", element: <Cart /> },
       { path: "summer", element: <Summer/>},
-      // { path: "senator", element: <Senator/>},
       { path: "casual", element: <Casual/>},
       { path: "formal", element: <Formal/>},
       { path: "senator", element: <Senator/>},
-      { path: "search", element: <SearchResultPage/>}
+      { path: "search", element: <SearchResultPage/>},
+      { path: "mesh", element: <Mesh/>},
+      {  path: "bubu", element: <Bubu/>},
+      {  path: "dinner", element: <Dinner/>},
+      {  path: "ball", element: <Ball/>},
+      {  path: "summerBabies", element: <SummerBabies/>}, // Assuming this is the correct path for the Ball component
 
 
 

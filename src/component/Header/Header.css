@@ -107,9 +107,9 @@ transform: scale(1.07);
   justify-content: center;
   position: relative;
   gap: 40px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  font-family: 'jost', sans-serif;
+  font-family:  sans-serif;
 
 }
 
@@ -171,8 +171,8 @@ color: rgb(245, 17, 17);
   padding-bottom: 10px;
   align-items: flex-start;
   columns: red;
-  top: 50px;
-  right: 400px;
+  top: 70px;
+  right: 500px;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
 }
@@ -199,8 +199,8 @@ color: rgb(245, 17, 17);
   padding-bottom: 20px;
   align-items: flex-start;
   columns: red;
-  top: 50px;
-  right: 350px;
+  top: 70px;
+  right: 400px;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
 }
@@ -227,8 +227,8 @@ color: rgb(245, 17, 17);
   padding-bottom: 20px;
   align-items: flex-start;
   columns: red;
-  top: 50px;
-  right: 250px;
+  top: 70px;
+  right: 300px;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
 }
