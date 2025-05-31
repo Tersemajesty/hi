@@ -44,7 +44,7 @@ const Cart = () => {
         console.log("Cart response:", res.data);
       } catch (err) {
         console.error("login in first:", err.response?.data || err.message);
-        toast.error("Failed to load cart items.");
+        toast.error("login in first.");
       }
     };
 
@@ -58,7 +58,6 @@ const Cart = () => {
       )
     );
   };
-const url1 = "https://capitalshop-3its.onrender.com/api/cart/remove";
   const handleDecrease = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -69,8 +68,32 @@ const url1 = "https://capitalshop-3its.onrender.com/api/cart/remove";
     );
   };
 
-  const handleDelete = (id) => {
-    setCartItems((prev) => prev.filter((item) => item._id !== id));
+  const handleDelete = async (product_id) => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      toast.error("You must be logged in to delete items from the cart.");
+      return;
+    }
+
+    try {
+      const res = await axios.delete(
+        `https://capitalshop-3its.onrender.com/api/cart/remove/${product_id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          data: {product_id}
+        }
+      );
+      console.log("Delete response:", res.data);
+      setCartItems((prev) =>
+        prev.filter((item) => item.product._id !== product_id)
+      );
+      toast.success("Item removed from cart.");
+    } catch (err) {
+      console.error("Error deleting item:", err.response?.data || err.message);
+      toast.error("Failed to remove item from cart.");
+    }
   };
 
   const subtotal = cartItems.reduce(
@@ -92,60 +115,54 @@ const url1 = "https://capitalshop-3its.onrender.com/api/cart/remove";
         <div className={style.containerdiv}>
           <div className={style.containerdiv2}>
             {cartItems.map((item) => (
-              <div key={item._id} className={style.purpose1}>
-                <h1>{item.productId?.name}</h1>
+              <div key={item.product._id} className={style.purpose1}>
+                <h1>{item.product.name}</h1>
                 <div className={style.chnge1}>
                   <div className={style.buttondiv}>
-                    <button onClick={() => handleDecrease(item._id)}>-</button>
+                    <button onClick={() => handleDecrease(item.product._id)}>
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => handleIncrease(item._id)}>+</button>
+                    <button onClick={() => handleIncrease(item.product._id)}>
+                      +
+                    </button>
                   </div>
                   <p className={style.p}>
-                    ${(item.productId?.price * item.quantity).toFixed(2)}
+                    ${(item.product.price * item.quantity).toFixed(2)}
                   </p>
-                  <button onClick={() => handleDelete(item._id)}>
+                  <button onClick={() => handleDelete(item.product._id)}>
                     <RiDeleteBin6Line size={16} style={{ color: "red" }} />
                   </button>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className={style.containerdiv1}>
-            <div className={style.purpose3}>
-              <h1>Order Summary</h1>
-              <div className={style.subtotal}>
-                <p>Subtotal</p>
-                <p>${subtotal.toFixed(2)}</p>
-              </div>
-              <div className={style.chnge9}>
-                <p>Shipping</p>
-                <p>Free</p>
-              </div>
-              <div className={style.chnge16}>
-                <p>Total</p>
-                <p>${subtotal.toFixed(2)}</p>
-              </div>
-              <button
-                onClick={() => navigate("/productcheckout")}
-                className={style.proceed}
-              >
-                Proceed To Checkout
-              </button>
-            </div>
-            <div className={style.purpose5}>
-              <button className={style.btwn}>Clear Cart</button>
-              <button className={style.btwn}>Continue Shopping</button>
-            </div>
-          </div>
         </div>
-
-        <div className={style.herosection}>
-          <div className={style.div1}>
-            <h2 className={style.div3}>You may also like</h2>
+        <div className={style.containerdiv1}>
+          <div className={style.purpose3}>
+            <h1>Order Summary</h1>
+            <div className={style.subtotal}>
+              <p>Subtotal</p>
+              <p>${subtotal.toFixed(2)}</p>
+            </div>
+            <div className={style.chnge9}>
+              <p>Shipping</p>
+              <p>Free</p>
+            </div>
+            <div className={style.chnge16}>
+              <p>Total</p>
+              <p>${subtotal.toFixed(2)}</p>
+            </div>
+            <button
+              onClick={() => navigate("/productcheckout")}
+              className={style.proceed}
+            >
+              Proceed To Checkout
+            </button>
           </div>
-          <div className={style.div}>
-            <Card images={images1} title="Baby Wears" />
+          <div className={style.purpose5}>
+            <button className={style.btwn}>Clear Cart</button>
+            <button className={style.btwn}>Continue Shopping</button>
           </div>
         </div>
       </div>

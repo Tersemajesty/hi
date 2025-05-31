@@ -20,7 +20,7 @@ const ProductDetails = () => {
         console.log(res); 
         setProduct(res?.data?.data);
       } catch (err) {
-        console.error("Failed to fetch product:", err.message);
+        console.error("Login first:", err.message);
       } finally {
         setLoading(false);
       }
