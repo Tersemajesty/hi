@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const hasFetched = useRef(false); // Prevent multiple fetches in development mode
 
@@ -41,6 +42,7 @@ const Cart = () => {
 
         const items = res?.data?.items || [];
         setCartItems(items);
+        setLoading(false);
         console.log("Cart response:", res.data);
       } catch (err) {
         console.error("login in first:", err.response?.data || err.message);
@@ -77,7 +79,7 @@ const Cart = () => {
 
     try {
       const res = await axios.delete(
-        `https://capitalshop-3its.onrender.com/api/cart/remove/${product_id}`,
+        `https://capitalshop-3its.onrender.com/api/cart/clear`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -111,33 +113,37 @@ const Cart = () => {
         <div className={style.purpose}>
           <h1>Products</h1>
         </div>
-
-        <div className={style.containerdiv}>
-          <div className={style.containerdiv2}>
-            {cartItems.map((item) => (
-              <div key={item.product._id} className={style.purpose1}>
-                <h1>{item.product.name}</h1>
-                <div className={style.chnge1}>
-                  <div className={style.buttondiv}>
-                    <button onClick={() => handleDecrease(item.product._id)}>
-                      -
-                    </button>
-                    <span>{item.quantity}</span>
-                    <button onClick={() => handleIncrease(item.product._id)}>
-                      +
-                    </button>
-                  </div>
-                  <p className={style.p}>
-                    ${(item.product.price * item.quantity).toFixed(2)}
-                  </p>
-                  <button onClick={() => handleDelete(item.product._id)}>
-                    <RiDeleteBin6Line size={16} style={{ color: "red" }} />
-                  </button>
-                </div>
-              </div>
-            ))}
+         {loading ? (
+  <h2>Loading your cart...</h2>
+) : cartItems.length === 0 ? (
+  <h2>No products added yet</h2>
+) : (
+  <div className={style.containerdiv}>
+    <div className={style.containerdiv2}>
+      {cartItems.map((item) => (
+        <div key={item.product._id} className={style.purpose1}>
+          <img src={item.product.image} alt="" />
+          <h1>{item.product.name}</h1>
+          <div className={style.chnge1}>
+            <div className={style.buttondiv}>
+              <button onClick={() => handleDecrease(item.product._id)}>-</button>
+              <span>{item.quantity}</span>
+              <button onClick={() => handleIncrease(item.product._id)}>+</button>
+            </div>
+            <p className={style.p}>
+              ${(item.product.price * item.quantity).toFixed(2)}
+            </p>
+            <button onClick={() => handleDelete(item.product._id)}>
+              <RiDeleteBin6Line size={16} style={{ color: "red" }} />
+            </button>
           </div>
         </div>
+      ))}
+    </div>
+  </div>
+)}
+
+       
         <div className={style.containerdiv1}>
           <div className={style.purpose3}>
             <h1>Order Summary</h1>

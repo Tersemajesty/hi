@@ -68,7 +68,7 @@ const ProductDetails = () => {
       );
       toast.error(
         error?.response?.data?.message ||
-          "Failed to add to cart. Please try again.",
+          "login please!.",
         {
           position: "top-right",
           autoClose: 5000,
