@@ -110,16 +110,17 @@ const Cart = () => {
       </div>
 
       <div className={style.car2}>
-        <div className={style.purpose}>
+        {/* <div className={style.purpose}>
           <h1>Products</h1>
-        </div>
-         {loading ? (
+        </div> */}
+ 
+  <div className={style.containerdiv}>
+           {loading ? (
   <h2>Loading your cart...</h2>
 ) : cartItems.length === 0 ? (
   <h2>No products added yet</h2>
 ) : (
-  <div className={style.containerdiv}>
-    <div className={style.containerdiv2}>
+ <div className={style.containerdiv2}>
       {cartItems.map((item) => (
         <div key={item.product._id} className={style.purpose1}>
           <img src={item.product.image} alt="" />
@@ -140,11 +141,12 @@ const Cart = () => {
         </div>
       ))}
     </div>
-  </div>
-)}
 
-       
-        <div className={style.containerdiv1}>
+    )}
+  </div>
+  
+
+<div className={style.containerdiv1}>
           <div className={style.purpose3}>
             <h1>Order Summary</h1>
             <div className={style.subtotal}>
@@ -171,6 +173,9 @@ const Cart = () => {
             <button className={style.btwn}>Continue Shopping</button>
           </div>
         </div>
+
+       
+        
       </div>
     </div>
   );
