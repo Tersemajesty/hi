@@ -10,32 +10,7 @@ const ProductCheckout = () => {
         
       </div>
 
-      <div className={style.container}>
-         <div className={style.returningcustomer}>
-          <div className={style.returningcustomer1}>
-          <p>
-          Returning Customer? <Link to="/login">Click here to login</Link>
-          </p>
-          </div>
-          <div className={style.text}>
-         <p>If you have shopped with us before, please enter your details in the boxes below. 
-            If you are a new customer, please proceed to the Billing & Shipping section.</p>
-          </div>
-          <div className={style.input}>
-             <input type="text"
-             placeholder="Username or Email" />
-
-             <input type="text"
-             placeholder="password" />
-          </div>
-          <div className={style.logGEDin}>
-          <button onClick={()=>navigate("./login")}>Login</button>
-            <input type="checkbox" id="create-account" />
-            <label htmlFor="create-account">Create an account?</label> 
-          </div>
-      </div>
-
-    </div>
+     
     <div className={style.hold}>
           <div className={style.billing}>               
                 <div className={style.bilng0}>
