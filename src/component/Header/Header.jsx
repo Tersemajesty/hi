@@ -13,10 +13,41 @@ const Header = () => {
   const [menubar, setMenubar] = useState(false);
   const [showPageDropdown, setShowPageDropdown] = useState(false);
   const [showMenDropdown, setShowMenDropdown] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  useEffect(() => {
+    const fetchCartCount = async () => {
+      const token = localStorage.getItem("token");
+      setIsLoggedIn(!!token); // Check if user is logged in
+      if (!token) return;
+      try {
+        const response = await fetch(
+          "https://capitalshop-3its.onrender.com/api/cart",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        const data = await response.json();
+      
+        console.log("Cart items", data?.cart?.items);
+  const items = data?.items || [];
+        const totalQuantity = items.reduce(
+          (sum, item) => sum + item.quantity,
+          0
+        );
+        setCartCount(totalQuantity);
+      } catch (error) {
+        console.error("Error fetching cart count:", error);
+        setCartCount(0); // Reset count on error
+      }
+    };
+    fetchCartCount();
+  }, []);
   const toggleMenu = () => setMenubar(!menubar);
   const togglePageDropdown = () => setShowPageDropdown(!showPageDropdown);
-  const toggleDropdown = () => setShowBlogDropdown(!showBlogDropdown);
 
   const navigate = useNavigate();
   const [showSearch, setShowSearch] = useState(false);
@@ -105,7 +136,7 @@ const Header = () => {
               onMouseEnter={() => handleMouseEnter("women")}
               onMouseLeave={handleMouseLeave}
             >
-              women
+              Women
               {activeDropdown === "women" && (
                 <ul
                   className="showdropdown3"
@@ -124,7 +155,7 @@ const Header = () => {
               onMouseEnter={() => handleMouseEnter("babycollection")}
               onMouseLeave={handleMouseLeave}
             >
-              babycollection
+              BabyCollection
               {activeDropdown === "babycollection" && (
                 <ul
                   className="showdropdown4"
@@ -191,14 +222,22 @@ const Header = () => {
               </div>
             )}
           </i>
-          <i className="i-nav">
+          {
+            isLoggedIn ? (
+              <i className="i-nav">
             <CgProfile onClick={() => navigate("/profilepage")} />
           </i>
+            ) : (
+            <i className="i-nav">
+              <CgProfile onClick={() => navigate("/login")} />
+                </i>
+            )
+          }
 
           <NavLink to={"Cart"}>
             <i className="i-nav">
               <HiOutlineShoppingCart />
-              <p className="cartcount">1</p>
+              {cartCount > 0 && <p className="cartcount">{cartCount}</p>}{" "}
             </i>
           </NavLink>
         </div>
