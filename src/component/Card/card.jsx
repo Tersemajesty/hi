@@ -2,13 +2,13 @@ import React from "react";
 import "./card.css";
 import { ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide,Swiper } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import
 
-const Card = ({ images, title = "Product Name" }) => {
+const Card = ({ images, title = "Product Name", autoplayDelay=300 }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,8 +17,13 @@ const Card = ({ images, title = "Product Name" }) => {
 
       <div className="card">
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination,Autoplay]}
           Pagination={{ cliiclable: true }}
+          autoplay={{
+            delay: autoplayDelay,
+            disableOnInteraction: false,
+          }}
+          loop={true}
           spaceBetween={10}
           slidesPerView={1}
           className="card-container"

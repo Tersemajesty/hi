@@ -9,6 +9,10 @@ import { getAllProduct } from "../auth/Api";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Card from "../component/Card/card";
+import { SwiperSlide,Swiper } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const testimonials = [
 
@@ -257,34 +261,52 @@ const trendingNextSlide = () => {
         </div>
 
         <div className="separator9-line"></div>
-          <div className="carousel9">
-      {images2
-        .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
-        .map((image, index) => (
-          <div key={index} className="slide9">
-            {/* Product Image */}
-            <div className="image9-container">
-              <img src={image.url} alt={`Slide ${index + 1}`} />
-              {/* Hover Box */}
-              <div className="hover9-box">
-                <div className="icon9-container">
-                  <FaShoppingCart onClick={()=> handleAddToCart} className="icon9" />
-                </div>
-                
-                <div className="icon9-container">
-                  <FaSearch className="icon9" />
-                </div>
-              </div>
+       <Swiper
+  modules={[Autoplay, Pagination]}
+  spaceBetween={10}
+  pagination={{ clickable: true }}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  loop={true}
+  breakpoints={{
+    320: {
+      slidesPerView: 1, // mobile - 1 at a time
+    },
+    640: {
+      slidesPerView: 2, // tablet
+    },
+    1024: {
+      slidesPerView: 4, // desktop - 4 at a time
+    },
+  }}
+>
+  {images2.map((image, index) => (
+    <SwiperSlide key={index}>
+      <div className="slide9">
+        <div className="image9-container">
+          <img src={image.url} alt={`Slide ${index + 1}`} />
+          <div className="hover9-box">
+            <div className="icon9-container">
+              <FaShoppingCart onClick={() => handleAddToCart()} className="icon9" />
             </div>
-            {/* Product Name & Price */}
-            <div className="product9-details">
-                <h2 className="product9-title">{image.title}</h2>
-              <p className="price9">
-    <span className="old9-price">{image.price}</span>              </p>
+            <div className="icon9-container">
+              <FaSearch className="icon9" />
             </div>
           </div>
-        ))}
-    </div>
+        </div>
+        <div className="product9-details">
+          <h2 className="product9-title">{image.title}</h2>
+          <p className="price9">
+            <span className="old9-price">{image.price}</span>
+          </p>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </div>
       <div className="testimony-container">
         <h2 className="testimony-header">Clients review</h2>
@@ -356,38 +378,51 @@ const trendingNextSlide = () => {
         {/* Gray Separator Line */}
         <div className="separator9-line"></div>
         {/* Carousel */}
-          <div className="carousel9-container">
-    <button className="nav9-button left9-btn" onClick={trendingPrevSlide}>❮</button>
-    <div className="carousel9">
-      {images1
-        .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
-        .map((image, index) => (
-          <div key={index} className="slide9">
-            {/* Product Image */}
-            <div className="image9-container">
-              <img src={image.url} alt={`Slide ${index + 1}`} />
-              {/* Hover Box */}
-              <div className="hover9-box">
-                <div className="icon9-container">
-                  <FaShoppingCart className="icon9" />
-                </div>
-                
-                <div className="icon9-container">
-                  <FaSearch className="icon9" />
-                </div>
-              </div>
+            <Swiper
+  modules={[Autoplay, Pagination]}
+  spaceBetween={10}
+  pagination={{ clickable: true }}
+  autoplay={{
+    delay: 3000,
+    disableOnInteraction: false,
+  }}
+  loop={true}
+  breakpoints={{
+    320: {
+      slidesPerView: 1, // mobile - 1 at a time
+    },
+    640: {
+      slidesPerView: 2, // tablet
+    },
+    1024: {
+      slidesPerView: 4, // desktop - 4 at a time
+    },
+  }}
+>
+  {images1.map((image, index) => (
+    <SwiperSlide key={index}>
+      <div className="slide9">
+        <div className="image9-container">
+          <img src={image.url} alt={`Slide ${index + 1}`} />
+          <div className="hover9-box">
+            <div className="icon9-container">
+              <FaShoppingCart onClick={() => handleAddToCart()} className="icon9" />
             </div>
-            {/* Product Name & Price */}
-            <div className="product9-details">
-              <h2 className="product9-title">{image.title}</h2>
-              <p className="price9">
-<span className="old9-price">{image.price}</span>              </p>
+            <div className="icon9-container">
+              <FaSearch className="icon9" />
             </div>
           </div>
-        ))}
-    </div>
-    <button className="nav9-button right9-btn" onClick={trendingNextSlide}></button>
-  </div>
+        </div>
+        <div className="product9-details">
+          <h2 className="product9-title">{image.title}</h2>
+          <p className="price9">
+            <span className="old9-price">{image.price}</span>
+          </p>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
       </div>
 
       <div className="Mainbody">

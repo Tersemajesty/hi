@@ -44,7 +44,7 @@ const Casual = () => {
       <div className={style.casualContainer}>
         {Array.from({ length: Math.ceil(data.length / 4) }).map((_, i) => (
           <div key={i} className={style.casualContainer1}>
-            <Card
+            <Card autoplayDelay={Math.floor(Math.random() * 2000) + 3000}
               images={data.slice(i * 4, (i + 1) * 4)}
               title={`Casuals ${i + 1}`}
             />
