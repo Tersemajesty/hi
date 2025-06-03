@@ -2,6 +2,11 @@ import React from "react";
 import "./card.css";
 import { ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { Pagination } from "swiper/modules";
+import { SwiperSlide,Swiper } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/pagination';
+// import
 
 const Card = ({ images, title = "Product Name" }) => {
   const navigate = useNavigate();
@@ -11,9 +16,26 @@ const Card = ({ images, title = "Product Name" }) => {
       <ToastContainer />
 
       <div className="card">
-        <div className="card-container">
+        <Swiper
+          modules={[Pagination]}
+          Pagination={{ cliiclable: true }}
+          spaceBetween={10}
+          slidesPerView={1}
+          className="card-container"
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+        >
           {images?.map((item, index) => (
-            <div key={index} className="cardslide">
+            <SwiperSlide key={index}>
               <div
                 onClick={() => navigate(`/productdetails/${item.id}`)}
                 className="card-image-container"
@@ -23,11 +45,10 @@ const Card = ({ images, title = "Product Name" }) => {
               </div>
               <div className="card-product9-details">
                 <h2 className="card-product9-title">{item.name}</h2>
-                
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

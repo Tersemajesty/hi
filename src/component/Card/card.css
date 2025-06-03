@@ -27,6 +27,19 @@
   overflow: hidden;
 }
 
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .cardslide {
   width: 24%;
   flex-shrink: 0;
