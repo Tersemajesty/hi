@@ -219,7 +219,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(241,241,242);
+  background: rgb(241, 241, 242);
 }
 
 .Cart1 {
@@ -228,12 +228,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(241,241,242);
+  background: rgb(241, 241, 242);
   position: relative;
-  bottom:  20px;
+  bottom: 20px;
 }
-
-
 
 .car2 {
   height: 80%;
@@ -266,9 +264,9 @@
   align-items: center;
   justify-content: space-around;
   gap: 10px;
-    overflow-y: auto; 
-  scrollbar-color:  gray;
-  background: rgb(255,255,255);
+  overflow-y: auto;
+  scrollbar-color: gray;
+  background: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   /* background: burlywood; */
 }
@@ -285,27 +283,23 @@
 }
 
 .containerdiv2 {
-  height: 90%; 
+  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: column;
   /* background: pink;  */
   gap: 10px;
-  scrollbar-width: thin; 
+  scrollbar-width: thin;
 }
 
 .containerdiv2::-webkit-scrollbar {
   width: 8px;
 }
 
-
-
 .containerdiv2::-webkit-scrollbar-thumb {
   background-color: red;
   border-radius: 10px;
 }
-
-
 
 .purpose1 {
   height: 400px;
@@ -364,7 +358,7 @@
   align-items: center;
 }
 
-.p{
+.p {
   font-size: 18px;
 }
 .chnge2 {
@@ -446,9 +440,9 @@
   text-align: center;
   justify-content: space-around;
 
-  & p{
-      font-size: 18px;
-      font-weight: 400;
+  & p {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
@@ -460,9 +454,9 @@
   justify-content: space-around;
   border-bottom: 1px solid gray;
 
-   & p{
-      font-size: 18px;
-      font-weight: 400;
+  & p {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
@@ -473,9 +467,9 @@
   align-items: center;
   justify-content: space-around;
 
-   & p{
-      font-size: 18px;
-      font-weight: 400;
+  & p {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
@@ -734,7 +728,7 @@ a {
 
 .checkoutwrapper {
   width: 100%;
-  height: 170vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -744,7 +738,7 @@ a {
 
 .checkoutwrapperbody {
   width: 100%;
-  height: 10%;
+  height: 15%;
   background-color: #f2e9d8;
   color: rgb(62, 61, 61);
   text-align: center;
@@ -792,101 +786,6 @@ a {
 
 /* Returning Customer Section */
 
-.returningcustomer {
-  height: 90%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.returningcustomer1 {
-  height: 18%;
-  width: 94%;
-  background: rgb(244, 244, 244);
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-
-  & p {
-    font-size: 12px;
-    padding: 8px;
-  }
-}
-
-.text {
-  height: 18%;
-  width: 94%;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  padding: 15px;
-}
-
-.input {
-  height: 22%;
-  width: 94%;
-  /* background: pink; */
-  display: flex;
-  align-items: center;
-  gap: 7px;
-
-  & input {
-    height: 68%;
-    width: 30%;
-    outline: none;
-    border: 1px solid gray;
-    border-radius: 2px;
-    background: rgb(255, 255, 255);
-    padding: 6px;
-  }
-}
-
-.logGEDin {
-  height: 14%;
-  width: 94%;
-  /* background: pink; */
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  & button {
-    height: 100%;
-    width: 10%;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    background: red;
-    color: white;
-    cursor: pointer;
-  }
-
-  & label {
-    font-size: 13px;
-    color: gray;
-    cursor: pointer;
-  }
-}
-
-.button {
-  height: 14%;
-  width: 94%;
-  display: flex;
-  align-items: center;
-
-  & button {
-    height: 70%;
-    width: 17%;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    background: red;
-    color: white;
-  }
-}
-
 .hold {
   height: 90%;
   width: 100%;
@@ -898,11 +797,12 @@ a {
 
 .billing {
   height: 95%;
-  width: 65%;
+  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* background: #000; */
 }
 
 .bilng0 {
@@ -1010,7 +910,7 @@ a {
 }
 
 .order {
-  height: 40%;
+  height: 60%;
   width: 30%;
   background: rgb(245, 245, 247);
   cursor: pointer;
@@ -1335,4 +1235,250 @@ descriptiondetails :hover {
   outline: none;
   font-size: 20px;
   border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+ /* for product detail page  */
+
+
+
+@media screen and (max-width: 768px) {
+
+ .productwrapper{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  /* background: red; */
+ }
+
+ .detailwrapper{
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  /* align-content: center; */
+  /* background: red; */
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 30px;
+ }
+
+ .detailproductimage{
+  width: 100%;
+  height: 400px;
+  /* background-color: rgb(241, 239, 239); */
+  /* background: pink; */
+  display: flex;
+  /* flex-direction: column; */
+  object-fit: contain;
+  background-repeat: no-repeat;
+
+
+  & img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+  }
+ }
+
+ .pricetextholder{
+  width: 100%;
+  height: 70%;
+  color: black;
+  /* background: paleturquoise; */
+  /* margin-top: 40px; */
+ }
+
+ .review{
+  font-size: 25px;
+  margin-top: 20px;
+
+  & p {
+    font-size: 20px;
+  }
+ }
+
+ .buttoncart{
+  width: 100%;
+  height: 65px;
+  background-color: red;
+  color: #000;
+  border-radius: 100px;
+  cursor: pointer;
+  /* font-size: 1px; */
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+
+  & p {
+    font-size: 23px;
+    font-weight: 100;
+  }
+ }
+
+ .descriptionwrapper{
+  height: 100%;
+  width: 90%;
+  /* background: #000; */
+ }
+  
+}
+
+/* for cartpage */
+@media screen and (max-width: 760px) {
+ 
+  .Cart{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(241, 241, 242);
+    /* background: red; */
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .car2{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    /* background: purple; */
+    gap: 20px;
+  }
+  .containerdiv{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-color: gray;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .containerdiv2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    /* background: pink;  */
+    gap: 10px;
+    scrollbar-width: thin;
+  }
+
+  .purpose1{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    gap: 20px;
+
+    & h1 {
+      font-size: 20px;
+      font-weight: 90;
+    }
+
+    & img {
+      width: 350px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .chnge1{
+    height: 20%;
+    width: 350px;
+    display: flex;
+    color: grey;
+    /* align-items: center; */
+    /* flex-direction: column; */
+    justify-content: center;
+    /* gap: 100px; */
+    font-size: 15px;
+    /* background: pink; */
+    overflow: hidden;
+  }
+
+  .buttondiv{
+    height: 60%;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: relative;
+    left: 15%;
+  }
+
+  .p{
+    font-size: 25px;
+    /* background: green; */
+    width: 100px;
+    height: 30%;
+  }
+
+  .button{
+    height: 40px;
+    width: 100%;
+    /* background: red; */
+    /* color: red; */
+    border: none;
+    font-size: 15px;
+    outline: none;
+    border-radius: 10px;
+    font-family: " sans-serif";
+    font-weight: 100;
+    cursor: pointer;
+    position: relative;
+    right: 15%;
+  }
+
+  .containerdiv1{
+    height: 150%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: green;
+  }
+
+  .proceed{
+    height: 60px;
+    width: 100%;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+  }
 }

@@ -17,7 +17,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(url);
-        console.log(res); 
+        console.log(res);  
         setProduct(res?.data?.data);
       } catch (err) {
         console.error("Login first:", err.message);
@@ -29,7 +29,7 @@ const ProductDetails = () => {
     fetchProduct();
   }, [id]);
 
-  const addToCart = async () => {
+   const addToCart = async () => {
     const rawToken = localStorage.getItem("token");
     const token = rawToken?.replace(/^"(.*)"$/, "$1"); // Removes quotes
 

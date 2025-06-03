@@ -275,22 +275,23 @@
   
  @media screen and (max-width:768px){
     .footer{
-        height: 155vh;
+        height: 215vh;
         width: 100%;
         /* background: pink; */
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
 
     .footerContainer{
-        height: 140vh;
+        height: 210vh;
         width: 100%;
         /* background: purple; */
     }
 
     .footerText{
-        height: 110%;
-        width: 100%;
+        height: 90%;
+        width: 109%;
         flex-direction: column;
         /* background: red; */
         gap: 10px;
@@ -298,17 +299,26 @@
 
     .newsletter{
         height: 100%;
-        width: 90%;
+        width: 100%;
         /* background: blue; */
         display: flex;
         /* align-items: center; */
         justify-content: center;
         gap: 10px;
+      & span {
+            font-size: 27px;
+            color: white;
+        }
+
+        & h1 {
+            font-size: 19px;
+            color: white;
+        }
     }
 
     .inpuT{
-        height: 120%;
-        width: 90%;
+        height: 90%;
+        width: 100%;
         /* background: brown; */
         flex-direction: column;
         gap: 10px;
@@ -316,35 +326,42 @@
         
     & input{
         height: 60%;
-        width: 90%;
+        width: 95%;
         background: white;
         border: none;
         /* padding: 12px; */
         color: black;
         outline: none;
+        font-size: 20px;
 
     }
 
    & button {
     height: 60%;
-    width: 30%;
+    width: 95%;
     background: red;
     color: black;
     border: none ;
     outline: none;
     cursor: pointer;
     color: white;
+      font-size: 20px;
    }
     }
 
     .socialMedia{
         height: 80%;
-        width: 50%;
+        width: 100%;
         /* background: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 25%;
     }
 
     .footerText1{
-        height: 80%;
+        height: 90%;
         width: 100%;
         /* background: red; */
         flex-direction: column;
@@ -354,7 +371,7 @@
 
     .footeriner1{
         height: 18%;
-        width: 90%;
+        width: 100%;
         /* background: green; */
         display: flex;
         align-items: center;
@@ -365,19 +382,21 @@
 
 
         & img {
-            height: 120%;
+            height: 100%;
             position: relative;
-           bottom:  40px;
-            width: 30%;
+           right:  75px;
+           bottom: 40px;
+            width: 20%;
             /* padding-bottom: 20px; */
             /* background: #000; */
-            background-position: center;
+            background-position: left;
         }
         & header {
             font-size: 30px;
             color: white;
             position: relative;
             bottom:  40px;
+            right:  75px;
         }
     
         & strong {
@@ -388,72 +407,100 @@
     }
 
     .footeriner2{
-        height: 15%;
+         height: 25%;
         width: 92%;
         /* background: blue; */
         display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-direction:row;
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction:column;
         justify-content: center;
 
         & h2{
-            padding-bottom: 40px;
-            font-size: 16px;
+            padding-bottom: 20px;
+            font-size: 23px;
+        }
+
+         & h1{
+            /* padding-bottom: 40px; */
+            font-size: 15px;
         }
     }
 
     .footeriner3{
-        height: 15%;
+         height: 25%;
         width: 92%;
         /* background: blue; */
         display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-direction:row;
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction:column;
         justify-content: center;
 
         & h2{
-            padding-bottom: 40px;
-            font-size: 16px;
+            padding-bottom: 20px;
+            font-size: 23px;
+        }
+
+         & h1{
+            /* padding-bottom: 40px; */
+            font-size: 15px;
         }
     }
 
     .footeriner4{
-        height: 15%;
+       height: 25%;
         width: 92%;
         /* background: blue; */
         display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-direction:row;
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction:column;
         justify-content: center;
 
         & h2{
-            padding-bottom: 40px;
-            font-size: 16px;
+            padding-bottom: 20px;
+            font-size: 23px;
+        }
+
+         & h1{
+            /* padding-bottom: 40px; */
+            font-size: 15px;
         }
     }
 
     .footeriner5{
-        height: 15%;
+        height: 25%;
         width: 92%;
         /* background: blue; */
         display: flex;
-        gap: 20px;
-        align-items: center;
-        flex-direction:row;
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction:column;
         justify-content: center;
 
         & h2{
-            padding-bottom: 40px;
-            font-size: 16px;
+            padding-bottom: 20px;
+            font-size: 23px;
+        }
+
+         & h1{
+            /* padding-bottom: 40px; */
+            font-size: 15px;
         }
     }
 
     .footerText2{
-        height: 20%;
+        height: 30%;
         width: 98%;
         /* background: burlywood; */
+        display: flex;
+        align-items: center;
+
+        & p {
+        font-size: 20px;
     }
+    }
+
+    
  }

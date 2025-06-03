@@ -19,6 +19,8 @@
   align-items: center;
   color: white;
   background-color: black;
+  width: 100%;
+  height: 10%;
   & h5 {
     display: none;
   }
@@ -544,7 +546,7 @@
 
 .testimony-container {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   background: #f3ead8;
   display: flex;
   /* background: red; */
@@ -706,7 +708,7 @@
   align-items: center;
   text-align: center;
   padding: 0px 10px 0px 0px;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   gap: 10px;
 
   & h3 {
@@ -738,14 +740,16 @@
 
   .first {
     width: 100%;
-    height: 70vh;
-    background: #000;
+    height: 90vh;
+    background: red;
   }
 
   .hero-section {
-    width: 150vw;
-    height: 8000%;
-    background: palevioletred;
+    width: 50%;
+    height: 10vh;
+    background: green;
+    display: flex;
+    align-items: center;
   }
 
   .carousel9-container {
@@ -754,10 +758,9 @@
   }
 
   .carousel9 {
-    height: 90%;
+    height: 99%;
     width: 100%;
     background: pink;
-    flex-direction: r;
   }
   .hero-section {
     width: 100%;
@@ -769,7 +772,6 @@
   .navbar {
     width: 100%;
     height: 5vh;
-    /* font-size: 14px; */
   }
   .navbar p {
     display: none;
@@ -812,16 +814,55 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
 
+  .carousel9-section {
+    height: max-content;
+    width: 95%;
+    /* background: greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .carousel9-header {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    /* height: 70%; */
+    align-items: flex-start;
+    top: 30px;
+    position: relative;
   }
 
+  .slide9 {
+    height: 100%;
+    width: 100%;
+    /* background: #000; */
+  }
+  .image9-container {
+    height: 85%;
+    width: 100%;
+    /* background: #000; */
+  }
   .category9-links {
-    gap: 20px;
+    /* gap: 20px; */
     width: 60%;
+    height: 80%;
+    /* background: plum; */
+
+    & a {
+      font-size: 18px;
+    }
   }
 
+  .carousel9 {
+    height: 70vh;
+    width: 100%;
+    /* background: purple; */
+    display: flex;
+    overflow: hidden;
+     transition: transform 0.5s ease-in-out;
+  }
   .navbaricons1 {
     display: none;
     opacity: 1;
@@ -890,22 +931,41 @@
     color: #2b2b2b;
   }
 
-  .latestnewsimgandtext {
-    margin-right: 40px;
+  .testimony-container {
+    height: 50vh;
+    width: 100%;
+    /* background: red; */
+  }
+
+  .testimony-header{
+    /* background: green; */
+    height: 160vh;
+    width: 90%;
+  }
+
+  .testimony-subtext{
+    /* background: palevioletred; */
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .testimony-wrapper{
+    /* background: purple; */
+    width: 90%;
+  }
+
+  .testimony-text {
+    /* background: #000; */
+    width: 180%;
+    position: relative;
+    right: 50%;
+    font-size: 18px;
   }
 
   .downicon p {
     font-size: 14px;
     font-family: "jost", sans-serif;
     color: gray;
-  }
-
-  .man {
-    border-left: none;
-    border-right: none;
-  }
-  .woman {
-    border-left: none;
   }
 
   .iconhld1 {
@@ -928,9 +988,8 @@
   }
 
   .categories-wrapper {
-    width: 92%;
-    /* background: red; */
-    height: max-content;
+    width: 97%;
+    height: 100%;
     flex-wrap: wrap;
   }
 
@@ -942,6 +1001,7 @@
   .baby {
     width: 100%;
     height: 400px;
+    /* background: #000; */
   }
 
   .women {

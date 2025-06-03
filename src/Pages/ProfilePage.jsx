@@ -9,6 +9,11 @@ const ProfilePage = () => {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      console.error("No token found, user is not logged in.");
+      return;
+    }
     try {
       const response = await axios.post(url, {
         method: "POST",

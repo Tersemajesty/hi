@@ -113,9 +113,7 @@ const Cart = () => {
       </div>
 
       <div className={style.car2}>
-        {/* <div className={style.purpose}>
-          <h1>Products</h1>
-        </div> */}
+       
 
         <div className={style.containerdiv}>
           {loading ? (
@@ -130,7 +128,7 @@ const Cart = () => {
                   <h1>{item.product.name}</h1>
                   <div className={style.chnge1}>
                     <div className={style.buttondiv}>
-                      <button onClick={() => handleDecrease(item.product._id)}>
+                      <button  onClick={() => handleDecrease(item.product._id)}>
                         -
                       </button>
                       <span>{item.quantity}</span>
@@ -141,8 +139,8 @@ const Cart = () => {
                     <p className={style.p}>
                       ${(item.product.price * item.quantity).toFixed(2)}
                     </p>
-                    <button onClick={() => handleDelete(item.product._id)}>
-                      <RiDeleteBin6Line size={16} style={{ color: "red" }} />
+                    <button className={style.button} onClick={() => handleDelete(item.product._id)}>
+                      <RiDeleteBin6Line size={23} style={{ color: "red" }} />
                     </button>
                   </div>
                 </div>
