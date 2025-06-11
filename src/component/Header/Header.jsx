@@ -155,7 +155,7 @@ const Header = () => {
               </div>
             ) : null}
 
-            <p onClick={handleDropdown2}>Woman</p>
+            <p onClick={handleDropdown2}>Women</p>
             {dropdown2 ? (
               <div className="Dropdown2">
                 <p className="ptag" onClick={() => navigate("/mesh")}>
@@ -234,15 +234,11 @@ const Header = () => {
               </div>
             )}
           </i>
-          {isLoggedIn ? (
-            <i className="i-nav">
-              <CgProfile onClick={() => navigate("/profilepage")} />
-            </i>
-          ) : (
+          
             <i className="i-nav">
               <CgProfile onClick={() => navigate("/login")} />
             </i>
-          )}
+        
 
           <NavLink to={"Cart"}>
             <i className="i-nav">

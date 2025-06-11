@@ -101,7 +101,7 @@
 }
 
 .formal {
-  height: 350vh;
+  height: max-content;
   width: 100%;
   /* background: purple; */
   display: flex;
