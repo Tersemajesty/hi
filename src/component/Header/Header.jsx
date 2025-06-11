@@ -182,7 +182,7 @@ const Header = () => {
               </div>
             ) : null}
 
-            <li
+            {/* <li
               className="li-header"
               onMouseEnter={() => handleMouseEnter("pages")}
               onMouseLeave={handleMouseLeave}
@@ -209,7 +209,7 @@ const Header = () => {
                   </NavLink>
                 </ul>
               )}
-            </li>
+            </li> */}
 
             {/* Blog Dropdown */}
           </ul>

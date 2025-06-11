@@ -1,6 +1,11 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight, FaSearch, FaShoppingCart } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaSearch,
+  FaShoppingCart,
+} from "react-icons/fa";
 import { PiTruckLight } from "react-icons/pi";
 import { CiCreditCard1 } from "react-icons/ci";
 import { GiBank } from "react-icons/gi";
@@ -9,13 +14,14 @@ import { getAllProduct } from "../auth/Api";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Card from "../component/Card/card";
-import { SwiperSlide,Swiper } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 
 const testimonials = [
-
+  // {
+  //   text: "This product has completely changed my life. The quality is amazing, and the customer support is outstanding!",
+  //   image: "/images/dp.jpeg",
+  //   name: "John Doe",
+  //   stack: "Software Engineer",
+  // },
   {
     text: "I love how easy it is to use this platform. It has saved me so much time and effort. Highly recommended!",
     image: "/images/dp.jpeg",
@@ -43,19 +49,21 @@ const testimonials = [
 ];
 
 const images1 = [
-  { url: "/images/img12.jpeg",title: "New Yellow Blouse", price: "$60.00" },
-  { url: "/images/mesh2.jpeg",title: "Mesh New Design", price: "$20.00" },
-  { url: "/images/img11.jpeg",title: "Jean Inner Singlet", price: "$50.00" },
-  { url: "/images/mesh4.jpeg" ,title:  "New Mesh Gown", price: "$15.00" },
-  
+  { url: "/images/img12.jpeg", title: "New Yellow Blouse", price: "$60.00" },
+  { url: "/images/mesh2.jpeg", title: "Mesh New Design", price: "$20.00" },
+  { url: "/images/img11.jpeg", title: "Jean Inner Singlet", price: "$50.00" },
+  { url: "/images/mesh4.jpeg", title: "New Mesh Gown", price: "$15.00" },
 ];
 
 const images2 = [
-  { url: "/images/vint3.jpeg" , title: "Green Mix Vintage Shirt", price: "$30.00" },
-  { url: "/images/senate5.jpeg", title: "Senator Wear", price: "$35.00"  },
-  { url: "/images/shirt1.jpeg", title: "New Black Shirt", price: "$10.00"  },
-  { url: "/images/vint1.jpeg", title: "Vintage Shirt", price: "$15.00"  },
-
+  {
+    url: "/images/vint3.jpeg",
+    title: "Green Mix Vintage Shirt",
+    price: "$30.00",
+  },
+  { url: "/images/senate5.jpeg", title: "Senator Wear", price: "$35.00" },
+  { url: "/images/shirt1.jpeg", title: "New Black Shirt", price: "$10.00" },
+  { url: "/images/vint1.jpeg", title: "Vintage Shirt", price: "$15.00" },
 ];
 
 const Home = () => {
@@ -141,69 +149,69 @@ const Home = () => {
   };
 
   const [currentTrendingIndex, setCurrentTrendingIndex] = useState(0);
-const trendingPages = Math.ceil(images1.length / 4);
+  const trendingPages = Math.ceil(images1.length / 4);
 
-const trendingPrevSlide = () => {
-  setCurrentTrendingIndex((prev) =>
-    prev === 0 ? trendingPages - 1 : prev - 1
-  );
-};
+  const trendingPrevSlide = () => {
+    setCurrentTrendingIndex((prev) =>
+      prev === 0 ? trendingPages - 1 : prev - 1
+    );
+  };
 
-const trendingNextSlide = () => {
-  setCurrentTrendingIndex((prev) =>
-    prev === trendingPages - 1 ? 0 : prev + 1
-  );
-};
+  const trendingNextSlide = () => {
+    setCurrentTrendingIndex((prev) =>
+      prev === trendingPages - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
     <div className="HomeWrapper">
       <ToastContainer />
-     
-        <nav className="navbar">
-          <h5>
-            Period Offer <span className="spam">Shop Now</span>{" "}
-          </h5>
-          <p>
-            Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer{" "}
-            <span className="spam">Shop Now</span>
-          </p>
-        </nav>
 
-        <section
-          className="hero-section"
-          style={{ backgroundImage: `url(${images[currentIndex].url})` }}
-        >
-          <div className={`text-container ${images[currentIndex].align}`}>
-            <h2 className="fade-in h2">Fashion Sale</h2>
-            <h1 className="slide-up h1" color="red">
-              {images[currentIndex].h1}
-            </h1>
-            {images[currentIndex].align === "left" ? (
-              <p className="zoom-in p">
-                "Own Every Moment. Style That Speaks Strength." From bold
-                senator <br /> sets to laid-back casuals, our men's collection
-                blends modern design <br /> with cultural flair. Dress to
-                express—comfort, class, and confidence <br /> in every stitch.
-              </p>
-            ) : (
-              <p className="zoom-in p">
-                "Unapologetically You. Effortless Elegance, Everyday." Turn
-                heads with our stunning range of women’s wear—casual, formal,
-                and everything in between. For every mood, every move, and every
-                woman who wears her power with style.
-              </p>
-            )}
-            <button className="btn-slide">Shop Now</button>
-          </div>
+      <nav className="navbar">
+        <h5>
+          Period Offer <span className="spam">Shop Now</span>{" "}
+        </h5>
+        <p>
+          Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer{" "}
+          <span className="spam">Shop Now</span>
+        </p>
+      </nav>
 
-          <button className="nav-button left-btn" onClick={prevSlide}>
-            ❮
-          </button>
-          <button className="nav-button right-btn" onClick={nextSlide}>
-            ❯
-          </button>
-        </section>
-    
+      <section
+        className="hero-section"
+        style={{ backgroundImage: `url(${images[currentIndex].url})` }}
+      >
+        <div className={`text-container ${images[currentIndex].align}`}>
+          <h2 className="fade-in h2">Fashion Sale</h2>
+          <h1 className="slide-up h1" color="red">
+            {images[currentIndex].h1}
+          </h1>
+          {images[currentIndex].align === "left" ? (
+            <p className="zoom-in p">
+              "Own Every Moment. Style That Speaks Strength." From bold senator{" "}
+              <br /> sets to laid-back casuals, our men's collection blends
+              modern design <br /> with cultural flair. Dress to
+              express—comfort, class, and confidence <br /> in every stitch.
+            </p>
+          ) : (
+            <p className="zoom-in p">
+              "Unapologetically You. Effortless Elegance, Everyday." Turn heads
+              with our stunning range of women’s wear—casual, formal, and
+              everything in between. For every mood, every move, and every woman
+              who wears her power with style.
+            </p>
+          )}
+          <button className="btn-slide">Shop Now</button>
+        </div>
+
+        <button className="nav-button left-btn" onClick={prevSlide}>
+          ❮
+        </button>
+        <button className="nav-button right-btn" onClick={nextSlide}>
+          ❯
+        </button>
+      </section>
+
       <div className="product-categories">
         <div className="categories-wrapper">
           {/* Men's Fashion */}
@@ -261,52 +269,38 @@ const trendingNextSlide = () => {
         </div>
 
         <div className="separator9-line"></div>
-       <Swiper
-  modules={[Autoplay, Pagination]}
-  spaceBetween={10}
-  pagination={{ clickable: true }}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-  }}
-  loop={true}
-  breakpoints={{
-    320: {
-      slidesPerView: 1, // mobile - 1 at a time
-    },
-    640: {
-      slidesPerView: 2, // tablet
-    },
-    1024: {
-      slidesPerView: 4, // desktop - 4 at a time
-    },
-  }}
->
-  {images2.map((image, index) => (
-    <SwiperSlide key={index}>
-      <div className="slide9">
-        <div className="image9-container">
-          <img src={image.url} alt={`Slide ${index + 1}`} />
-          <div className="hover9-box">
-            <div className="icon9-container">
-              <FaShoppingCart onClick={() => handleAddToCart()} className="icon9" />
-            </div>
-            <div className="icon9-container">
-              <FaSearch className="icon9" />
-            </div>
-          </div>
-        </div>
-        <div className="product9-details">
-          <h2 className="product9-title">{image.title}</h2>
-          <p className="price9">
-            <span className="old9-price">{image.price}</span>
-          </p>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+        <div className="carousel9">
+          {images2
+            .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
+            .map((image, index) => (
+              <div key={index} className="slide9">
+                {/* Product Image */}
+                <div className="image9-container">
+                  <img src={image.url} alt={`Slide ${index + 1}`} />
+                  {/* Hover Box */}
+                  <div className="hover9-box">
+                    <div className="icon9-container">
+                      <FaShoppingCart
+                        onClick={() => handleAddToCart}
+                        className="icon9"
+                      />
+                    </div>
 
+                    <div className="icon9-container">
+                      <FaSearch className="icon9" />
+                    </div>
+                  </div>
+                </div>
+                {/* Product Name & Price */}
+                <div className="product9-details">
+                  <h2 className="product9-title">{image.title}</h2>
+                  <p className="price9">
+                    <span className="old9-price">{image.price}</span>{" "}
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
       <div className="testimony-container">
         <h2 className="testimony-header">Clients review</h2>
@@ -378,51 +372,45 @@ const trendingNextSlide = () => {
         {/* Gray Separator Line */}
         <div className="separator9-line"></div>
         {/* Carousel */}
-            <Swiper
-  modules={[Autoplay, Pagination]}
-  spaceBetween={10}
-  pagination={{ clickable: true }}
-  autoplay={{
-    delay: 3000,
-    disableOnInteraction: false,
-  }}
-  loop={true}
-  breakpoints={{
-    320: {
-      slidesPerView: 1, // mobile - 1 at a time
-    },
-    640: {
-      slidesPerView: 2, // tablet
-    },
-    1024: {
-      slidesPerView: 4, // desktop - 4 at a time
-    },
-  }}
->
-  {images1.map((image, index) => (
-    <SwiperSlide key={index}>
-      <div className="slide9">
-        <div className="image9-container">
-          <img src={image.url} alt={`Slide ${index + 1}`} />
-          <div className="hover9-box">
-            <div className="icon9-container">
-              <FaShoppingCart onClick={() => handleAddToCart()} className="icon9" />
-            </div>
-            <div className="icon9-container">
-              <FaSearch className="icon9" />
-            </div>
+        <div className="carousel9-container">
+          <button
+            className="nav9-button left9-btn"
+            onClick={trendingPrevSlide}
+          ></button>
+          <div className="carousel9">
+            {images1
+              .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
+              .map((image, index) => (
+                <div key={index} className="slide9">
+                  {/* Product Image */}
+                  <div className="image9-container">
+                    <img src={image.url} alt={`Slide ${index + 1}`} />
+                    {/* Hover Box */}
+                    <div className="hover9-box">
+                      <div className="icon9-container">
+                        <FaShoppingCart className="icon9" />
+                      </div>
+
+                      <div className="icon9-container">
+                        <FaSearch className="icon9" />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Product Name & Price */}
+                  <div className="product9-details">
+                    <h2 className="product9-title">{image.title}</h2>
+                    <p className="price9">
+                      <span className="old9-price">{image.price}</span>{" "}
+                    </p>
+                  </div>
+                </div>
+              ))}
           </div>
+          <button
+            className="nav9-button right9-btn"
+            onClick={trendingNextSlide}
+          ></button>
         </div>
-        <div className="product9-details">
-          <h2 className="product9-title">{image.title}</h2>
-          <p className="price9">
-            <span className="old9-price">{image.price}</span>
-          </p>
-        </div>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
       </div>
 
       <div className="Mainbody">

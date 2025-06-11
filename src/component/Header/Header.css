@@ -116,86 +116,63 @@ link:hover {
 
 .Dropdown1 {
   width: 16%;
-  height: 200px;
   background-color: white;
   position: absolute;
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
-  /* padding: 10px; */
-  columns: red;
-  padding-bottom: 20px;
   align-items: flex-start;
   top: 55px;
   right: 60%;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
-}
-
-.Dropdown2 {
-  width: 16%;
-  height: 150px;
-  background-color: white;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  /* gap: 20px; */
-  /* padding: 10px; */
-  columns: red;
-  padding-bottom: 20px;
-  align-items: flex-start;
-  top: 55px;
-  right: 45%;
-  border-top: 3px solid red;
-  border-radius: 10px 10px 0px 0px;
-}
-
-.Dropdown3 {
-  width: 16%;
-  height: 60%;
-  background-color: white;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  /* gap: 20px; */
   padding: 10px;
-  columns: red;
-  padding-bottom: 20px;
-  align-items: flex-start;
-  top: 60px;
-  left: 55%;
-  border-top: 3px solid red;
-  border-radius: 10px 10px 0px 0px;
+  gap: 10px; /* Add small controlled spacing */
 }
+
 .ptag {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 6px 10px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .ptag:hover {
-  color: rgb(245, 17, 17);
+  background-color: #f0f0f0;
 }
 
-.Dropdown3 {
+
+.Dropdown2{
   width: 16%;
-  height: max-content;
   background-color: white;
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 10px;
-  columns: red;
-  padding-bottom: 20px;
   align-items: flex-start;
-  top: 90px;
-  right: 110px;
+  top: 55px;
+  right: 40%;
   border-top: 3px solid red;
   border-radius: 10px 10px 0px 0px;
+  padding: 10px;
+  gap: 10px; /* Add small controlled spacing */
 }
+
+.Dropdown3 {
+  width: 16%;
+  background-color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+   top:50px;
+  left: 65%;
+  border-top: 3px solid red;
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px;
+  gap: 10px; /* Add small controlled spacing */
+}
+
+
+
 
 .header-icons2 {
   width: 10%;
@@ -351,10 +328,11 @@ link:hover {
 /* Mobile Menu */
 .side-menu {
   position: fixed;
-  top: 15px;
+  top: 30px;
   right: -260px;
   width: 250px;
   height: 100%;
+  /* background: red; */
   background-color: #fff;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   z-index: 1001;
@@ -372,10 +350,11 @@ link:hover {
 }
 
 .side-menu li {
-  margin: 1.2rem 0;
+  margin: 2rem 0;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  /* background: red; */
 }
 
 /* Submenu inside mobile nav */
@@ -411,6 +390,7 @@ link:hover {
   height: 100%;
   background: rgba(0,0,0,0.4);
   z-index: 1000;
+  /* background: #000; */
 }
 
 

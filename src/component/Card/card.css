@@ -27,19 +27,6 @@
   overflow: hidden;
 }
 
-
-.swiper {
-  width: 100%;
-  height: auto;
-}
-
-
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-}
-
 .cardslide {
   width: 24%;
   flex-shrink: 0;
@@ -55,7 +42,7 @@
   cursor: pointer;
   height: 80%;
   width: 100%;
-  background: red;
+  /* background: red; */
 }
 
 .card-image-container img {
@@ -159,3 +146,44 @@
 .cardright9-btn {
   right: 3px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .cardwrapper{
+    height: 74vh;
+    width: 120%;
+    overflow: hidden;
+    /* background: red; */
+  }
+ 
+  .card-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+  }
+
+  .cardslide {
+    width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .card-image-container {
+    width: 100%;
+    height: auto;
+    background: transparent;
+  }
+
+  .card-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Keeps full image in view */
+    display: block;
+  }
+}
+
+
