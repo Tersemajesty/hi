@@ -279,7 +279,7 @@ const Header = () => {
         Women {mobileWomenDropdown ? "" : ""}</p></li>
       {mobileWomenDropdown && (
         <ul className="mobile-dropdown">
-          <li onClick={() => { closeMenu(); navigate("/mesh ") }}>Mesh gown</li>
+          <li onClick={() => { closeMenu(); navigate("/mesh") }}>Mesh </li>
           <li onClick={() => { closeMenu(); navigate("/dinner") }}>Dinner</li>
           <li onClick={() => { closeMenu(); navigate("/bubu") }}>Bubu gown</li>
         </ul>

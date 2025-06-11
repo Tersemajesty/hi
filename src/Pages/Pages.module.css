@@ -476,7 +476,7 @@
 .proceed {
   height: 17%;
   width: 40%;
-  background: red;
+  /* background: red; */
   border: none;
   outline: none;
   border-radius: 20px;
@@ -918,6 +918,63 @@ a {
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .checkoutwrapper {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* background: red; */
+  }
+
+  .checkoutwrapperbody {
+    height: 10%;
+  }
+
+  .hold {
+    width: 100%;
+    flex-direction: column;
+    gap: 5%;
+  }
+  .billing {
+    height: 50%;
+    /* background: pink; */
+    width: 100%;
+  }
+  .billing4,
+  .billing5,
+  .billing8, {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    border: none;
+    padding: 16px;
+  }
+  .billing12 {
+    width: 100%;
+    font-size: 20px;
+    /* background: #000; */
+
+    & p {
+      font-size: 25px;
+    }
+
+    & button {
+      width: 50%;
+      /* background: #000; */
+      height: 30%;
+      font-size: 20px;
+    }
+  }
+
+  .order{
+    width: 80%;
+  }
+}
 /* for ProductDetails */
 
 .productwrapper {
@@ -1045,11 +1102,14 @@ p {
   /* font-size: 1px; */
   font-weight: 100;
   display: flex;
+  /* align-items: center; */
   justify-content: center;
 
   & p {
     font-size: 23px;
     font-weight: 100;
+    position: relative;
+    top: 4px;
   }
 }
 
@@ -1237,109 +1297,95 @@ descriptiondetails :hover {
   border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
- /* for product detail page  */
-
-
+/* for product detail page  */
 
 @media screen and (max-width: 768px) {
-
- .productwrapper{
-  height: 70%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* gap: 10px; */
-  /* background: red; */
- }
-
- .detailwrapper{
-  width: 90%;
-  height: 80vh;
-  display: flex;
-  /* justify-content: center; */
-  align-items: flex-start;
-  /* align-content: center; */
-  /* background: red; */
-  margin-top: 50px;
-  flex-direction: column;
-  gap: 30px;
- }
-
- .detailproductimage{
-  width: 100%;
-  height: 400px;
-  /* background-color: rgb(241, 239, 239); */
-  /* background: pink; */
-  display: flex;
-  /* flex-direction: column; */
-  object-fit: contain;
-  background-repeat: no-repeat;
-
-
-  & img {
+  .productwrapper {
+    height: 70%;
     width: 100%;
-    height: 110%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    /* background: red; */
   }
- }
 
- .pricetextholder{
-  width: 100%;
-  height: 70%;
-  color: black;
-  /* background: paleturquoise; */
-  /* margin-top: 40px; */
- }
-
- .review{
-  font-size: 25px;
-  margin-top: 20px;
-
-  & p {
-    font-size: 20px;
+  .detailwrapper {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* align-content: center; */
+    /* background: red; */
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 30px;
   }
- }
 
- .buttoncart{
-  width: 100%;
-  height: 65px;
-  background-color: red;
-  color: #000;
-  border-radius: 100px;
-  cursor: pointer;
-  /* font-size: 1px; */
-  font-weight: 100;
-  display: flex;
-  justify-content: center;
+  .detailproductimage {
+    width: 100%;
+    height: 400px;
+    /* background-color: rgb(241, 239, 239); */
+    /* background: pink; */
+    display: flex;
+    /* flex-direction: column; */
+    object-fit: contain;
+    background-repeat: no-repeat;
 
-  & p {
-    font-size: 23px;
+    & img {
+      width: 100%;
+      height: 110%;
+      object-fit: cover;
+    }
+  }
+
+  .pricetextholder {
+    width: 100%;
+    height: 70%;
+    color: black;
+    /* background: paleturquoise; */
+    /* margin-top: 40px; */
+  }
+
+  .review {
+    font-size: 25px;
+    margin-top: 20px;
+
+    & p {
+      font-size: 20px;
+    }
+  }
+
+  .buttoncart {
+    width: 100%;
+    height: 65px;
+    background-color: red;
+    color: #000;
+    border-radius: 100px;
+    cursor: pointer;
+    /* font-size: 1px; */
     font-weight: 100;
-  }
- }
+    display: flex;
+    justify-content: center;
 
- .descriptionwrapper{
-  height: 100%;
-  width: 90%;
-  /* background: #000; */
- }
-  
+    & p {
+      font-size: 23px;
+      font-weight: 100;
+    }
+  }
+
+  .descriptionwrapper {
+    height: 100%;
+    width: 90%;
+    /* background: #000; */
+  }
 }
 
 /* for cartpage */
 @media screen and (max-width: 760px) {
- 
-  .Cart{
+  .Cart {
     height: max-content;
     width: 100%;
     display: flex;
@@ -1352,7 +1398,7 @@ descriptiondetails :hover {
     padding-bottom: 20px;
   }
 
-  .car2{
+  .car2 {
     height: 90%;
     width: 100%;
     display: flex;
@@ -1363,7 +1409,7 @@ descriptiondetails :hover {
     /* background: purple; */
     gap: 20px;
   }
-  .containerdiv{
+  .containerdiv {
     height: 100%;
     width: 90%;
     display: flex;
@@ -1376,7 +1422,7 @@ descriptiondetails :hover {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 
-  .containerdiv2{
+  .containerdiv2 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -1386,7 +1432,7 @@ descriptiondetails :hover {
     scrollbar-width: thin;
   }
 
-  .purpose1{
+  .purpose1 {
     height: 600px;
     width: 100%;
     display: flex;
@@ -1394,8 +1440,9 @@ descriptiondetails :hover {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid gray;
-    padding: 20px;
-    gap: 20px;
+    /* padding: 20px; */
+    /* gap: 90px; */
+    /* background: red; */
 
     & h1 {
       font-size: 20px;
@@ -1410,7 +1457,7 @@ descriptiondetails :hover {
     }
   }
 
-  .chnge1{
+  .chnge1 {
     height: 20%;
     width: 350px;
     display: flex;
@@ -1424,7 +1471,7 @@ descriptiondetails :hover {
     overflow: hidden;
   }
 
-  .buttondiv{
+  .buttondiv {
     height: 60%;
     width: 150px;
     display: flex;
@@ -1435,14 +1482,14 @@ descriptiondetails :hover {
     left: 15%;
   }
 
-  .p{
+  .p {
     font-size: 25px;
     /* background: green; */
     width: 100px;
     height: 30%;
   }
 
-  .button{
+  .button {
     height: 40px;
     width: 100%;
     /* background: red; */
@@ -1458,7 +1505,7 @@ descriptiondetails :hover {
     right: 15%;
   }
 
-  .containerdiv1{
+  .containerdiv1 {
     height: 150%;
     width: 90%;
     display: flex;
@@ -1469,7 +1516,7 @@ descriptiondetails :hover {
     background: green;
   }
 
-  .proceed{
+  .proceed {
     height: 60px;
     width: 100%;
     background: red;

@@ -30,11 +30,7 @@ const Summer = () => {
     <Loader />
   ) : (
     <div className={style.summer}>
-      <IoArrowUndoSharp
-        className={style.backwardIcon}
-        size={30}
-        onClick={() => navigate(-1)}
-      />
+     
 
       <div className={style.summerContainer3}>
         {Array.from({ length: Math.ceil(data.length / 4) }).map((_, i) => (

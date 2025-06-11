@@ -31,11 +31,7 @@ const Formal = () => {
     <Loader />
   ) : (
     <div className={style.formal}>
-      <IoArrowUndoSharp
-        className={style.backwardIcon}
-        size={30}
-        onClick={() => navigate(-1)}
-      />
+    
       <div className={style.formalContainer}>
         {[0, 1, 2, 3].map((i) => (
           <div key={i} className={style.formalContainer1}>

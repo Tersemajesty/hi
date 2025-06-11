@@ -328,7 +328,7 @@ link:hover {
 /* Mobile Menu */
 .side-menu {
   position: fixed;
-  top: 30px;
+  top: 2px;
   right: -260px;
   width: 250px;
   height: 100%;

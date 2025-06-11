@@ -262,45 +262,39 @@ const Home = () => {
             <a onClick={() => navigate("./babycollection")} href="#">
               Baby
             </a>
-            <a onClick={() => navigate("./favorites")} href="#">
-              Favorites
-            </a>
+            
           </div>
         </div>
 
         <div className="separator9-line"></div>
-        <div className="carousel9">
-          {images2
-            .slice(currentTrendingIndex * 4, currentTrendingIndex * 4 + 4)
-            .map((image, index) => (
-              <div key={index} className="slide9">
-                {/* Product Image */}
-                <div className="image9-container">
-                  <img src={image.url} alt={`Slide ${index + 1}`} />
-                  {/* Hover Box */}
-                  <div className="hover9-box">
-                    <div className="icon9-container">
-                      <FaShoppingCart
-                        onClick={() => handleAddToCart}
-                        className="icon9"
-                      />
-                    </div>
-
-                    <div className="icon9-container">
-                      <FaSearch className="icon9" />
-                    </div>
-                  </div>
-                </div>
-                {/* Product Name & Price */}
-                <div className="product9-details">
-                  <h2 className="product9-title">{image.title}</h2>
-                  <p className="price9">
-                    <span className="old9-price">{image.price}</span>{" "}
-                  </p>
-                </div>
-              </div>
-            ))}
+<div className="carousel9">
+  {images2?.map((image, index) => (
+    <div key={index} className="slide9">
+      <div className="image9-container">
+        <img src={image.url} alt={`Slide ${index + 1}`} />
+        <div className="hover9-box">
+          <div className="icon9-container">
+            <FaShoppingCart
+              onClick={() => handleAddToCart(image)}
+              className="icon9"
+            />
+          </div>
+          <div className="icon9-container">
+            <FaSearch className="icon9" />
+          </div>
         </div>
+      </div>
+      <div className="product9-details">
+        <h2 className="product9-title">{image.title}</h2>
+        <p className="price9">
+          <span className="old9-price">{image.price}</span>
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
+
       </div>
       <div className="testimony-container">
         <h2 className="testimony-header">Clients review</h2>
@@ -364,9 +358,7 @@ const Home = () => {
             <a onClick={() => navigate("./babycollection")} href="#">
               Baby
             </a>
-            <a onClick={() => navigate("./favorites")} href="#">
-              Favorites
-            </a>
+            
           </div>
         </div>
         {/* Gray Separator Line */}

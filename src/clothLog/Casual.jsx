@@ -35,11 +35,7 @@ const Casual = () => {
     <Loader />
   ) : (
     <div className={style.casual}>
-      <IoArrowUndoSharp
-        className={style.backwardIcon}
-        size={30}
-        onClick={() => navigate(-1)}
-      />
+     
 
       <div className={style.casualContainer}>
         {Array.from({ length: Math.ceil(data.length / 4) }).map((_, i) => (
